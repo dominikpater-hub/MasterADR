@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-przepisy-szczegolne@adr-2025",
+  "factId": "b1-przepisy-szczegolne",
+  "adrRef": "ADR 3.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 9,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyłączenia w praktyce",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "mcq"
+  ],
+  "why": "Zwolnienia z przepisów szczególnych: 598 — akumulatory, 168 — przewóz azbestu, 188 — akumulatory litowe zawarte w urządzeniach (nie podlega ADR).",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj przepis szczególny do towaru:",
+      "pairs": {
+        "168": "azbest",
+        "188": "akumulatory litowe w urządzeniach",
+        "598": "akumulatory"
+      }
+    },
+    "mcq": {
+      "prompt": "Akumulatory litowe zawarte w urządzeniu obejmuje przepis szczególny:",
+      "options": [
+        "168",
+        "188",
+        "598"
+      ],
+      "correct": "188"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-przepisy-szczegolne",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

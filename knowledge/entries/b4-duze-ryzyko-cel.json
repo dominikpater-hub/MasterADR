@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-duze-ryzyko-cel",
+  "factId": "b4-duze-ryzyko-cel",
+  "adrRef": "ADR 1.10",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 25,
+  "status": "core",
+  "block": 4,
+  "topic": "Towary dużego ryzyka",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Ochrona towarów ma na celu zminimalizowanie ryzyka kradzieży oraz użycia ich niezgodnie z przeznaczeniem. W szczególności zapobieżenie kradzieży pojazdów, kradzieży towarów, zamachom na zaparkowane pojazdy.",
+  "q": {
+    "mcq": {
+      "prompt": "Celem ochrony towarów dużego ryzyka (dział 1.10) jest:",
+      "options": [
+        "Ochrona przed pozarem",
+        "Minimalizacja ryzyka kradzieży i użycia niezgodnie z przeznaczeniem",
+        "Ochrona środowiska"
+      ],
+      "correct": "Minimalizacja ryzyka kradzieży i użycia niezgodnie z przeznaczeniem"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-duze-ryzyko-cel@adr-2025",
+  "migratedAt": "2026-07-23"
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-cv2-plomien",
+  "factId": "b4-cv2-plomien",
+  "adrRef": "ADR CV2 / 7.5.11",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 24,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o załadunku",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Przed dokonaniem załadunku powierzchnia ładunkowa pojazdu lub kontenera powinna zostać dokładnie oczyszczona. Zabrania się używania otwartego płomienia wewnątrz pojazdu lub kontenera oraz w ich pobliżu, a także podczas załadunku i rozładunku (przepis szczególny CV2 — 7.5.11).",
+  "q": {
+    "mcq": {
+      "prompt": "Przed załadunkiem powierzchnia ładunkowa powinna być:",
+      "options": [
+        "Sucha",
+        "Dokładnie oczyszczona",
+        "Wyłożona folia"
+      ],
+      "correct": "Dokładnie oczyszczona"
+    },
+    "scenario": {
+      "prompt": "Załadunek towaru ADR. Czy można używać otwartego płomienia w pobliżu pojazdu?",
+      "options": [
+        "Tak, poza kabina",
+        "Nie — zakaz wg CV2",
+        "Tylko przy klasie 9"
+      ],
+      "correct": "Nie — zakaz wg CV2"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-cv2-plomien@adr-2025",
+  "migratedAt": "2026-07-23"
+}

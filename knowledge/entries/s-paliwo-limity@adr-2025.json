@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "s-paliwo-limity@adr-2025",
+  "factId": "s-paliwo-limity",
+  "adrRef": "ADR 1.1.3.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 9,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyłączenia w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "match"
+  ],
+  "why": "Wyłączenie 1.1.3.3 dla paliwa w zbiornikach pojazdu: do 1500 l na jednostkę transportową, nie więcej niż 500 l na przyczepie, w kanistrach nie więcej niż 60 l.",
+  "q": {
+    "scenario": {
+      "prompt": "Ciągnik 800 l + naczepa 400 l + 2 kanistry po 20 l = 1240 l. Czy mieści się w wyłączeniu paliwowym (paliwo w zbiornikach pojazdu)?",
+      "options": [
+        "Nie, przekroczone 1000 l",
+        "Tak — 1240 l poniżej 1500 l, kanistry 40 l poniżej 60 l",
+        "Tylko bez kanistrów"
+      ],
+      "correct": "Tak — 1240 l poniżej 1500 l, kanistry 40 l poniżej 60 l"
+    },
+    "match": {
+      "prompt": "Dopasuj limit paliwa (wyłączenie paliwowe):",
+      "pairs": {
+        "Jednostka transportową": "1500 l",
+        "Przyczepa": "500 l",
+        "Kanistry": "60 l"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-paliwo-limity",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

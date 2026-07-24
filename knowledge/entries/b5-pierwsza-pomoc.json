@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-pierwsza-pomoc",
+  "factId": "b5-pierwsza-pomoc",
+  "adrRef": "ADR 5.4.3.4",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 2,
+  "status": "core",
+  "block": 5,
+  "topic": "Reakcja po wypadku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Zdjąć zanieczyszczone ubranie i użyte zanieczyszczone wyposażenie ochronne oraz usunąć je w sposób bezpieczny. Unikać wdychania oparów, dymu, pyłu i pary poprzez pozostawanie po stronie nawietrznej. Nie wchodzić na uwolnione materiały i nie dotykać ich.",
+  "q": {
+    "mcq": {
+      "prompt": "Co zrobić z zanieczyszczonym ubraniem po kontakcie z materiałem?",
+      "options": [
+        "Wyprać",
+        "Zdjąć i usunąć w sposób bezpieczny",
+        "Zostawić na sobie"
+      ],
+      "correct": "Zdjąć i usunąć w sposób bezpieczny"
+    },
+    "scenario": {
+      "prompt": "Uwolniony materiał na jezdni. Twoje zachowanie:",
+      "options": [
+        "Sprawdzam co to, dotykając",
+        "Nie wchodzę, nie dotykam, pozostaje po stronie nawietrznej",
+        "Rozgarniam łopata"
+      ],
+      "correct": "Nie wchodzę, nie dotykam, pozostaje po stronie nawietrznej"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b5-pierwsza-pomoc@adr-2025",
+  "migratedAt": "2026-07-23"
+}

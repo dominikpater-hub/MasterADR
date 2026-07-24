@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-certyfikat-pakowania",
+  "factId": "b4-certyfikat-pakowania",
+  "adrRef": "ADR 5.4.2",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 14,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Certyfikat pakowania kontenera/pojazdu wymagany jest przed załadunkiem, który poprzedza przewóz MORSKI. Może być elementem dokumentu MULTIMODAL DANGEROUS GOODS FORM lub DGN.",
+  "q": {
+    "mcq": {
+      "prompt": "Certyfikat pakowania kontenera wymagany jest przed przewozem:",
+      "options": [
+        "Drogowym",
+        "Morskim",
+        "Kolejowym"
+      ],
+      "correct": "Morskim"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-certyfikat-pakowania@adr-2025",
+  "migratedAt": "2026-07-23"
+}

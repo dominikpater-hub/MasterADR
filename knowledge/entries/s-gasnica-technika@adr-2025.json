@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "s-gasnica-technika@adr-2025",
+  "factId": "s-gasnica-technika",
+  "adrRef": "praktyka gaszenia",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 27,
+  "status": "core",
+  "block": 5,
+  "topic": "Reakcja po wypadku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "match"
+  ],
+  "why": "Strumień proszku kierujemy w źródło płomieni, stojąc od strony nawietrznej. Gaśnica 6 kg wystarcza na ok. 10 sekund, 2 kg na ok. 6 sekund. Zasięg około 4 m. Masz jedna próbę — celuj w źródło, nie w płomień.",
+  "q": {
+    "scenario": {
+      "prompt": "Gasisz początkowy pożar opony gaśnica 6 kg. Ile masz czasu?",
+      "options": [
+        "Około 30 sekund",
+        "Około 10 sekund",
+        "Około 2 minut"
+      ],
+      "correct": "Około 10 sekund"
+    },
+    "match": {
+      "prompt": "Parametry gaśnic:",
+      "pairs": {
+        "Gaśnica 6 kg": "ok. 10 s",
+        "Gaśnica 2 kg": "ok. 6 s",
+        "Zasięg strumienia": "ok. 4 m"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-gasnica-technika",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-1136-kat0-blokada@adr-2025",
+  "factId": "s-1136-kat0-blokada",
+  "adrRef": "ADR 1.1.3.6.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Kategoria 0 ma limit 0 — każda ilość oznacza pełny ADR. Nie ma znaczenia, ze suma punktów z pozostałych towarów jest niska. Kategoria 0 blokuje wyłączenie całkowicie.",
+  "q": {
+    "scenario": {
+      "prompt": "Ładunek: 5 kg towaru kategorii 0 + 50 l kategorii 3 (razem 50 punktów). Czy przysługuje wyłączenie „1000 punktów”?",
+      "options": [
+        "Tak, 50 punktów to mało",
+        "Nie — kategoria 0 zawsze oznacza pełny ADR",
+        "Tak, jeśli kategoria 0 nie przekracza 20 kg"
+      ],
+      "correct": "Nie — kategoria 0 zawsze oznacza pełny ADR"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-1136-kat0-blokada",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-wskazowki-klasy@adr-2025",
+  "factId": "b5-wskazowki-klasy",
+  "adrRef": "ADR 5.4.3.4 tabela",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 3,
+  "status": "core",
+  "block": 5,
+  "topic": "Wskazówki per klasa",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match"
+  ],
+  "why": "Wskazówki dodatkowe z instrukcji pisemnej: klasa 1 — schronić się i pozostać z dala od okien; 2.1/2.2/2.3 — schronić się, unikać zagłębień terenu; 5.1/5.2 — nie dopuszczać do zmieszania z materiałami zapalnymi lub palnymi (np. trocinami); 6.1 — użyć maski ucieczkowej; 7 — ograniczyć czas narażenia; 4.3 — uwolniony materiał utrzymywać w stanie suchym, pod przykryciem.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj klasę do wskazówki z instrukcji pisemnej:",
+      "pairs": {
+        "Klasa 1": "schronić się, z dala od okien",
+        "Klasa 5.1": "nie mieszać z materiałami palnymi",
+        "Klasa 6.1": "użyć maski ucieczkowej",
+        "Klasa 7": "ograniczyć czas narażenia"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b5-wskazowki-klasy",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

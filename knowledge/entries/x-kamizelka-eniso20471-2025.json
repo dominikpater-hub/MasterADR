@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "id": "x-kamizelka-eniso20471-2025",
+  "factId": "x-kamizelka-eniso20471-2025",
+  "adrRef": "ADR 2025, 8.1.5 + EN ISO 20471:2023",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "key-amendments-2025",
+  "page": null,
+  "status": "rozszerzenie",
+  "block": 4,
+  "topic": "Zmiany ADR 2025",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "ROZSZERZENIE (poza kompendium): ADR 2025 doprecyzowuje, ze kamizelka ostrzegawcza w wyposażeniu pojazdu ma spełniać normę EN ISO 20471:2023 (lepsza widoczność w słabym świetle). DO WERYFIKACJI DGSA.",
+  "q": {
+    "mcq": {
+      "prompt": "Jaka normę ma spełniać kamizelka ostrzegawcza wg ADR 2025?",
+      "options": [
+        "EN ISO 20471:2023",
+        "EN 471:1994 (stara)",
+        "Dowolna kamizelka odblaskowa"
+      ],
+      "correct": "EN ISO 20471:2023"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    },
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": null,
+  "migratedAt": "2026-07-23"
+}

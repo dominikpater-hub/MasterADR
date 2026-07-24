@@ -1,0 +1,54 @@
+{
+  "_note": "Teksty dla displaySignal() z ADR-003 v2. Klucz -> tekst per jezyk. Aplikacje konsumujace biblioteke tlumacza level/label na te napisy. Krotkie, bo pokazywane przy fakcie, nie w osobnym ekranie.",
+  "_source": "ADR-003-v2-model-dwuosiowy.md, sekcja 'Kontrakt UI'",
+  "_updated": "2026-07-24",
+
+  "signal.verified": {
+    "pl": "Zweryfikowane",
+    "en": "Verified",
+    "uk": "Перевірено",
+    "ru": "Проверено",
+    "de": "Verifiziert",
+    "_meaning": "currency CURRENT + trustLevel T1. Bez zastrzezen."
+  },
+  "signal.dated": {
+    "pl": "Stan na {date}",
+    "en": "As of {date}",
+    "uk": "Станом на {date}",
+    "ru": "По состоянию на {date}",
+    "de": "Stand {date}",
+    "_meaning": "currency LAPSED, kanal przepuscil. Po terminie przegladu, ale nic nie wskazuje na zmiane przepisu. {date} = data ostatniej weryfikacji."
+  },
+  "signal.unreviewed": {
+    "pl": "Bez przeglądu",
+    "en": "Not reviewed",
+    "uk": "Без перегляду",
+    "ru": "Без проверки",
+    "de": "Ohne Prüfung",
+    "_meaning": "currency STALE. Brak przegladu liczacego sie do higieny — slabszy sygnal niz LAPSED."
+  },
+  "signal.ai_sourced": {
+    "pl": "Wskazówka AI — nie porada prawna",
+    "en": "AI hint — not legal advice",
+    "uk": "Підказка ШІ — не юридична порада",
+    "ru": "Подсказка ИИ — не юридический совет",
+    "de": "KI-Hinweis — keine Rechtsberatung",
+    "_meaning": "trustLevel T3. Zrodlo slabe (research, verifiedBy null)."
+  },
+  "signal.drifted": {
+    "pl": "Treść wstrzymana — przepis mógł się zmienić",
+    "en": "Content on hold — the rule may have changed",
+    "uk": "Вміст призупинено — правило могло змінитися",
+    "ru": "Содержание приостановлено — правило могло измениться",
+    "de": "Inhalt zurückgehalten — die Vorschrift könnte sich geändert haben",
+    "_meaning": "currency DRIFTED. BLOKADA, nie poziom zaufania. Watcher wykryl zmiane przepisu albo zrodlo milczy > 14 dni (failClosed)."
+  },
+  "signal.blocked_channel": {
+    "pl": "Niedostępne offline — sprawdź w trybie online",
+    "en": "Unavailable offline — check online",
+    "uk": "Недоступно офлайн — перевірте онлайн",
+    "ru": "Недоступно офлайн — проверьте онлайн",
+    "de": "Offline nicht verfügbar — online prüfen",
+    "_meaning": "Bramka kanalowa odrzucila (np. LAPSED w offline_pack). Tresc istnieje, ale nie w tym kanale."
+  }
+}

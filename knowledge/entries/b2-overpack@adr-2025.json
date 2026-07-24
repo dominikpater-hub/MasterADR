@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-overpack@adr-2025",
+  "factId": "b2-overpack",
+  "adrRef": "ADR 5.1.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 7,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt opakowania",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Jeśli używamy opakowania zbiorczego (skrzyni, klatki, palety) i nalepki lub numery UN nie są widoczne na zewnątrz, należy je ponowić. Gdy w opakowaniu są 2 rodzaje towaru (np. klasy 3 i 8), na zewnątrz muszą być wszystkie wzory nalepek (3 i 8). Jeśli nalepka jest ta sama dla wszystkich opakowań, wystarczy na palecie 1 nalepka. Należy umieścić napis OPAKOWANIE ZBIORCZE — OVERPACK (język kraju nadania i angielski lub niemiecki lub francuski).",
+  "q": {
+    "mcq": {
+      "prompt": "Napis na opakowaniu zbiorczym to:",
+      "options": [
+        "ZBIORCZE",
+        "OPAKOWANIE ZBIORCZE - OVERPACK",
+        "PALETA ADR"
+      ],
+      "correct": "OPAKOWANIE ZBIORCZE - OVERPACK"
+    },
+    "scenario": {
+      "prompt": "Paleta z towarami klasy 3 i klasy 8, nalepki niewidoczne. Co na zewnątrz?",
+      "options": [
+        "Tylko nalepka 3",
+        "Wszystkie wzory nalepek: 3 i 8",
+        "Żadna"
+      ],
+      "correct": "Wszystkie wzory nalepek: 3 i 8"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b2-overpack",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

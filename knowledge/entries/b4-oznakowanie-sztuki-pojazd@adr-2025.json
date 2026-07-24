@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-oznakowanie-sztuki-pojazd@adr-2025",
+  "factId": "b4-oznakowanie-sztuki-pojazd",
+  "adrRef": "ADR 5.3.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 21,
+  "status": "core",
+  "block": 4,
+  "topic": "Oznakowanie pojazdu w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Jednostki przewożące towary niebezpieczne w SZTUKACH PRZESYŁKI (np. butle gazowe, DPPL, kanistry, BIG-BAGi) powinny być oznakowane WYŁĄCZNIE tablicami BEZ numerów z przodu i tyłu pojazdu. NIE stosujemy w takim przypadku nalepek.",
+  "q": {
+    "mcq": {
+      "prompt": "Pojazd przewożący towary w sztukach przesyłki oznakowuje się:",
+      "options": [
+        "Tablicami z numerami",
+        "Tablicami bez numerów z przodu i tyłu",
+        "Nalepkami z trzech stron"
+      ],
+      "correct": "Tablicami bez numerów z przodu i tyłu"
+    },
+    "scenario": {
+      "prompt": "Wieziesz kanistry z farba (sztuki przesyłki). Czy umieszczasz nalepki na pojeździe?",
+      "options": [
+        "Tak, z obu boków",
+        "Nie — przy sztukach przesyłki nalepek nie stosujemy",
+        "Tak, z tyłu"
+      ],
+      "correct": "Nie — przy sztukach przesyłki nalepek nie stosujemy"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-oznakowanie-sztuki-pojazd",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

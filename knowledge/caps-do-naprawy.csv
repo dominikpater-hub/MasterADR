@@ -1,0 +1,47 @@
+id,block,topic,bylo,jest,powinno_byc
+b1-rozladowca,1,"Uczestnicy przewozu",ZDEJMUJE,Zdejmuję,ZDEJMUJE
+b1-odbiorca,1,"Uczestnicy przewozu",PRZYJMUJE,Przyjmuje,PRZYJMUJE
+b1-zaladowca,1,"Uczestnicy przewozu",UMIESZCZA,Umieszcza,UMIESZCZA
+b1-role-rozroznianie,1,"Uczestnicy przewozu",OGLADA,Ogląda,OGLĄDA
+b1-role-rozroznianie,1,"Uczestnicy przewozu",UKLADA,Układa,UKŁADA
+b1-role-rozroznianie,1,"Uczestnicy przewozu",CZYSCI,Czyści,CZYŚCI
+b1-role-rozroznianie,1,"Uczestnicy przewozu",PRZYJMUJE,Przyjmuje,PRZYJMUJE
+b1-lq-tunel-e,1,"Wylaczenia w praktyce",MOGA,Mogą,MOGĄ
+b1-kat0,1,"Wyliczenie 1000 punktow",KAZDA,Każda,KAŻDA
+b2-grupy-pakowania,2,"Klasyfikacja",MAJA,Mają,MAJĄ
+b2-ino,2,"Klasyfikacja",WEGLOWODORY,Węglowodory,WĘGLOWODORY
+b2-ino,2,"Klasyfikacja",SPREZONA,Sprężona,SPRĘŻONA
+b4-wyposazenie-jednostka,4,"Dobor wyposazenia",KAZDEGO,Każdego,KAŻDEGO
+b4-wyposazenie-zaloga,4,"Dobor wyposazenia",KAZDEGO,Każdego,KAŻDEGO
+b4-maska-ucieczkowa,4,"Dobor wyposazenia",KAZDEGO,Każdego,KAŻDEGO
+b4-instrukcje-kto,4,"Praca z dokumentem",PRZEWOZNIK,Przewoźnik,PRZEWOŹNIK
+b4-dokument-zapisy,4,"Praca z dokumentem",PODWYZSZONA,Podwyższona,PODWYŻSZONA
+b4-dokument-zapisy,4,"Praca z dokumentem",ZAGRAZAJACY,Zagrażający,ZAGRAŻAJĄCY
+b4-dokument-zapisy,4,"Praca z dokumentem",SRODOWISKU,Środowisku,ŚRODOWISKU
+b4-oznakowanie-sztuki-pojazd,4,"Oznakowanie pojazdu w praktyce",PRZESYLKI,Przesyłki,PRZESYŁKI
+b4-oznakowanie-sztuki-pojazd,4,"Oznakowanie pojazdu w praktyce",WYLACZNIE,Wyłącznie,WYŁĄCZNIE
+b4-oznakowanie-luzem-cysterna,4,"Oznakowanie pojazdu w praktyce",TRZECH,Trzech,TRZECH
+b4-tunel-zachowanie,4,"Decyzja o tunelu",NALEZY,Należy,NALEŻY
+b5-dokument-awaryjny,5,"Powiadamianie sluzb",PRZEWOZOWY,Przewozowy,PRZEWOZOWY
+b5-wiele-zagrozen,5,"Wskazowki per klasa",KAZDA,Każda,KAŻDA
+s-tunel-lq,4,"Decyzja o tunelu",MOZE,Może,MOŻE
+s-wiatr-opary,5,"Reakcja po wypadku",NAWIETRZNEJ,Nawietrznej,NAWIETRZNEJ
+s-zrodla-zaplonu-decyzja,5,"Reakcja po wypadku",WLACZAC,Włączać,WŁĄCZAĆ
+s-dgsa-czy-potrzebny,1,"Podstawy prawne",KAZDA,Każda,KAŻDA
+s-jtr-wyposazenie-liczba,1,"Jednostka i sposoby przewozu",KAZDY,Każdy,KAŻDY
+s-jtr-wyposazenie-liczba,1,"Jednostka i sposoby przewozu",POJAZD,Pojazd,POJAZD
+s-jtr-wyposazenie-liczba,1,"Jednostka i sposoby przewozu",JEDNOSTKE,Jednostkę,JEDNOSTKĘ
+s-jtr-wyposazenie-liczba,1,"Jednostka i sposoby przewozu",TRANSPORTOWA,Transportową,TRANSPORTOWĄ
+s-jtr-paliwo-zestaw,1,"Jednostka i sposoby przewozu",CALEJ,Całej,CAŁEJ
+s-grupa-pakowania-ktore-klasy,2,"Klasyfikacja",MAJA,Mają,MAJĄ
+s-ino-uzupelnienie,2,"Klasyfikacja",WEGLOWODORY,Węglowodory,WĘGLOWODORY
+s-ino-uzupelnienie,2,"Klasyfikacja",MIESZANINA,Mieszanina,MIESZANINA
+s-ino-uzupelnienie,2,"Klasyfikacja",SPREZONA,Sprężona,SPRĘŻONA
+s-podklasa-gazu,2,"Klasy zagrozen",MOGA,Mogą,MOGĄ
+s-podklasa-gazu,2,"Klasy zagrozen",BYC,Być,BYĆ
+s-podklasa-gazu,2,"Klasy zagrozen",DUSZACE,Duszące,DUSZĄCE
+s-podklasa-4,2,"Klasy zagrozen",MUSZA,Muszą,MUSZĄ
+s-podklasa-6-pulapka,2,"Klasy zagrozen",PULAPKA,Pułapka,PUŁAPKA
+s-znak-srodowisko-prog,3,"Materialy zagrazajace srodowisku",WIEKSZYCH,Większych,WIĘKSZYCH
+s-un-3077-3082,3,"Materialy zagrazajace srodowisku",STALY,Stały,STAŁY
+s-un-3077-3082,3,"Materialy zagrazajace srodowisku",CIEKLY,Ciekły,CIEKŁY

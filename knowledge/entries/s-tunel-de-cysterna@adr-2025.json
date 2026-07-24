@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-tunel-de-cysterna@adr-2025",
+  "factId": "s-tunel-de-cysterna",
+  "adrRef": "ADR 1.9.5",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 23,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o tunelu",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Kod (D/E) czytamy: D dotyczy cysterny i luzem, E dotyczy sztuk przesyłki. Cysterna z kodem D nie może wjechać do tunelu D ani E. Do C, B i A może.",
+  "q": {
+    "scenario": {
+      "prompt": "Dokument: kod tunelowy (D/E). Wieziesz w CYSTERNIE. Tunel kategorii D — wjeżdżasz?",
+      "options": [
+        "Tak",
+        "Nie — dla cysterny obowiązuje D, zakaz w tunelu D i E",
+        "Tylko z eskorta"
+      ],
+      "correct": "Nie — dla cysterny obowiązuje D, zakaz w tunelu D i E"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-tunel-de-cysterna",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-gasnice-1136",
+  "factId": "s-gasnice-1136",
+  "adrRef": "ADR 1.1.3.6 / 8.1.4",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór gaśnic",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Pojazd na wyłączeniu 1.1.3.6 musi mieć 1 gaśnice 2 kg typu ABC. Wyłączenie zwalnia z pełnego wyposażenia, ale NIE z gaśnicy.",
+  "q": {
+    "scenario": {
+      "prompt": "Jedziesz na zwolnieniu „1000 punktów” zestawem 20 t. Ile gaśnic?",
+      "options": [
+        "Dwie, łącznie 12 kg jak przy pełnym ADR",
+        "Jedna 2 kg ABC",
+        "Żadna — wyłączenie zwalnia"
+      ],
+      "correct": "Jedna 2 kg ABC"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-gasnice-1136@adr-2025",
+  "migratedAt": "2026-07-23"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-def@adr-2025",
+  "factId": "b1-def",
+  "adrRef": "ADR 1.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Umowa ADR powstała w 1957 r. w Genewie. Składa się z 2 załączników A i B. Nowelizowana co 2 lata.",
+  "q": {
+    "mcq": {
+      "prompt": "Co ile lat nowelizowana jest umowa ADR?",
+      "options": [
+        "Co roku",
+        "Co 2 lata",
+        "Co 5 lat"
+      ],
+      "correct": "Co 2 lata"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-def",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

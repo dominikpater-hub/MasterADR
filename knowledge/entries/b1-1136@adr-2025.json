@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-1136@adr-2025",
+  "factId": "b1-1136",
+  "adrRef": "ADR 1.1.3.6",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 10,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "fill"
+  ],
+  "why": "Zwolnienie 1.1.3.6 (tzw. 1000 pkt) — pod uwagę bierze się ilość towaru na jednostce transportowej. WYMAGANE: opakowania certyfikowane i oznakowane, gaśnica 2 kg ABC z data przeglądu, prawidłowy dokument przewozowy, szkolenie stanowiskowe. NIE MUSISZ: oznakowywać pojazdu tablicami, mieć zaświadczenia ADR, instrukcji pisemnej, wyposażenia (skrzynki ADR), stosować się do znaków drogowych ADR, wyznaczać DGSA, przestrzegać zakazu przewozu pasażerów.",
+  "q": {
+    "mcq": {
+      "prompt": "Przy zwolnieniu „1000 punktów” (liczysz ilość × mnożnik kategorii) kierowca NIE musi:",
+      "options": [
+        "Mieć gaśnicy",
+        "Mieć zaświadczenia ADR i tablic pomarańczowych",
+        "Prawidłowo zapakować towaru"
+      ],
+      "correct": "Mieć zaświadczenia ADR i tablic pomarańczowych"
+    },
+    "fill": {
+      "prompt": "Suma punktów (ilość × mnożnik kategorii) nie może przekroczyć ___ na jednostkę transportową.",
+      "correct": "1000",
+      "hint": "liczba"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-1136",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

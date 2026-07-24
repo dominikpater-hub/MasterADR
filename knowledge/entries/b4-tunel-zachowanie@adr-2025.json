@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-tunel-zachowanie@adr-2025",
+  "factId": "b4-tunel-zachowanie",
+  "adrRef": "ADR 8.6 / przepisy ruchu",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 23,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o tunelu",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "match",
+    "scenario"
+  ],
+  "why": "W tunelu ZAKAZUJE się: palenia, używania okularów przeciwsłonecznych, używania telefonu komórkowego i radia CB. W tunelu NALEŻY: stosować się do znaków i sygnałów, słuchać komunikatów radiowych, włączyć światła mijania.",
+  "q": {
+    "mcq": {
+      "prompt": "Czego NIE wolno robić w tunelu przewożąc ADR?",
+      "options": [
+        "Włączać świateł mijania",
+        "Używać okularów przeciwsłonecznych i telefonu",
+        "Słuchać komunikatów radiowych"
+      ],
+      "correct": "Używać okularów przeciwsłonecznych i telefonu"
+    },
+    "match": {
+      "prompt": "Dopasuj zachowanie w tunelu:",
+      "pairs": {
+        "Palenie": "zakazane",
+        "Okulary przeciwsloneczne": "zakazane",
+        "Światła mijania": "nakazane",
+        "Komunikaty radiowe": "nakazane"
+      }
+    },
+    "scenario": {
+      "prompt": "Wjeżdżasz do tunelu z ADR. Co robisz ze światłami?",
+      "options": [
+        "Gaszę wszystkie",
+        "Włączam światła mijania",
+        "Włączam awaryjne"
+      ],
+      "correct": "Włączam światła mijania"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-tunel-zachowanie",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

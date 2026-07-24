@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "id": "b3-srodowisko-znak-ryba",
+  "factId": "b3-srodowisko-znak-ryba",
+  "adrRef": "ADR 5.2.1.8",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 22,
+  "status": "core",
+  "block": 3,
+  "topic": "Obowiązek ochrony środowiska",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Materiały zagrażające środowisku wodnemu oznacza się znakiem: ryba i drzewo (martwa ryba i uschnięte drzewo) na białym tle. Znak ostrzega, że substancja jest niebezpieczna dla organizmów wodnych i środowiska — wymaga szczególnej ostrożności przy wycieku.",
+  "q": {
+    "mcq": {
+      "prompt": "Jaki symbol oznacza materiał zagrażający środowisku wodnemu?",
+      "options": [
+        "Płomień",
+        "Martwa ryba i uschnięte drzewo",
+        "Czaszka"
+      ],
+      "correct": "Martwa ryba i uschnięte drzewo"
+    },
+    "scenario": {
+      "prompt": "Na sztuce przesyłki widzisz znak z rybą i drzewem. O czym Cię ostrzega?",
+      "options": [
+        "Towar łatwopalny",
+        "Towar groźny dla środowiska wodnego",
+        "Towar radioaktywny"
+      ],
+      "correct": "Towar groźny dla środowiska wodnego"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    },
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": null,
+  "migratedAt": "2026-07-23"
+}

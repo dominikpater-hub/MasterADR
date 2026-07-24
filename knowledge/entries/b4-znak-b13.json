@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-znak-b13",
+  "factId": "b4-znak-b13",
+  "adrRef": "znaki drogowe PL",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 22,
+  "status": "core",
+  "block": 4,
+  "topic": "Ruch drogowy i postoj",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Znak B-13 oznacza zakaz wjazdu dla pojazdów przewożących towary niebezpieczne klas: 1, gazy palne (2F), 3, 4.1, 4.2, 4.3, 5.1, 5.2 — czyli wszystkie nalepki z płomieniem.",
+  "q": {
+    "mcq": {
+      "prompt": "Znak B-13 dotyczy towarów:",
+      "options": [
+        "Zagrażających środowisku",
+        "Z nalepkami z płomieniem (1, 2F, 3, 4.1, 4.2, 4.3, 5.1, 5.2)",
+        "Trujacych"
+      ],
+      "correct": "Z nalepkami z płomieniem (1, 2F, 3, 4.1, 4.2, 4.3, 5.1, 5.2)"
+    },
+    "scenario": {
+      "prompt": "Wieziesz benzynę (klasa 3). Czy obowiązuje Cię znak B-13?",
+      "options": [
+        "Nie",
+        "Tak — klasa 3 ma nalepkę z płomieniem",
+        "Tylko w cysternie"
+      ],
+      "correct": "Tak — klasa 3 ma nalepkę z płomieniem"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-znak-b13@adr-2025",
+  "migratedAt": "2026-07-23"
+}

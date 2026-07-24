@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-okres-przejsciowy",
+  "factId": "s-okres-przejsciowy",
+  "adrRef": "ADR 1.6",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Nowe przepisy wchodzą 1 stycznia roku nieparzystego, ale do końca czerwca obowiązuje okres przejściowy — można stosować \"stara\" LUB \"nowa\" wersje przepisów. Od 1 lipca obowiązuje już tylko nowa.",
+  "q": {
+    "scenario": {
+      "prompt": "Marzec roku nieparzystego. Twoje instrukcje pisemne są wg poprzedniej edycji ADR. Kontrola. Czy to naruszenie?",
+      "options": [
+        "Tak, od stycznia obowiązuje nowa edycja",
+        "Nie — do końca czerwca trwa okres przejściowy, wolno stosować stara wersje",
+        "Tak, ale kara jest symboliczna"
+      ],
+      "correct": "Nie — do końca czerwca trwa okres przejściowy, wolno stosować stara wersje"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-okres-przejsciowy@adr-2025",
+  "migratedAt": "2026-07-23"
+}

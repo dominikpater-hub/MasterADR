@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "s-podklasa-4",
+  "factId": "s-podklasa-4",
+  "adrRef": "ADR 2.2.41-43",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 3,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasy zagrożeń",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Klasa 4: 4.1 zapalne stałe i samoreaktywne, 4.2 podatne na samozapalenie (piroforyczne, fosfor biały, rozdrobnione metale), 4.3 wydzielają z wodą gazy palne. Skutek praktyczny: 4.3 MUSZĄ być w pojazdach zamkniętych, a uwolniony materiał trzyma się w stanie suchym pod przykryciem.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj podklasę klasy 4:",
+      "pairs": {
+        "4.1": "zapalne stałe, samoreaktywne",
+        "4.2": "samozapalne (piroforyczne)",
+        "4.3": "z wodą wydzielają gazy palne"
+      }
+    },
+    "scenario": {
+      "prompt": "Wieziesz materiał klasy 4.3. Zaczyna padać deszcz, plandeka przecieka. Problem?",
+      "options": [
+        "Nie, woda nie szkodzi",
+        "Tak — 4.3 z wodą wydziela gazy palne, musi być pojazd zamknięty",
+        "Tylko przy dużej ilości"
+      ],
+      "correct": "Tak — 4.3 z wodą wydziela gazy palne, musi być pojazd zamknięty"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-podklasa-4@adr-2025",
+  "migratedAt": "2026-07-23"
+}

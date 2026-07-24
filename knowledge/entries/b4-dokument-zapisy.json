@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-dokument-zapisy",
+  "factId": "b4-dokument-zapisy",
+  "adrRef": "ADR 5.4.1.1",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 12,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match"
+  ],
+  "why": "Zapisy specjalne w dokumencie: \"Przewóz zgodny z 1.1.4.2.1\" — przewóz multimodalny; \"ODPAD\" po numerze UN; \"próżny DPPL, 8\" — próżne opakowania z numerem nalepki; \"GORĄCY\" gdy nazwa nie zawiera PODWYŻSZONA TEMPERATURA lub STOPIONY; \"ZAGRAŻAJĄCY ŚRODOWISKU\" gdy spełnia kryteria (nie stosuje się do UN 3077 i UN 3082).",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj zapis w dokumencie do sytuacji:",
+      "pairs": {
+        "Przewóz zgodny z 1.1.4.2.1": "przewóz multimodalny",
+        "próżny DPPL, 8": "próżne opakowanie",
+        "GORĄCY": "materiał w podwyższonej temperaturze"
+      }
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-dokument-zapisy@adr-2025",
+  "migratedAt": "2026-07-23"
+}

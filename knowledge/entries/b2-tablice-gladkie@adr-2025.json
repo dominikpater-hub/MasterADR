@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-tablice-gladkie@adr-2025",
+  "factId": "b2-tablice-gladkie",
+  "adrRef": "ADR 5.3.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 17,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "fill"
+  ],
+  "why": "Tablice odblaskowe pomarańczowe mają wymiary 300 x 400 mm (+/- 10%) z czarna ramka o szerokości 15 mm. Tablice powinny przetrwać w pożarze 15 minut. Dopuszcza się tablice 300 x 120 mm (obramowanie 10 mm) w pojazdach bez miejsca na standardowa, np. osobowych. Tablic gładkich używa się zwykle przy przewozie w sztukach przesyłki.",
+  "q": {
+    "mcq": {
+      "prompt": "Wymiary standardowej tablicy pomarańczowej to:",
+      "options": [
+        "250 x 250 mm",
+        "300 x 400 mm",
+        "400 x 400 mm"
+      ],
+      "correct": "300 x 400 mm"
+    },
+    "fill": {
+      "prompt": "Tablica pomarańczowa powinna przetrwać w pożarze ___ minut.",
+      "correct": "15",
+      "hint": "liczba"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b2-tablice-gladkie",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

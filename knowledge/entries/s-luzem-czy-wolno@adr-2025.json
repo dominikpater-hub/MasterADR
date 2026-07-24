@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-luzem-czy-wolno@adr-2025",
+  "factId": "s-luzem-czy-wolno",
+  "adrRef": "ADR kol. 10/17 Tabeli A",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 6,
+  "status": "core",
+  "block": 1,
+  "topic": "Jednostka i sposoby przewozu",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Przewóz luzem NIE jest dozwolony domyślnie. Wolno tylko wtedy, gdy w tabeli A w kolumnie 10 lub 17 wskazany jest przepis szczególny BK1, BK2, BK3, VC1, VC2 lub VC3. Przepisy BK wskazują specjalny rodzaj kontenera. Przykład: UN 3257 (materiał o podwyższonej temperaturze ciekły) może być luzem na podstawie VC3.",
+  "q": {
+    "scenario": {
+      "prompt": "Chcesz przewieźć materiał stały luzem. Gdzie sprawdzasz, czy wolno?",
+      "options": [
+        "W instrukcji pisemnej",
+        "W tabeli A, kolumna 10 lub 17 — musi być BK lub VC",
+        "Na tablicy pomarańczowej"
+      ],
+      "correct": "W tabeli A, kolumna 10 lub 17 — musi być BK lub VC"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-luzem-czy-wolno",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

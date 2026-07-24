@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-klasyfikacja-kto",
+  "factId": "b2-klasyfikacja-kto",
+  "adrRef": "ADR czesc 2",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 2,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasyfikacja",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "match"
+  ],
+  "why": "Za klasyfikację odpowiada PRODUCENT, NADAWCA oraz Instytut Przemysłu Organicznego (IPO). Dla klasy 7 — Państwowa Agencja Atomistyki (PAA).",
+  "q": {
+    "mcq": {
+      "prompt": "Kto odpowiada za klasyfikację materiałów promieniotwórczych (klasa 7)?",
+      "options": [
+        "IPO",
+        "Państwowa Agencja Atomistyki",
+        "TDT"
+      ],
+      "correct": "Państwowa Agencja Atomistyki"
+    },
+    "match": {
+      "prompt": "Dopasuj odpowiedzialność za klasyfikację:",
+      "pairs": {
+        "Klasy 1-9 (poza 7)": "producent, nadawca, IPO",
+        "Klasa 7": "Państwowa Agencja Atomistyki"
+      }
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b2-klasyfikacja-kto@adr-2025",
+  "migratedAt": "2026-07-23"
+}

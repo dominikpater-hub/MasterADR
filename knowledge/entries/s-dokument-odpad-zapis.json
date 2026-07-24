@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-dokument-odpad-zapis",
+  "factId": "s-dokument-odpad-zapis",
+  "adrRef": "ADR 5.4.1.1.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 12,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Słowo ODPAD umieszcza się PO numerze UN, przed nazwa: UN 1230 odpad metanol 3 (6.1) II, (D/E).",
+  "q": {
+    "scenario": {
+      "prompt": "Który zapis odpadu w dokumencie jest prawidłowy?",
+      "options": [
+        "odpad UN 1230 metanol 3 (6.1) II, (D/E)",
+        "UN 1230 odpad metanol 3 (6.1) II, (D/E)",
+        "UN 1230 metanol odpad 3 (6.1) II, (D/E)"
+      ],
+      "correct": "UN 1230 odpad metanol 3 (6.1) II, (D/E)"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-dokument-odpad-zapis@adr-2025",
+  "migratedAt": "2026-07-23"
+}

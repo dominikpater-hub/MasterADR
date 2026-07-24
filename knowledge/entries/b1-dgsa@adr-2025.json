@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-dgsa@adr-2025",
+  "factId": "b1-dgsa",
+  "adrRef": "ADR 1.8.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "DGSA to doradca ds. bezpieczeństwa. Powinna go wyznaczyć każda firma pakująca, ładująca, transportująca lub rozładowująca towary niebezpieczne. Kara za niewyznaczenie: 5000 PLN.",
+  "q": {
+    "mcq": {
+      "prompt": "Kara za niewyznaczenie doradcy DGSA w firmie wynosi:",
+      "options": [
+        "1000 PLN",
+        "5000 PLN",
+        "10000 PLN"
+      ],
+      "correct": "5000 PLN"
+    },
+    "scenario": {
+      "prompt": "Firma tylko załadowuje towary niebezpieczne, nie przewozi. Czy musi wyznaczyć DGSA?",
+      "options": [
+        "Nie, tylko przewoźnicy",
+        "Tak, załadowca również",
+        "Tylko przy klasie 1"
+      ],
+      "correct": "Tak, załadowca również"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-dgsa",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

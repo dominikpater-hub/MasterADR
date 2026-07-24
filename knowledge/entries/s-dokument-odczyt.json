@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-dokument-odczyt",
+  "factId": "s-dokument-odczyt",
+  "adrRef": "ADR 5.4.1",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 12,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Nawet nie znając języka dokumentu, kierowca odczyta właściwości towaru po numerze nalepki i grupie pakowania. UN 1580 CHLOROPIKRYNA 6.1 GP I: 6.1 = trujący, GP I = silnie (największe zagrożenie).",
+  "q": {
+    "scenario": {
+      "prompt": "W dokumencie: UN 1580 CHLOROPIKRYNA 6.1 GP I. Co to mówi bez znajomości języka?",
+      "options": [
+        "Materiał zapalny, małe zagrożenie",
+        "Materiał trujący, silnie — I grupa pakowania",
+        "Gaz duszący"
+      ],
+      "correct": "Materiał trujący, silnie — I grupa pakowania"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-dokument-odczyt@adr-2025",
+  "migratedAt": "2026-07-23"
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-instrukcje-kto",
+  "factId": "b4-instrukcje-kto",
+  "adrRef": "ADR 5.4.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 13,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Za instrukcje pisemne odpowiedzialny jest PRZEWOŹNIK. Instrukcje są zgodne ze wzorem zawartym w umowie ADR i uniwersalne — dla każdego produktu takie same. Należy się z nimi zapoznać przed rozpoczęciem transportu.",
+  "q": {
+    "mcq": {
+      "prompt": "Kto odpowiada za instrukcje pisemne?",
+      "options": [
+        "Nadawca",
+        "PRZEWOŹNIK",
+        "Kierowca"
+      ],
+      "correct": "PRZEWOŹNIK"
+    },
+    "scenario": {
+      "prompt": "Instrukcje pisemne dla przewozu benzyny i dla przewozu kwasu są:",
+      "options": [
+        "Różne",
+        "Takie same — wzór uniwersalny",
+        "Zależne od nadawcy"
+      ],
+      "correct": "Takie same — wzór uniwersalny"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-instrukcje-kto@adr-2025",
+  "migratedAt": "2026-07-23"
+}

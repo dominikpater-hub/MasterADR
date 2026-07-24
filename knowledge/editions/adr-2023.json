@@ -1,0 +1,10 @@
+{
+  "id": "adr-2023",
+  "corpus": "ADR",
+  "label": "ADR 2023",
+  "validFrom": "2023-01-01",
+  "validTo": "2024-12-31",
+  "supersededBy": "adr-2025",
+  "jurisdictions": ["*"],
+  "note": "Umowa ADR, edycja 2023. Cykl dwuletni. Wygasla 31.12.2024."
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "s-wyposazenie-ilosci",
+  "factId": "s-wyposazenie-ilosci",
+  "adrRef": "ADR 8.1.5",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór wyposażenia",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Na każdego członka załogi: kamizelka, latarka, rękawice, ochrona oczu, maska ucieczkowa (gdy wymagana). Po 1 sztuce w pojeździe niezależnie od załogi: płyn do płukania oczu, łopata, osłona kanalizacji, pojemnik. Klin — dla każdego pojazdu. Znaki stojące — 2 na jednostkę.",
+  "q": {
+    "match": {
+      "prompt": "Załoga 2 osoby — ile sztuk?",
+      "pairs": {
+        "Kamizelka": "2 (na każdego)",
+        "Maska ucieczkowa": "2 (na każdego)",
+        "Płyn do płukania oczu": "1 (na pojazd)",
+        "Łopata": "1 (na pojazd)"
+      }
+    },
+    "scenario": {
+      "prompt": "Załoga 2 osoby, przewóz klasy 3. Ile łopat musisz mieć?",
+      "options": [
+        "Dwie — po jednej na osobę",
+        "Jedna — niezależnie od liczby załogi",
+        "Żadnej"
+      ],
+      "correct": "Jedna — niezależnie od liczby załogi"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-wyposazenie-ilosci@adr-2025",
+  "migratedAt": "2026-07-23"
+}

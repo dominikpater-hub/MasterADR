@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "id": "s-1136-oblicz-1",
+  "factId": "s-1136-oblicz-1",
+  "adrRef": "ADR 1.1.3.6",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "fill"
+  ],
+  "why": "Kategoria 2 ma mnożnik x3. 100 l x 3 = 300 punktów. Wynik poniżej 1000 — wyłączenie przysługuje.",
+  "q": {
+    "fill": {
+      "prompt": "Wieziesz 100 l towaru kategorii transportowej 2. Ile punktów?",
+      "correct": "300",
+      "hint": "ilość x mnożnik"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-1136-oblicz-1@adr-2025",
+  "migratedAt": "2026-07-23"
+}

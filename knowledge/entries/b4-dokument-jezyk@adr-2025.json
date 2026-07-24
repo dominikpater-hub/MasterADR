@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-dokument-jezyk@adr-2025",
+  "factId": "b4-dokument-jezyk",
+  "adrRef": "ADR 5.4.1.4.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 12,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "fill"
+  ],
+  "why": "Dokument przewozowy sporządza się w języku kraju nadania, a w transporcie międzynarodowym również w języku angielskim lub niemieckim lub francuskim. Dokument przewozowy należy przechowywać 3 miesiące.",
+  "q": {
+    "mcq": {
+      "prompt": "W transporcie międzynarodowym dokument przewozowy sporządza się dodatkowo w języku:",
+      "options": [
+        "Tylko angielskim",
+        "Angielskim lub niemieckim lub francuskim",
+        "Dowolnym"
+      ],
+      "correct": "Angielskim lub niemieckim lub francuskim"
+    },
+    "fill": {
+      "prompt": "Dokument przewozowy należy przechowywać ___ miesiące.",
+      "correct": "3",
+      "hint": "liczba"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-dokument-jezyk",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

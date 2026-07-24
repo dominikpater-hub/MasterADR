@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-zaswiadczenie-wydanie",
+  "factId": "b1-zaswiadczenie-wydanie",
+  "adrRef": "ADR 8.2.2.8 / ustawa PL",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 13,
+  "status": "core",
+  "block": 1,
+  "topic": "Zakres uprawnień",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Po zdanym egzaminie marszałek wydaje zaświadczenie ADR (plastikowa karta) w ciągu 14 dni; w praktyce dociera pocztą w 1-3 tygodnie. Ważność 5 lat. Żeby przedłużyć, w ostatnim roku ważności robisz kurs doskonalący i ponownie zdajesz egzamin, zanim dokument wygaśnie.",
+  "q": {
+    "mcq": {
+      "prompt": "Kto wydaje zaświadczenie ADR po zdanym egzaminie?",
+      "options": [
+        "Akredytowany osrodek szkolenia",
+        "Marszałek województwa",
+        "Transportowy Dozór Techniczny"
+      ],
+      "correct": "Marszałek województwa"
+    },
+    "scenario": {
+      "prompt": "Twoje zaświadczenie ADR wygasa za 8 miesięcy. Co robisz, żeby zachować ciągłość?",
+      "options": [
+        "Czekam aż wygaśnie i robie kurs od nowa",
+        "W ostatnim roku ważności kurs doskonalący + egzamin, zanim wygaśnie",
+        "Nic — odnawia się samo"
+      ],
+      "correct": "W ostatnim roku ważności kurs doskonalący + egzamin, zanim wygaśnie"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b1-zaswiadczenie-wydanie@adr-2025",
+  "migratedAt": "2026-07-23"
+}

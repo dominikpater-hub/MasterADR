@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-lopata-oslona@adr-2025",
+  "factId": "b4-lopata-oslona",
+  "adrRef": "ADR 8.1.5.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór wyposażenia",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Łopata, osłona otworów kanalizacyjnych i pojemnik do zbierania pozostałości są wymagane TYLKO dla nalepek 3, 4.1, 4.3, 8 lub 9. Niezależnie od ilości członków załogi — tylko 1 sztuka w pojeździe.",
+  "q": {
+    "mcq": {
+      "prompt": "Łopata, osłona kanalizacji i pojemnik wymagane są przy nalepkach:",
+      "options": [
+        "2.3 i 6.1",
+        "3, 4.1, 4.3, 8 lub 9",
+        "Wszystkich"
+      ],
+      "correct": "3, 4.1, 4.3, 8 lub 9"
+    },
+    "scenario": {
+      "prompt": "Załoga 2 osoby, przewóz klasy 3. Ile łopat?",
+      "options": [
+        "Dwie",
+        "Jedna — niezależnie od liczby załogi",
+        "Żadna"
+      ],
+      "correct": "Jedna — niezależnie od liczby załogi"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-lopata-oslona",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-numer-podwojenie",
+  "factId": "b2-numer-podwojenie",
+  "adrRef": "ADR 5.3.2.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 17,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Powtórzenie cyfry wskazuje na nasilenie oznaczonego ta cyfra zagrożenia, np. 33 = materiał łatwo zapalny ciekły (temperatura zapłonu niższa niż 23 st. C).",
+  "q": {
+    "mcq": {
+      "prompt": "Powtórzenie cyfry w numerze rozpoznawczym oznacza:",
+      "options": [
+        "Dwa różne zagrożenia",
+        "Nasilenie zagrożenia",
+        "Brak zagrożenia dodatkowego"
+      ],
+      "correct": "Nasilenie zagrożenia"
+    },
+    "scenario": {
+      "prompt": "Tablica 33/1203. Co oznacza 33?",
+      "options": [
+        "Materiał zapalny o temp. zapłonu 23-60 st. C",
+        "Materiał łatwo zapalny ciekły, temp. zapłonu poniżej 23 st. C",
+        "Gaz palny"
+      ],
+      "correct": "Materiał łatwo zapalny ciekły, temp. zapłonu poniżej 23 st. C"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b2-numer-podwojenie@adr-2025",
+  "migratedAt": "2026-07-23"
+}

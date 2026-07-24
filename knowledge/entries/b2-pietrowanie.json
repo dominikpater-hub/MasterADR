@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-pietrowanie",
+  "factId": "b2-pietrowanie",
+  "adrRef": "ADR 6.5.2.2.2",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 8,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt opakowania",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Piętrowanie towarów niebezpiecznych jest dopuszczone, jeśli odpowiednie oznakowanie na opakowaniu wskazuje na taka możliwość (rys. 6.5.2.2.2.1 — DPPL przeznaczony do spietrzania, z podanym max obciążeniem w kg; rys. 6.5.2.2.2.2 — DPPL NIE przeznaczony do spietrzania).",
+  "q": {
+    "mcq": {
+      "prompt": "Czy można piętrować DPPL?",
+      "options": [
+        "Zawsze",
+        "Tylko jeśli oznakowanie na opakowaniu na to wskazuje",
+        "Nigdy"
+      ],
+      "correct": "Tylko jeśli oznakowanie na opakowaniu na to wskazuje"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b2-pietrowanie@adr-2025",
+  "migratedAt": "2026-07-23"
+}

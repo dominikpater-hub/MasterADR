@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-dokument-1136-punkty@adr-2025",
+  "factId": "s-dokument-1136-punkty",
+  "adrRef": "ADR 5.4.1.1.10",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 12,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Przy zastosowaniu zwolnienia 1.1.3.6 należy w dokumencie umieścić zapis o całkowitej ilości towaru dla kategorii transportowej oraz o \"punktach\" (wartości obliczonej), np. kategoria transportową 2 — 100 l — 300 punktów.",
+  "q": {
+    "scenario": {
+      "prompt": "Jedziesz na zwolnieniu „1000 punktów”. Co dodatkowo musi być w dokumencie?",
+      "options": [
+        "Nic dodatkowego",
+        "Całkowita ilość dla kategorii transportowej i wartość obliczona (punkty)",
+        "Numer zaświadczenia ADR"
+      ],
+      "correct": "Całkowita ilość dla kategorii transportowej i wartość obliczona (punkty)"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-dokument-1136-punkty",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

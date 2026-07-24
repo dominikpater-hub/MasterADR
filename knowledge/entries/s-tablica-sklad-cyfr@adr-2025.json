@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-tablica-sklad-cyfr@adr-2025",
+  "factId": "s-tablica-sklad-cyfr",
+  "adrRef": "ADR 5.3.2.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 18,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match"
+  ],
+  "why": "Numer rozpoznawczy składa się z cyfr o stalym znaczeniu: 2 emisja gazu, 3 zapalność cieczy, 4 zapalność ciał stałych, 5 utleniające, 6 trujące/zakaźne, 7 promieniotwórcze, 8 żrące, 9 gwałtowna reakcja. Składając je czytasz zagrożenie bez tabeli.",
+  "q": {
+    "match": {
+      "prompt": "Rozłóż numer na zagrożenia:",
+      "pairs": {
+        "26": "gaz trujący",
+        "80": "materiał żrący",
+        "336": "łatwo zapalny ciekły trujący",
+        "539": "nadtlenek organiczny zapalny"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-tablica-sklad-cyfr",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

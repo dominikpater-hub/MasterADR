@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-kolejnosc-informacji",
+  "factId": "b5-kolejnosc-informacji",
+  "adrRef": "procedury krajowe",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 27,
+  "status": "core",
+  "block": 5,
+  "topic": "Powiadamianie służb",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "order",
+    "scenario"
+  ],
+  "why": "Kolejność przekazywanych informacji: miejsce zdarzenia, rodzaj zdarzenia (wypadek, kolizja, wyciek), skutki zdarzenia, liczba ofiar, rozmiar zdarzenia (ile pojazdów, osób), numery UN przewożonego towaru, sposób jego przewozu (luzem, cysterna), ilość towaru niebezpiecznego, czy nastąpiło jego uwolnienie.",
+  "q": {
+    "order": {
+      "prompt": "Ulóz kolejność informacji przekazywanych służbom:",
+      "items": [
+        "Numery UN przewożonego towaru",
+        "Miejsce zdarzenia",
+        "Rodzaj zdarzenia",
+        "Liczba ofiar"
+      ],
+      "correct": [
+        "Miejsce zdarzenia",
+        "Rodzaj zdarzenia",
+        "Liczba ofiar",
+        "Numery UN przewożonego towaru"
+      ]
+    },
+    "scenario": {
+      "prompt": "Dzwonisz po służby. Od czego zaczynasz?",
+      "options": [
+        "Od numeru UN",
+        "Od miejsca zdarzenia",
+        "Od marki pojazdu"
+      ],
+      "correct": "Od miejsca zdarzenia"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b5-kolejnosc-informacji@adr-2025",
+  "migratedAt": "2026-07-23"
+}

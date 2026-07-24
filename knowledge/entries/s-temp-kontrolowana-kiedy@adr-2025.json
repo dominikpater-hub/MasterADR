@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-temp-kontrolowana-kiedy@adr-2025",
+  "factId": "s-temp-kontrolowana-kiedy",
+  "adrRef": "ADR 7.1.7",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 4,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasy zagrożeń",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Temperatury kontrolowanej mogą wymagać klasy 4.1 (samoreaktywne) i 5.2 (nadtlenki organiczne) — reakcja egzotermiczna. Wtedy: termometr z 2 czujnikami, sprawdzanie co 4-6 h, rejestracja, procedura na wypadek utraty kontroli temperatury. Zapis w dokumencie: TEMPERATURA KONTROLOWANA / TEMPERATURA AWARYJNA.",
+  "q": {
+    "scenario": {
+      "prompt": "Wieziesz nadtlenek organiczny w temperaturze kontrolowanej. Co ile sprawdzasz temperaturę?",
+      "options": [
+        "Co godzinę",
+        "Co 4-6 h, z rejestracja",
+        "Raz na początku trasy"
+      ],
+      "correct": "Co 4-6 h, z rejestracja"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-temp-kontrolowana-kiedy",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

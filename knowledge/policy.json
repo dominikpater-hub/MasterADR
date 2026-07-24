@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "note": "Polityka aktualnosci. Progi tutaj, nie w rekordach — zmiana progu nie wymaga migracji 228 wpisow.",
+  "staleness": {
+    "reviewIntervalDays": 365,
+    "note": "Ile dni od ostatniego przegladu wpis uznajemy za swiezy.",
+    "appliesToDraft": false,
+    "appliesToDraftNote": "Nieopublikowany wpis nie moze byc nieaktualny — nikogo jeszcze nie dotknal. Bez tego 220 wpisow bez recenzenta swieci od dnia pierwszego (problem 212 w innym przebraniu).",
+    "migrationSightingCounts": false,
+    "migrationSightingNote": "reviewKind MIGRATION_SIGHTED nie zeruje zegara staleness — przejrzenie zadan w prototypie to nie weryfikacja zrodlowa."
+  },
+  "watcher": {
+    "maxSilenceDays": 14,
+    "failClosed": true,
+    "note": "Zrodlo niesprawdzone dluzej niz maxSilenceDays traktowane jak DRIFTED. Martwy watcher jest grozniejszy niz brak watchera, bo daje falszywe poczucie pokrycia."
+  },
+  "channels": {
+    "online": {
+      "CURRENT": "allow",
+      "STALE": "allow",
+      "LAPSED": "allow_with_notice",
+      "DRIFTED": "block"
+    },
+    "offline_pack": {
+      "CURRENT": "allow",
+      "STALE": "allow",
+      "LAPSED": "block",
+      "DRIFTED": "block",
+      "note": "Paczka offline zyje w telefonie tygodniami i nie da sie jej wycofac. Online naprawia sie w minute."
+    },
+    "rag_corpus": {
+      "CURRENT": "allow",
+      "STALE": "allow",
+      "LAPSED": "allow_with_notice",
+      "DRIFTED": "block"
+    }
+  },
+  "trustLadderCompat": {
+    "mapCurrencyToT2": false,
+    "decidedAt": "2026-07-23",
+    "decidedBy": "wlasciciel produktu",
+    "note": "MODEL DWUOSIOWY (decyzja 2026-07-23, ADR-003 zaktualizowany). trustLevel liczony wylacznie z source/verifiedBy wg ADR-006-B; aktualnosc niesiona osobno w currency i egzekwowana bramkami kanalowymi. Powod: przy true wpis DRIFTED dostawal etykiete T2 'wymaga aktualizacji', co sugeruje lekkie przeterminowanie, podczas gdy realnie jest zablokowany jako niepewny — a LAPSED dostawal ta sama etykiete co DRIFTED, mimo innego poziomu ryzyka. Zlepianie dwoch stanow w jedna etykiete gubilo rozdzielczosc tam, gdzie stawka jest najwyzsza (tresc safety-critical).",
+    "uiContract": "Kierowca NIE oglada dwoch osi. UI liczy jeden wynikowy sygnal deterministycznie z pary (trustLevel, currency) — patrz displaySignal() w scripts/currency.js. DRIFTED prezentowany jako blokada tresci, nie jako poziom zaufania.",
+    "whenTrue": "Tryb zgodnosci wstecznej z pierwotnym ADR-003 (T2 = VERIFIED_STALE). Zachowany wylacznie na wypadek koniecznosci powrotu; nie jest juz modelem kanonicznym."
+  }
+}

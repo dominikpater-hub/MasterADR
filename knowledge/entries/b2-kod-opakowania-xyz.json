@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-kod-opakowania-xyz",
+  "factId": "b2-kod-opakowania-xyz",
+  "adrRef": "ADR 6.1.2",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 8,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt opakowania",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "mcq"
+  ],
+  "why": "Litera na drugim miejscu kodu opakowania wskazuje, dla której grupy pakowania może być użyte: X — dla I, II, III GP; Y — dla II, III GP; Z — tylko dla III GP.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj literę kodu opakowania do grup pakowania:",
+      "pairs": {
+        "X": "I, II, III GP",
+        "Y": "II, III GP",
+        "Z": "III GP"
+      }
+    },
+    "mcq": {
+      "prompt": "Opakowanie z litera Y może być użyte dla grup pakowania:",
+      "options": [
+        "Tylko I",
+        "II i III",
+        "Wszystkich"
+      ],
+      "correct": "II i III"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b2-kod-opakowania-xyz@adr-2025",
+  "migratedAt": "2026-07-23"
+}

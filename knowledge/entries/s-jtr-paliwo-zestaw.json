@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-jtr-paliwo-zestaw",
+  "factId": "s-jtr-paliwo-zestaw",
+  "adrRef": "ADR 1.1.3.3 / 1.2.1",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 9,
+  "status": "core",
+  "block": 1,
+  "topic": "Jednostka i sposoby przewozu",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Limit 1500 l dotyczy CAŁEJ jednostki transportowej, nie każdego pojazdu osobno. Ciągnik 1000 l + naczepa 400 l = 1400 l na jednostkę — mieści się. Ale uwaga: na przyczepie limit to dodatkowo max 500 l.",
+  "q": {
+    "scenario": {
+      "prompt": "Ciągnik ma zbiorniki 1000 l, naczepa dodatkowy zbiornik 400 l. Razem 1400 l. Czy mieści się w wyłączeniu paliwowym (paliwo w zbiornikach pojazdu do jego napędu)?",
+      "options": [
+        "Nie — każdy pojazd ma limit 1500 l osobno, więc jest problem",
+        "Tak — 1400 l na cała jednostkę, poniżej 1500 l",
+        "Nie — przekroczony limit"
+      ],
+      "correct": "Tak — 1400 l na cała jednostkę, poniżej 1500 l"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-jtr-paliwo-zestaw@adr-2025",
+  "migratedAt": "2026-07-23"
+}

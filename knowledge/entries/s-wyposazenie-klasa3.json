@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-wyposazenie-klasa3",
+  "factId": "s-wyposazenie-klasa3",
+  "adrRef": "ADR 8.1.5",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór wyposażenia",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Nalepka 3 należy do grupy 3, 4.1, 4.3, 8, 9 — wymagana łopata, osłona otworów kanalizacyjnych i pojemnik do zbierania pozostałości (po 1 sztuce). Płyn do płukania oczu też wymagany (nie jest na liście wyłączeń 1/2.x).",
+  "q": {
+    "scenario": {
+      "prompt": "Wieziesz benzynę (nalepka 3). Jakie wyposażenie dodatkowe poza standardem?",
+      "options": [
+        "Maska ucieczkowa",
+        "Łopata, osłona kanalizacji, pojemnik",
+        "Nic dodatkowego"
+      ],
+      "correct": "Łopata, osłona kanalizacji, pojemnik"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-wyposazenie-klasa3@adr-2025",
+  "migratedAt": "2026-07-23"
+}

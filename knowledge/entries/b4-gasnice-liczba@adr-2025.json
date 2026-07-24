@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-gasnice-liczba@adr-2025",
+  "factId": "b4-gasnice-liczba",
+  "adrRef": "ADR 8.1.4",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór gaśnic",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Minimalna liczba gaśnic na jednostce transportowej wynosi 2 — niezależnie od dopuszczalnej masy całkowitej. Jedna gaśnica 12 kg NIE wystarczy: zawsze muszą być co najmniej dwie.",
+  "q": {
+    "mcq": {
+      "prompt": "Minimalna liczba gaśnic na jednostce transportowej z towarem ADR wynosi:",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": "2"
+    },
+    "scenario": {
+      "prompt": "Masz jedna gaśnice 12 kg na zestawie 40 t. Czy to spełnia wymóg?",
+      "options": [
+        "Tak, pojemność się zgadza",
+        "Nie — muszą być minimum 2 gaśnice",
+        "Tak, jeśli ma aktualny przegląd"
+      ],
+      "correct": "Nie — muszą być minimum 2 gaśnice"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-gasnice-liczba",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

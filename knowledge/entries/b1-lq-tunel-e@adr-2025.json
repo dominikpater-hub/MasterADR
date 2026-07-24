@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-lq-tunel-e@adr-2025",
+  "factId": "b1-lq-tunel-e",
+  "adrRef": "ADR 1.9.5 / 3.4",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 10,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyłączenia w praktyce",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Jednostki transportowe oznakowane znakiem LQ (powyżej 8 t brutto) NIE MOGĄ wjeżdżać do tunelu kategorii E.",
+  "q": {
+    "mcq": {
+      "prompt": "Pojazd oznakowany znakiem LQ powyżej 8 t brutto nie może wjechać do tunelu kategorii:",
+      "options": [
+        "B",
+        "D",
+        "E"
+      ],
+      "correct": "E"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-lq-tunel-e",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

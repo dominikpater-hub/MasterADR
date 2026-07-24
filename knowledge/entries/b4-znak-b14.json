@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-znak-b14",
+  "factId": "b4-znak-b14",
+  "adrRef": "znaki drogowe PL",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 22,
+  "status": "core",
+  "block": 4,
+  "topic": "Ruch drogowy i postoj",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Znak B-14 oznacza zakaz wjazdu ze szkodliwymi dla środowiska wodnego: gazy trujące, żrące, klasa 3, 4.3, 6.1, 6.2, 8, część klasy 9 + znak \"ryba\" (zagrażający środowisku).",
+  "q": {
+    "mcq": {
+      "prompt": "Znak B-14 dotyczy towarów:",
+      "options": [
+        "Z nalepkami z płomieniem",
+        "Szkodliwych dla środowiska wodnego",
+        "Wybuchowych"
+      ],
+      "correct": "Szkodliwych dla środowiska wodnego"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-znak-b14@adr-2025",
+  "migratedAt": "2026-07-23"
+}

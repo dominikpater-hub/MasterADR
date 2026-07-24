@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-plan-ochrony-wymogi@adr-2025",
+  "factId": "b4-plan-ochrony-wymogi",
+  "adrRef": "ADR 1.10",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 26,
+  "status": "core",
+  "block": 4,
+  "topic": "Towary dużego ryzyka",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Zapamiętaj: plan ochrony WYMAGA legitymowania kierowcy i wykazu osób. NIE WYMAGA specjalnego znakowania przesyłek lub pojazdów, nadzoru GPS ani konwojenta.",
+  "q": {
+    "mcq": {
+      "prompt": "Plan ochrony towarów dużego ryzyka NIE wymaga:",
+      "options": [
+        "Legitymowania kierowcy",
+        "Nadzoru GPS i konwojenta",
+        "Wykazu osób"
+      ],
+      "correct": "Nadzoru GPS i konwojenta"
+    },
+    "scenario": {
+      "prompt": "Przewozisz towar dużego ryzyka. Czy pojazd musi mieć GPS?",
+      "options": [
+        "Tak, obowiazkowo",
+        "Nie — plan ochrony nie wymaga GPS",
+        "Tylko przy klasie 1"
+      ],
+      "correct": "Nie — plan ochrony nie wymaga GPS"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-plan-ochrony-wymogi",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

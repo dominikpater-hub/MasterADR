@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-ino-uzupelnienie@adr-2025",
+  "factId": "s-ino-uzupelnienie",
+  "adrRef": "ADR 3.1.2.8",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 2,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasyfikacja",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "I.N.O. = inaczej nie określony. Wymaga uzupełnienia o nazwy techniczne składników w nawiasie, np. UN 1964 WĘGLOWODORY GAZOWE, MIESZANINA SPRĘŻONA I.N.O (zawiera wodór i argon) 2.1 (B/D). Bez tego zapis jest niekompletny.",
+  "q": {
+    "scenario": {
+      "prompt": "W dokumencie: UN 1964 WĘGLOWODORY GAZOWE, MIESZANINA SPRĘŻONA I.N.O. 2.1. Czego brakuje?",
+      "options": [
+        "Niczego, zapis pełny",
+        "Nazw technicznych składników w nawiasie",
+        "Numeru nalepki"
+      ],
+      "correct": "Nazw technicznych składników w nawiasie"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-ino-uzupelnienie",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

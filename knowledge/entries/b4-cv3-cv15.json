@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-cv3-cv15",
+  "factId": "b4-cv3-cv15",
+  "adrRef": "ADR CV3 / CV15",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 24,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o załadunku",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Przepisy dotyczące manipulowania i układania wprowadzają ograniczenie masy ładunku na jednostkę transportową (na \"otwartych tablicach\"). Dotyczy towarów klasy 1, 4.1, 5.2 (samoreaktywne, nadtlenki organiczne typu B, C, D, E, F), które mają właściwości wybuchowe. Ograniczenia zawarte w przepisach CV3 i CV15.",
+  "q": {
+    "mcq": {
+      "prompt": "Ograniczenie masy ładunku na jednostkę transportową zawierają przepisy:",
+      "options": [
+        "CV2 i CV28",
+        "CV3 i CV15",
+        "S1 i S3"
+      ],
+      "correct": "CV3 i CV15"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-cv3-cv15@adr-2025",
+  "migratedAt": "2026-07-23"
+}

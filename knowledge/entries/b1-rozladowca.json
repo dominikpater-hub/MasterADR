@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-rozladowca",
+  "factId": "b1-rozladowca",
+  "adrRef": "ADR 1.4.3.7",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 28,
+  "status": "core",
+  "block": 1,
+  "topic": "Uczestnicy przewozu",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Rozładowca: sprawdza czy rozładowano właściwe towary (porównanie dokumentu ze sztuka przesyłki), sprawdza uszkodzenia, po rozładunku usuwa pozostałości z zewnętrznej powierzchni, zamyka zawory, zapewnia oczyszczenie i odkażenie. Z całkowicie oczyszczonego kontenera ZDEJMUJE nalepki i tablice.",
+  "q": {
+    "mcq": {
+      "prompt": "Kto zdejmuje nalepki i tablice z całkowicie oczyszczonego kontenera?",
+      "options": [
+        "Nadawca",
+        "Rozładowca",
+        "Przewoźnik"
+      ],
+      "correct": "Rozładowca"
+    },
+    "scenario": {
+      "prompt": "Kontener został rozładowany, oczyszczony i odkażony. Co z nalepkami?",
+      "options": [
+        "Zostają na kontenerze",
+        "Należy je usunąć",
+        "Zaklejamy tasma"
+      ],
+      "correct": "Należy je usunąć"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b1-rozladowca@adr-2025",
+  "migratedAt": "2026-07-23"
+}

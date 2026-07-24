@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-dokument-prozny",
+  "factId": "s-dokument-prozny",
+  "adrRef": "ADR 5.4.1.1.6",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 12,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Zapis dla próżnych opakowań powinien zawierać nazwę opakowania oraz numery nalepek znajdujących się na opakowaniu, np. \"próżny DPPL, 8\".",
+  "q": {
+    "scenario": {
+      "prompt": "Wieziesz próżny, nieoczyszczony DPPL po kwasie (nalepka 8). Jak zapisać w dokumencie?",
+      "options": [
+        "DPPL pusty",
+        "próżny DPPL, 8",
+        "UN 0000 puste opakowanie"
+      ],
+      "correct": "próżny DPPL, 8"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-dokument-prozny@adr-2025",
+  "migratedAt": "2026-07-23"
+}

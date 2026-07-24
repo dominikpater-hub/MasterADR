@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-fissile",
+  "factId": "b5-fissile",
+  "adrRef": "ADR 5.4.3.4 tabela",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 3,
+  "status": "core",
+  "block": 5,
+  "topic": "Wskazówki per klasa",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Nalepka 7E (FISSILE — materiał rozszczepialny) oznacza zagrożenie reakcja łańcuchowa.",
+  "q": {
+    "mcq": {
+      "prompt": "Nalepka FISSILE (7E) oznacza zagrożenie:",
+      "options": [
+        "Napromieniowaniem zewnetrznym",
+        "Reakcja łańcuchowa",
+        "Poparzeniem"
+      ],
+      "correct": "Reakcja łańcuchowa"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b5-fissile@adr-2025",
+  "migratedAt": "2026-07-23"
+}

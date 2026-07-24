@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "id": "s-1132-oblicz-energia",
+  "factId": "s-1132-oblicz-energia",
+  "adrRef": "ADR 1.1.3.2",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 9,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyłączenia w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "fill",
+    "scenario"
+  ],
+  "why": "Limit 54 000 MJ to nie liczba do wykucia — to wynik mnożenia. Wartość energetyczna = litry paliwa razy wartość energetyczna tego paliwa (kol. z uwagi 1: olej napędowy 36 MJ/l, benzyna 32 MJ/l, LPG 24 MJ/l). Przykład graniczny: 1500 l oleju napędowego x 36 MJ/l = 54 000 MJ — dokładnie na limicie. Żeby sprawdzić, czy przewóz gazu/paliwa w zbiornikach przewożonych pojazdów mieści się w wyłączeniu dla gazów, liczysz iloczyn i porównujesz z 54 000 MJ.",
+  "q": {
+    "fill": {
+      "prompt": "Przewozisz pojazd ze zbiornikiem 1000 l oleju napędowego (36 MJ/l). Ile MJ wartości energetycznej? (litry x MJ/l)",
+      "correct": "36000",
+      "hint": "litry x MJ/l"
+    },
+    "scenario": {
+      "prompt": "Zbiornik 1500 l oleju napędowego (36 MJ/l). Ile to MJ i czy mieści się w wyłączeniu dla gazów (limit 54 000 MJ)?",
+      "options": [
+        "54 000 MJ — dokładnie na limicie, mieści się",
+        "54 000 MJ — przekroczone, pelne ADR",
+        "36 000 MJ — z zapasem"
+      ],
+      "correct": "54 000 MJ — dokładnie na limicie, mieści się"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-1132-oblicz-energia@adr-2025",
+  "migratedAt": "2026-07-23"
+}

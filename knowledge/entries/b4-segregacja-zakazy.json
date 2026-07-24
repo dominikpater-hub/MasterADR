@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-segregacja-zakazy",
+  "factId": "b4-segregacja-zakazy",
+  "adrRef": "ADR 7.5.2.1",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 25,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o załadunku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Zakazy ładowania razem do jednego pojazdu lub kontenera zawarte są w przepisie 7.5.2.1. W uproszczeniu dotyczą towarów klasy 1 (wybuchowe), 4.1 + 1 (samoreaktywne) oraz 5.2 + 1 (nadtlenki organiczne) o właściwościach wybuchowych.",
+  "q": {
+    "mcq": {
+      "prompt": "Zakazy ładowania razem dotyczą w uproszczeniu:",
+      "options": [
+        "Wszystkich klas",
+        "Klasy 1, 4.1+1 i 5.2+1 o właściwościach wybuchowych",
+        "Tylko klas 6 i 8"
+      ],
+      "correct": "Klasy 1, 4.1+1 i 5.2+1 o właściwościach wybuchowych"
+    },
+    "scenario": {
+      "prompt": "Chcesz załadować razem klasę 3 i klasę 8. Czy wolno?",
+      "options": [
+        "Nie, zawsze zabronione",
+        "Tak — ładowanie razem tych klas jest dozwolone",
+        "Tylko w cysternie"
+      ],
+      "correct": "Tak — ładowanie razem tych klas jest dozwolone"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-segregacja-zakazy@adr-2025",
+  "migratedAt": "2026-07-23"
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-swiadectwo-kiedy",
+  "factId": "s-swiadectwo-kiedy",
+  "adrRef": "ADR 9.1.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 15,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Świadectwo dopuszczenia (\"czerwony pasek\") wymagane jest dla pojazdów EX/II i EX/III (klasa 1), FL i AT (cysterny) oraz MEMU. Pojazdy przewożące sztuki przesyłki (poza wybuchowymi) i luzem NIE muszą go mieć — np. butle z gazem, DPPL, kanistry.",
+  "q": {
+    "scenario": {
+      "prompt": "Wieziesz butle z gazem i kanistry na skrzyni. Czy pojazd potrzebuje świadectwa dopuszczenia?",
+      "options": [
+        "Tak, zawsze przy ADR",
+        "Nie — sztuki przesyłki poza klasa 1 nie wymagaja świadectwa",
+        "Tak, powyżej 3,5 t"
+      ],
+      "correct": "Nie — sztuki przesyłki poza klasa 1 nie wymagaja świadectwa"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-swiadectwo-kiedy@adr-2025",
+  "migratedAt": "2026-07-23"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-kod-opakowania-y@adr-2025",
+  "factId": "s-kod-opakowania-y",
+  "adrRef": "ADR 6.1.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 8,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt opakowania",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Litera na drugim miejscu kodu opakowania: X = dla I, II i III grupy pakowania; Y = dla II i III; Z = tylko dla III. Opakowanie Y nie nadaje się do towaru I grupy pakowania.",
+  "q": {
+    "scenario": {
+      "prompt": "Opakowanie z kodem 1A2/Y. Chcesz zapakować towar I grupy pakowania. Możesz?",
+      "options": [
+        "Tak, Y pasuje do wszystkich",
+        "Nie — Y jest tylko dla II i III grupy",
+        "Tak, jeśli towar jest ciekły"
+      ],
+      "correct": "Nie — Y jest tylko dla II i III grupy"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-kod-opakowania-y",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

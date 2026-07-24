@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-mocowanie@adr-2025",
+  "factId": "b5-mocowanie",
+  "adrRef": "ADR 7.5.7",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 27,
+  "status": "core",
+  "block": 5,
+  "topic": "Mocowanie ładunku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "match"
+  ],
+  "why": "Do mocowania ładunku używamy atestowanych pasów, burt przesuwanych, przegród nastawnych, mat antypoślizgowych, konstrukcji pojazdu (punkty kotwiczenia) lub wypełnienia pustych przestrzeni. Siła działająca na ładunek zmniejsza się wraz ze wzrostem promienia zakrętu. Ładunek ciekły w przypadku piętrowania należy umieszczać jak najniżej. Ładunek można piętrować tylko jeśli konstrukcja opakowania na to pozwala. Kąt pasa maksymalnie 45 stopni.",
+  "q": {
+    "mcq": {
+      "prompt": "Ładunek ciekły przy piętrowaniu należy umieszczać:",
+      "options": [
+        "Jak najwyzej",
+        "Jak najniżej",
+        "Na srodku"
+      ],
+      "correct": "Jak najniżej"
+    },
+    "match": {
+      "prompt": "Dopasuj element mocowania:",
+      "pairs": {
+        "Atestowane pasy": "mocowanie ładunku",
+        "Maty antyposlizgowe": "zwiekszenie tarcia",
+        "Wypelnienie pustych przestrzeni": "zapobiega przesuwaniu"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b5-mocowanie",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-luzem-przepisy@adr-2025",
+  "factId": "b1-luzem-przepisy",
+  "adrRef": "ADR kol. 10/17 Tabeli A",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 6,
+  "status": "core",
+  "block": 1,
+  "topic": "Jednostka i sposoby przewozu",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Przewóz luzem = materiał sypki bez opakowania, wprost do skrzyni/kontenera. Wolno go wieźć TYLKO wtedy, gdy tabela A na to pozwala — w kolumnie 10 lub 17 musi widnieć kod BK albo VC. BK (Bulk Container) = dozwolony określony typ kontenera do przewozu luzem. VC (Vehicle/Container) = warunki, w jakich wolno wieźć luzem danym pojazdem lub kontenerem. Dla kontrastu: kody P (np. P200, P900) to instrukcje PAKOWANIA — dotyczą przewozu w sztukach przesyłki, nie luzem. Kody S (np. S1, S2) to przepisy dot. bezpieczeństwa przewozu. Jeśli w kolumnach luzem NIE ma BK ani VC — przewóz luzem jest zakazany.",
+  "q": {
+    "mcq": {
+      "prompt": "Przewóz luzem jest dozwolony, gdy w tabeli A (kol. 10 lub 17) wskazano przepis:",
+      "options": [
+        "P200 lub P900 (to instrukcje pakowania)",
+        "BK1, BK2, BK3, VC1, VC2 lub VC3",
+        "S1 lub S2 (to przepisy bezpieczeństwa)"
+      ],
+      "correct": "BK1, BK2, BK3, VC1, VC2 lub VC3"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-luzem-przepisy",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

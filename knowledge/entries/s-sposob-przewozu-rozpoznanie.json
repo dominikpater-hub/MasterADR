@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "s-sposob-przewozu-rozpoznanie",
+  "factId": "s-sposob-przewozu-rozpoznanie",
+  "adrRef": "ADR 1.2.1 / 5.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 6,
+  "status": "core",
+  "block": 1,
+  "topic": "Jednostka i sposoby przewozu",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Rozpoznanie sposobu przewozu decyduje o oznakowaniu pojazdu. Sztuki przesyłki to opakowania: kanistry, bębny, butle, DPPL, worki, BIG-BAGi, wiązki. Luzem to NIEOPAKOWANE materiały stałe, np. zużyte akumulatory. Cysterna to zbiornik z wyposażeniem.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj ładunek do sposobu przewozu:",
+      "pairs": {
+        "BIG-BAGi z granulatem": "sztuki przesyłki",
+        "Zużyte akumulatory nieopakowane": "luzem",
+        "Paliwo w zbiorniku": "cysterna",
+        "Butle gazowe na palecie": "sztuki przesyłki"
+      }
+    },
+    "scenario": {
+      "prompt": "Wieziesz BIG-BAGi. To sztuki przesyłki czy luzem?",
+      "options": [
+        "Luzem — materiał sypki",
+        "Sztuki przesyłki — BIG-BAG to opakowanie",
+        "Zależy od masy"
+      ],
+      "correct": "Sztuki przesyłki — BIG-BAG to opakowanie"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-sposob-przewozu-rozpoznanie@adr-2025",
+  "migratedAt": "2026-07-23"
+}

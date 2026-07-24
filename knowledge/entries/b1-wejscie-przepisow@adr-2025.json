@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-wejscie-przepisow@adr-2025",
+  "factId": "b1-wejscie-przepisow",
+  "adrRef": "ADR 1.6",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "fill"
+  ],
+  "why": "Nowe przepisy ADR wchodzą zawsze 1 stycznia w roku nieparzystym. Do końca czerwca obowiązuje okres przejściowy — można używać starej lub nowej wersji.",
+  "q": {
+    "mcq": {
+      "prompt": "Kiedy wchodzą w życie nowe przepisy ADR?",
+      "options": [
+        "1 stycznia roku parzystego",
+        "1 stycznia roku nieparzystego",
+        "1 lipca każdego roku"
+      ],
+      "correct": "1 stycznia roku nieparzystego"
+    },
+    "fill": {
+      "prompt": "Okres przejściowy pozwalający używać starej wersji przepisów trwa do końca ___ (miesiąc).",
+      "correct": "czerwca",
+      "hint": "miesiąc, dopełniacz"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-wejscie-przepisow",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

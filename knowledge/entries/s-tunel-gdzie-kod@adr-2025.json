@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-tunel-gdzie-kod@adr-2025",
+  "factId": "s-tunel-gdzie-kod",
+  "adrRef": "ADR kol. 15",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 23,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o tunelu",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Kod tunelowy towaru znajdziesz w dokumencie przewozowym (w nawiasie na końcu zapisu) oraz w tabeli A w kolumnie 15. Kategorie tunelu na drodze odczytasz z tabliczki pod znakiem B-13a.",
+  "q": {
+    "scenario": {
+      "prompt": "Skąd wiesz, jaki kod tunelowy ma Twój towar?",
+      "options": [
+        "Z tablicy pomarańczowej",
+        "Z dokumentu przewozowego (nawias) lub tabeli A kolumna 15",
+        "Z instrukcji pisemnej"
+      ],
+      "correct": "Z dokumentu przewozowego (nawias) lub tabeli A kolumna 15"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-tunel-gdzie-kod",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-zrodla-zaplonu-decyzja",
+  "factId": "s-zrodla-zaplonu-decyzja",
+  "adrRef": "ADR 5.4.3.4",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 2,
+  "status": "core",
+  "block": 5,
+  "topic": "Reakcja po wypadku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Po wypadku należy unikać źródeł zapłonu: nie palić, nie używać e-papierosów, NIE WŁĄCZAĆ żadnych urządzeń elektrycznych. Telefon jako latarka to urządzenie elektryczne — użyj latarki z wyposażenia ADR (jest przystosowana).",
+  "q": {
+    "scenario": {
+      "prompt": "Noc, wyciek benzyny, chcesz oświetlić miejsce. Czego używasz?",
+      "options": [
+        "Telefonu — ma najlepsza latarkę",
+        "Latarki z wyposażenia ADR",
+        "Zapalniczki"
+      ],
+      "correct": "Latarki z wyposażenia ADR"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-zrodla-zaplonu-decyzja@adr-2025",
+  "migratedAt": "2026-07-23"
+}

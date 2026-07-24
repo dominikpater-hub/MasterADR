@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-ino@adr-2025",
+  "factId": "b2-ino",
+  "adrRef": "ADR 3.1.2.8",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 2,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasyfikacja",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Litery I.N.O. po nazwie oznaczają \"inaczej nie określony\". Wymaga się wtedy uzupełnienia o nazwy techniczne, np. UN 1964 WĘGLOWODORY GAZOWE, MIESZANINA SPRĘŻONA I.N.O (zawiera wodór i argon) 2.1 (B/D).",
+  "q": {
+    "mcq": {
+      "prompt": "Skrót I.N.O. po nazwie przewozowej oznacza:",
+      "options": [
+        "Inaczej nie określony",
+        "Instrukcja nadawcy obowiązkowa",
+        "Ilość nieograniczona"
+      ],
+      "correct": "Inaczej nie określony"
+    },
+    "scenario": {
+      "prompt": "W dokumencie widzisz UN 1964 ... I.N.O. Czego wymaga taki zapis?",
+      "options": [
+        "Nic dodatkowego",
+        "Uzupełnienia o nazwy techniczne składników",
+        "Zgody TDT"
+      ],
+      "correct": "Uzupełnienia o nazwy techniczne składników"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b2-ino",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

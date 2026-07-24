@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-odbiorca@adr-2025",
+  "factId": "b1-odbiorca",
+  "adrRef": "ADR 1.4.2.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 28,
+  "status": "core",
+  "block": 1,
+  "topic": "Uczestnicy przewozu",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Odbiorca: nie opóźnia przyjęcia towarów bez konieczności, sprawdza po rozładunku spełnienie wymagań ADR. Kontener może zwrócić przewoźnikowi dopiero po usunięciu naruszenia. Haczyk: odbiorca PRZYJMUJE towar — fizyczne zdejmowanie, czyszczenie i odkażanie po rozładunku to obowiązek rozładowcy, nie odbiorcy (choc często to ta sama firma).",
+  "q": {
+    "mcq": {
+      "prompt": "Odbiorca stwierdził naruszenie przepisów ADR w kontenerze. Może go zwrócić przewoźnikowi:",
+      "options": [
+        "Natychmiast",
+        "Dopiero po usunięciu naruszenia",
+        "Nigdy"
+      ],
+      "correct": "Dopiero po usunięciu naruszenia"
+    },
+    "scenario": {
+      "prompt": "Po rozładunku kontener trzeba oczyścić i odkazić oraz zdjąć nalepki. Czyj to obowiązek?",
+      "options": [
+        "Odbiorcy",
+        "Rozładowcy",
+        "Przewoźnika"
+      ],
+      "correct": "Rozładowcy"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-odbiorca",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

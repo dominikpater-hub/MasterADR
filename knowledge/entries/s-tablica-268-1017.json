@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-tablica-268-1017",
+  "factId": "s-tablica-268-1017",
+  "adrRef": "ADR 5.3.2.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 18,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Numer 268 = gaz trujący żrący. Cyfra 2 = emisja gazu, 6 = działanie trujące, 8 = działanie żrące. UN 1017 = chlor. Wymagana maska ucieczkowa (nalepka 2.3).",
+  "q": {
+    "scenario": {
+      "prompt": "Tablica 268 / 1017 (chlor). Jakie wyposażenie dodatkowe jest wymagane?",
+      "options": [
+        "Łopata i pojemnik",
+        "Maska ucieczkowa dla każdego członka załogi",
+        "Tylko gaśnica 2 kg"
+      ],
+      "correct": "Maska ucieczkowa dla każdego członka załogi"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-tablica-268-1017@adr-2025",
+  "migratedAt": "2026-07-23"
+}

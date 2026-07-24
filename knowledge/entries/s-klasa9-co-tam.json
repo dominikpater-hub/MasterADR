@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "s-klasa9-co-tam",
+  "factId": "s-klasa9-co-tam",
+  "adrRef": "ADR 2.2.9",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 4,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasy zagrożeń",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Klasa 9 to \"różne\" — wpadają tu towary bez wspólnego mianownika: azbest, materiały w podwyższonej temperaturze (stałe >240 st. C, ciekłe >100 st. C), akumulatory litowe, przedmioty ratownicze, materiały zagrażające środowisku wodnemu (UN 3077/3082).",
+  "q": {
+    "match": {
+      "prompt": "Które towary należą do klasy 9?",
+      "pairs": {
+        "Azbest": "klasa 9",
+        "Baterie litowe": "klasa 9",
+        "Asfalt 150 st. C": "klasa 9 (podwyższona temperatura)"
+      }
+    },
+    "scenario": {
+      "prompt": "Wieziesz asfalt o temperaturze 150 st. C. Czy to towar niebezpieczny?",
+      "options": [
+        "Nie, to zwykly asfalt",
+        "Tak — klasa 9, materiał ciekły powyżej 100 st. C",
+        "Tak, klasa 3"
+      ],
+      "correct": "Tak — klasa 9, materiał ciekły powyżej 100 st. C"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-klasa9-co-tam@adr-2025",
+  "migratedAt": "2026-07-23"
+}

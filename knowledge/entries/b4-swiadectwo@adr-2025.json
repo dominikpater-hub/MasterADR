@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-swiadectwo@adr-2025",
+  "factId": "b4-swiadectwo",
+  "adrRef": "ADR 9.1.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 15,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Świadectwo dopuszczenia (tzw. \"czerwony pasek\") wymagane jest przy przewozie towarów klasy 1 (pojazdy EX/II, EX/III) oraz w cysternach (pojazdy FL, AT) i MEMU. Potwierdza specjalna konstrukcje pojazdu. Wydawany w Polsce przez TDT na maksymalny okres JEDNEGO ROKU. Pojazdy przewożące sztuki przesyłki (poza wybuchowymi) i luzem NIE muszą mieć świadectwa — np. butle z gazem, DPPL, kanistry.",
+  "q": {
+    "mcq": {
+      "prompt": "Świadectwo dopuszczenia pojazdu wydawane jest na maksymalny okres:",
+      "options": [
+        "1 roku",
+        "5 lat",
+        "Bezterminowo"
+      ],
+      "correct": "1 roku"
+    },
+    "scenario": {
+      "prompt": "Przewozisz butle z gazem i kanistry (sztuki przesyłki). Czy pojazd potrzebuje \"czerwonego paska\"?",
+      "options": [
+        "Tak, zawsze przy ADR",
+        "Nie — sztuki przesyłki poza klasa 1 nie wymagaja świadectwa",
+        "Tylko powyżej 3,5 t"
+      ],
+      "correct": "Nie — sztuki przesyłki poza klasa 1 nie wymagaja świadectwa"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-swiadectwo",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-oznakowanie-luzem-cysterna",
+  "factId": "b4-oznakowanie-luzem-cysterna",
+  "adrRef": "ADR 5.3.1 / 5.3.2",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 21,
+  "status": "core",
+  "block": 4,
+  "topic": "Oznakowanie pojazdu w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Jednostki przewożące towary LUZEM lub W CYSTERNIE powinny być oznakowane tablicami Z NUMERAMI z przodu i tyłu jednostki transportowej oraz nalepkami z TRZECH stron — z obu boków oraz z tyłu.",
+  "q": {
+    "mcq": {
+      "prompt": "Pojazd przewożący towar luzem lub w cysternie oznakowuje się nalepkami:",
+      "options": [
+        "Z dwóch stron",
+        "Z trzech stron — oba boki i tył",
+        "Z czterech stron"
+      ],
+      "correct": "Z trzech stron — oba boki i tył"
+    },
+    "scenario": {
+      "prompt": "Cysterna z olejem napędowym. Gdzie tablice z numerami?",
+      "options": [
+        "Tylko z przodu",
+        "Z przodu i tyłu jednostki",
+        "Na bokach"
+      ],
+      "correct": "Z przodu i tyłu jednostki"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-oznakowanie-luzem-cysterna@adr-2025",
+  "migratedAt": "2026-07-23"
+}

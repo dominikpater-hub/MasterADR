@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-nalepka-wymiary",
+  "factId": "b2-nalepka-wymiary",
+  "adrRef": "ADR 5.2.2.2",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 7,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt opakowania",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Nalepka wskazująca zagrożenie na sztuce przesyłki ma rozmiar 100 mm x 100 mm. Może być więcej niż jedna — zagrożenie dominujące i dodatkowe.",
+  "q": {
+    "mcq": {
+      "prompt": "Rozmiar nalepki ostrzegawczej na sztuce przesyłki:",
+      "options": [
+        "100 x 100 mm",
+        "250 x 250 mm",
+        "300 x 400 mm"
+      ],
+      "correct": "100 x 100 mm"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b2-nalepka-wymiary@adr-2025",
+  "migratedAt": "2026-07-23"
+}

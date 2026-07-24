@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-gasnica-parametry",
+  "factId": "b5-gasnica-parametry",
+  "adrRef": "praktyka gaszenia",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 27,
+  "status": "core",
+  "block": 5,
+  "topic": "Gaszenie pożaru",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "mcq"
+  ],
+  "why": "Strumień proszku kierujemy w źródło płomieni od strony nawietrznej. Czas wyładowania gaśnicy 6 kg to około 10 s, a 2 kg to około 6 s. Zasięg gaśnic to około 4 m.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj gaśnice do czasu wyładowania:",
+      "pairs": {
+        "Gaśnica 6 kg": "około 10 s",
+        "Gaśnica 2 kg": "około 6 s"
+      }
+    },
+    "mcq": {
+      "prompt": "Zasięg gaśnicy proszkowej wynosi około:",
+      "options": [
+        "1 m",
+        "4 m",
+        "10 m"
+      ],
+      "correct": "4 m"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b5-gasnica-parametry@adr-2025",
+  "migratedAt": "2026-07-23"
+}

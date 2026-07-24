@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-tunele-kategorie",
+  "factId": "b4-tunele-kategorie",
+  "adrRef": "ADR 1.9.5",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 23,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o tunelu",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Kategorie tuneli: A — bez ograniczeń (znak D-37, nieoznakowany), B, C, D, E — coraz bardziej restrykcyjne. Kod (B) = zagrażające wybuchem o bardzo dużym zasięgu; (C) = wybuch o dużym zasięgu lub działanie trujące o dużym zasięgu; (D) = jw. lub duży pożar; (E) = zakaz dla ilości ograniczonych powyżej 8 t brutto.",
+  "q": {
+    "mcq": {
+      "prompt": "Która kategoria tunelu jest najbardziej restrykcyjna?",
+      "options": [
+        "Kategoria A",
+        "Kategoria C",
+        "Kategoria E"
+      ],
+      "correct": "Kategoria E"
+    },
+    "scenario": {
+      "prompt": "Towar ma kod tunelowy (B). Przez które tunele możesz przejechać?",
+      "options": [
+        "Wszystkie",
+        "Tylko A (nieoznakowany / D-37)",
+        "A, B i C"
+      ],
+      "correct": "Tylko A (nieoznakowany / D-37)"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-tunele-kategorie@adr-2025",
+  "migratedAt": "2026-07-23"
+}

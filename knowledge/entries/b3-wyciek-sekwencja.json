@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 2,
+  "id": "b3-wyciek-sekwencja",
+  "factId": "b3-wyciek-sekwencja",
+  "adrRef": "ADR 5.4.3.4",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 22,
+  "status": "core",
+  "block": 3,
+  "topic": "Reakcja na wyciek",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "order",
+    "scenario"
+  ],
+  "why": "Kolejność przy wycieku (o ile bezpieczne): 1) zatrzymać pojazd w bezpiecznym miejscu i wyłączyć silnik, 2) zabezpieczyć teren i ostrzec innych, 3) ograniczyć wyciek u źródła i nie dopuścić do kanalizacji, 4) powiadomić służby (112) podając dane z tablicy. Życie ludzkie ma pierwszeństwo przed ochroną mienia i środowiska.",
+  "q": {
+    "order": {
+      "prompt": "Ułóż kolejność reakcji na wyciek:",
+      "items": [
+        "Ograniczyć wyciek u źródła",
+        "Zatrzymać pojazd i wyłączyć silnik",
+        "Powiadomić służby (112)",
+        "Zabezpieczyć teren i ostrzec innych"
+      ],
+      "correct": [
+        "Zatrzymać pojazd i wyłączyć silnik",
+        "Zabezpieczyć teren i ostrzec innych",
+        "Ograniczyć wyciek u źródła",
+        "Powiadomić służby (112)"
+      ]
+    },
+    "scenario": {
+      "prompt": "Zauważasz wyciek w trasie. Co jest bezwzględnie ważniejsze niż ratowanie ładunku?",
+      "options": [
+        "Zdążyć na rozładunek",
+        "Bezpieczeństwo ludzi",
+        "Uniknięcie mandatu"
+      ],
+      "correct": "Bezpieczeństwo ludzi"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    },
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": null,
+  "migratedAt": "2026-07-23"
+}

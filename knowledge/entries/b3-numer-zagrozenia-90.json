@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "id": "b3-numer-zagrozenia-90",
+  "factId": "b3-numer-zagrozenia-90",
+  "adrRef": "ADR 5.3.2.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "adr-2025",
+  "page": null,
+  "status": "core",
+  "block": 3,
+  "topic": "Materiały zagrażające środowisku",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "fill"
+  ],
+  "why": "Numer rozpoznawczy zagrożenia (górny numer na tablicy pomarańczowej) dla materiałów zagrażających środowisku UN 3077 i UN 3082 to 90. Należy do znaczeń specjalnych.",
+  "q": {
+    "mcq": {
+      "prompt": "Jaki numer rozpoznawczy zagrożenia mają materiały zagrażające środowisku UN 3077 i UN 3082?",
+      "options": [
+        "90",
+        "99",
+        "X80"
+      ],
+      "correct": "90"
+    },
+    "fill": {
+      "prompt": "Numer rozpoznawczy zagrożenia dla materiału zagrażającego środowisku (UN 3077 / 3082) to ___.",
+      "correct": "90",
+      "hint": "dwie cyfry, znaczenie specjalne"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    },
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": null,
+  "migratedAt": "2026-07-23"
+}

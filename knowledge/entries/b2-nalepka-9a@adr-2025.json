@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-nalepka-9a@adr-2025",
+  "factId": "b2-nalepka-9a",
+  "adrRef": "ADR 5.2.2.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 4,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasy zagrożeń",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Nalepka 9A jest stosowana dla numerów UN 3090, UN 3091, UN 3480, UN 3481 — ogniwa i akumulatory litowe.",
+  "q": {
+    "mcq": {
+      "prompt": "Nalepka 9A jest stosowana dla:",
+      "options": [
+        "Azbestu",
+        "Ogniw i akumulatorów litowych (UN 3090, 3091, 3480, 3481)",
+        "Suchego lodu"
+      ],
+      "correct": "Ogniw i akumulatorów litowych (UN 3090, 3091, 3480, 3481)"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b2-nalepka-9a",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

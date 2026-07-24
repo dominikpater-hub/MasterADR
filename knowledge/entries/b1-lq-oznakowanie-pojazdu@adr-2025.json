@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-lq-oznakowanie-pojazdu@adr-2025",
+  "factId": "b1-lq-oznakowanie-pojazdu",
+  "adrRef": "ADR 3.4.13",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 10,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyłączenia w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Jednostki transportowe powyżej 12 t DMC przewożące powyżej 8 t brutto towarów LQ muszą być oznakowane znakiem LQ z przodu i tyłu pojazdu (250 x 250 mm). Nadawca musi poinformować przewoźnika o całkowitej ilości LQ. Oznakowanie zamienne z tablicami pomarańczowymi.",
+  "q": {
+    "mcq": {
+      "prompt": "Kiedy pojazd z towarami LQ musi być oznakowany z przodu i tyłu?",
+      "options": [
+        "Zawsze",
+        "Powyżej 12 t DMC i powyżej 8 t brutto ładunku LQ",
+        "Nigdy"
+      ],
+      "correct": "Powyżej 12 t DMC i powyżej 8 t brutto ładunku LQ"
+    },
+    "scenario": {
+      "prompt": "Ciężarówka 24 t DMC, 10 t brutto towarów LQ. Oznakowanie?",
+      "options": [
+        "Bez oznakowania",
+        "Znak LQ z przodu i tyłu",
+        "Tablice pomarańczowe z numerami"
+      ],
+      "correct": "Znak LQ z przodu i tyłu"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-lq-oznakowanie-pojazdu",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "s-kod-klasyfikacyjny@adr-2025",
+  "factId": "s-kod-klasyfikacyjny",
+  "adrRef": "ADR 2.1.1.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 2,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasyfikacja",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Zagrożenie dodatkowe określane jest kodem literowym: F = palne, T = trujące. Kod klasyfikacyjny mówi więcej niż sama klasa — np. gaz z kodem TF to gaz trujący i palny jednocześnie. To druga nalepka w dokumencie przewozowym.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj kod literowy do zagrożenia:",
+      "pairs": {
+        "F": "palne",
+        "T": "trujące"
+      }
+    },
+    "scenario": {
+      "prompt": "Gaz o kodzie klasyfikacyjnym TF. Jakie ma zagrożenia?",
+      "options": [
+        "Tylko trujący",
+        "Trujący i palny jednocześnie",
+        "Tylko palny"
+      ],
+      "correct": "Trujący i palny jednocześnie"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-kod-klasyfikacyjny",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

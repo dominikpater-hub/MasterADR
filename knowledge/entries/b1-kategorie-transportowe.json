@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-kategorie-transportowe",
+  "factId": "b1-kategorie-transportowe",
+  "adrRef": "ADR 1.1.3.6.3 / kol. 15",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "mcq"
+  ],
+  "why": "Jest 5 kategorii transportowych (0-1-2-3-4). Kategorie transportowe to NIE klasy ani grupy pakowania. Limity na jednostkę transportową: kąt. 0 = 0 (zawsze pełny ADR), kąt. 1 = 20 (mnożnik x50), kąt. 2 = 333 (x3), kąt. 3 = 1000 (x1), kąt. 4 = bez ograniczeń (mnożnik 0). Kategorie sprawdza się w kolumnie 15 tabeli A.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj kategorię transportową do limitu ilości:",
+      "pairs": {
+        "Kategoria 1": "20",
+        "Kategoria 2": "333",
+        "Kategoria 3": "1000",
+        "Kategoria 4": "bez ograniczeń"
+      }
+    },
+    "mcq": {
+      "prompt": "Kategorię transportową dla danego numeru UN sprawdzisz w tabeli A w kolumnie:",
+      "options": [
+        "kolumnie 1",
+        "kolumnie 15",
+        "kolumnie 20"
+      ],
+      "correct": "kolumnie 15"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b1-kategorie-transportowe@adr-2025",
+  "migratedAt": "2026-07-23"
+}

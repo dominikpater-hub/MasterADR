@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-sprawozdanie-roczne",
+  "factId": "b4-sprawozdanie-roczne",
+  "adrRef": "ADR 1.8.3.6",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 15,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "fill"
+  ],
+  "why": "Każda firma ładująca, przewożąca, rozładowująca towary niebezpieczne musi wyznaczyć doradcę DGSA. Sporządza on sprawozdanie roczne do ITD, składane do 28 lutego za poprzedni rok. Za niezłożenie sprawozdania kara wynosi 5000 PLN.",
+  "q": {
+    "mcq": {
+      "prompt": "Do kiedy składa się sprawozdanie roczne do ITD?",
+      "options": [
+        "Do 31 stycznia",
+        "Do 28 lutego",
+        "Do 31 marca"
+      ],
+      "correct": "Do 28 lutego"
+    },
+    "fill": {
+      "prompt": "Kara za niezłożenie sprawozdania rocznego wynosi ___ PLN.",
+      "correct": "5000",
+      "hint": "liczba"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-sprawozdanie-roczne@adr-2025",
+  "migratedAt": "2026-07-23"
+}

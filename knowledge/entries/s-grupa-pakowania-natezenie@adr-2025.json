@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "s-grupa-pakowania-natezenie@adr-2025",
+  "factId": "s-grupa-pakowania-natezenie",
+  "adrRef": "ADR 2.1.1.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 2,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasyfikacja",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Grupa pakowania = natężenie zagrożenia dominującego. I = duże, II = średnie, III = małe. Benzyna UN 1203 = II. Olej napędowy UN 1202 = III. Im niższa cyfra rzymska, tym groźniejszy towar.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj grupę pakowania do natężenia zagrożenia:",
+      "pairs": {
+        "I": "duże zagrożenie",
+        "II": "średnie zagrożenie",
+        "III": "małe zagrożenie"
+      }
+    },
+    "scenario": {
+      "prompt": "Dwa towary: jeden GP I, drugi GP III. Który jest groźniejszy?",
+      "options": [
+        "GP III",
+        "GP I — I oznacza duże zagrożenie",
+        "Takie same"
+      ],
+      "correct": "GP I — I oznacza duże zagrożenie"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-grupa-pakowania-natezenie",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

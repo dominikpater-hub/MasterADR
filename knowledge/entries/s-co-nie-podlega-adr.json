@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "s-co-nie-podlega-adr",
+  "factId": "s-co-nie-podlega-adr",
+  "adrRef": "ADR 3.3 SP 188",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 4,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasy zagrożeń",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Nie podlegają ADR: akumulatory i ogniwa litowe zawarte w urządzeniach wg przepisu 188, pojazdy poddane fumigacji, czynniki chłodzące jak UN 1845 suchy lód. Uwaga: mimo ze nie podlegają ADR, nadal stwarzają zagrożenie — fumigacja i suchy lód grozą uduszeniem.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj status:",
+      "pairs": {
+        "Baterie litowe w urządzeniu (przepis 188)": "nie podlega ADR",
+        "Suchy lód UN 1845": "nie podlega ADR",
+        "Jednostka po fumigacji": "nie podlega ADR"
+      }
+    },
+    "scenario": {
+      "prompt": "Wieziesz suchy lód jako czynnik chłodzący. Nie podlega ADR — czy zagrożenie znika?",
+      "options": [
+        "Tak, brak ADR = brak zagrożenia",
+        "Nie — nadal grozi uduszeniem, wymaga przewietrzania",
+        "Tylko powyżej 100 kg"
+      ],
+      "correct": "Nie — nadal grozi uduszeniem, wymaga przewietrzania"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-co-nie-podlega-adr@adr-2025",
+  "migratedAt": "2026-07-23"
+}

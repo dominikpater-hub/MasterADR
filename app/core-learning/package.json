@@ -1,0 +1,19 @@
+{
+  "name": "adr-core-learning",
+  "version": "0.1.0",
+  "description": "Rdzen Trenera ADR — silnik Leitner + petla lekcji + sesja + gamifikacja (Faza 0, offline-first, zero AI)",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.0"
+  }
+}

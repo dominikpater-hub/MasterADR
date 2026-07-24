@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-wartosc-energetyczna",
+  "factId": "b1-wartosc-energetyczna",
+  "adrRef": "ADR 1.1.3.2 uwaga 1",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 9,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyłączenia w praktyce",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "match"
+  ],
+  "why": "Wartości energetyczne paliw: olej napędowy 36 MJ/l, benzyna silnikowa 32 MJ/l, gaz ziemny/biogaz 35 MJ/Nm3, LPG 24 MJ/l, etanol 21 MJ/l, olej napędowy bio 33 MJ/l, paliwo emulsyjne 32 MJ/l, wodór 11 MJ/Nm3.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj paliwo do wartości energetycznej:",
+      "pairs": {
+        "Olej napędowy": "36 MJ/l",
+        "Benzyna silnikowa": "32 MJ/l",
+        "LPG": "24 MJ/l",
+        "Wodór": "11 MJ/Nm3"
+      }
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b1-wartosc-energetyczna@adr-2025",
+  "migratedAt": "2026-07-23"
+}

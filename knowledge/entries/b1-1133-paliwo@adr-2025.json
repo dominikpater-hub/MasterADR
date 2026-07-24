@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-1133-paliwo@adr-2025",
+  "factId": "b1-1133-paliwo",
+  "adrRef": "ADR 1.1.3.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 9,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyłączenia w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "fill",
+    "match"
+  ],
+  "why": "Zwolnienie 1.1.3.3 — paliwo w zbiornikach pojazdu służące do jego napędu lub pracy wyposażenia: do 1500 l na jednostkę transportową, nie więcej niż 500 l na przyczepie. W zbiornikach dodatkowych (kanistrach) nie więcej niż 60 l.",
+  "q": {
+    "mcq": {
+      "prompt": "Limit paliwa w zbiornikach pojazdu (do jego napędu) na jednostkę transportową:",
+      "options": [
+        "500 l",
+        "1000 l",
+        "1500 l"
+      ],
+      "correct": "1500 l"
+    },
+    "fill": {
+      "prompt": "W zbiornikach dodatkowych (kanistrach) nie więcej niż ___ litrów.",
+      "correct": "60",
+      "hint": "liczba"
+    },
+    "match": {
+      "prompt": "Dopasuj limit paliwa w zbiornikach pojazdu (wyłączenie paliwowe):",
+      "pairs": {
+        "Jednostka transportową": "1500 l",
+        "Przyczepa": "500 l",
+        "Kanistry": "60 l"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-1133-paliwo",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

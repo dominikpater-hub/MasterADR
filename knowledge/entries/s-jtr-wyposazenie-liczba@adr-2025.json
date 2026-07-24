@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "s-jtr-wyposazenie-liczba@adr-2025",
+  "factId": "s-jtr-wyposazenie-liczba",
+  "adrRef": "ADR 8.1.5 / 1.2.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 1,
+  "topic": "Jednostka i sposoby przewozu",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "match"
+  ],
+  "why": "Pułapka: klin pod koła liczy się NA KAŻDY POJAZD (ciągnik + naczepa = 2 kliny), ale stojące znaki ostrzegawcze liczy się NA JEDNOSTKĘ TRANSPORTOWĄ (zestaw = 2 znaki, nie 4). Ciągnik z naczepa to jedna jednostka, ale dwa pojazdy.",
+  "q": {
+    "scenario": {
+      "prompt": "Ciągnik siodłowy z naczepa. Ile klinów i ile stojących znaków ostrzegawczych?",
+      "options": [
+        "1 klin, 2 znaki",
+        "2 kliny (każdy pojazd), 2 znaki (jednostka)",
+        "2 kliny, 4 znaki"
+      ],
+      "correct": "2 kliny (każdy pojazd), 2 znaki (jednostka)"
+    },
+    "match": {
+      "prompt": "Zestaw: ciągnik + naczepa. Ile sztuk?",
+      "pairs": {
+        "Klin pod koła": "2 — na każdy pojazd",
+        "Stojące znaki ostrzegawcze": "2 — na jednostkę",
+        "Płyn do płukania oczu": "1 — na pojazd"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-jtr-wyposazenie-liczba",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

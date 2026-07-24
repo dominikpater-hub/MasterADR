@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-wiele-zagrozen@adr-2025",
+  "factId": "b5-wiele-zagrozen",
+  "adrRef": "ADR 5.4.3.4 uwaga 1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 3,
+  "status": "core",
+  "block": 5,
+  "topic": "Wskazówki per klasa",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "UWAGA 1 z instrukcji pisemnej: w przypadku towarów niebezpiecznych stwarzających więcej niż jedno zagrożenie oraz ładunków mieszanych, stosuje się KAŻDA z określonych dla nich wskazówek.",
+  "q": {
+    "mcq": {
+      "prompt": "Towar stwarza więcej niż jedno zagrożenie. Które wskazówki stosujesz?",
+      "options": [
+        "Tylko dla zagrożenia dominującego",
+        "KAŻDA z określonych wskazówek",
+        "Żadnych"
+      ],
+      "correct": "KAŻDA z określonych wskazówek"
+    },
+    "scenario": {
+      "prompt": "Ładunek mieszany: klasa 3 i klasa 6.1. Jakie wskazówki stosujesz?",
+      "options": [
+        "Tylko dla klasy 3",
+        "Obie — dla klasy 3 i 6.1",
+        "Wybieram jedna"
+      ],
+      "correct": "Obie — dla klasy 3 i 6.1"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b5-wiele-zagrozen",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

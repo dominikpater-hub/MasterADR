@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-numer-zero",
+  "factId": "b2-numer-zero",
+  "adrRef": "ADR 5.3.2.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 17,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Jeśli w numerze rozpoznawczym zagrożenia występuje 0 (zero), to zawsze na drugiej pozycji. Oznacza, ze NIE ma zwiększenia zagrożenia ani zagrożenia dodatkowego, a towar zwykle należy do II lub III grupy pakowania. Nie dotyczy gazów.",
+  "q": {
+    "mcq": {
+      "prompt": "Zero na drugim miejscu numeru rozpoznawczego oznacza:",
+      "options": [
+        "Nasilenie zagrożenia",
+        "Brak zwiększenia zagrożenia i zagrożenia dodatkowego",
+        "Reakcje z wodą"
+      ],
+      "correct": "Brak zwiększenia zagrożenia i zagrożenia dodatkowego"
+    },
+    "scenario": {
+      "prompt": "Numer 30 na tablicy. Do której grupy pakowania zwykle należy taki towar?",
+      "options": [
+        "I",
+        "II lub III",
+        "Nie ma grupy pakowania"
+      ],
+      "correct": "II lub III"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b2-numer-zero@adr-2025",
+  "migratedAt": "2026-07-23"
+}

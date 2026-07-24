@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-1136-gdzie-kategoria",
+  "factId": "s-1136-gdzie-kategoria",
+  "adrRef": "ADR kol. 15 Tabeli A",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 10,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Żeby policzyć punkty, najpierw musisz znać kategorię transportową towaru. Sprawdzasz ją w tabeli A, w kolumnie 15 (ta sama kolumna zawiera kod tunelowy w nawiasie).",
+  "q": {
+    "scenario": {
+      "prompt": "Chcesz policzyć punkty do zwolnienia „1000 punktów”. Skąd bierzesz kategorię transportową towaru?",
+      "options": [
+        "Z dokumentu przewozowego",
+        "Z tabeli A, kolumna 15",
+        "Z instrukcji pisemnej"
+      ],
+      "correct": "Z tabeli A, kolumna 15"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-1136-gdzie-kategoria@adr-2025",
+  "migratedAt": "2026-07-23"
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-kto-klasyfikuje-nie-ty",
+  "factId": "s-kto-klasyfikuje-nie-ty",
+  "adrRef": "ADR czesc 2",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 2,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasyfikacja",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Za klasyfikację odpowiada PRODUCENT, NADAWCA i IPO (dla klasy 7 — PAA). Kierowca NIE klasyfikuje towaru. Jeśli masz wątpliwości co do klasyfikacji, nie zgadujesz — pytasz nadawcę albo doradcę DGSA.",
+  "q": {
+    "scenario": {
+      "prompt": "Nadawca dal Ci towar bez nalepki. Mówi, ze \"to chyba klasa 3\". Co robisz?",
+      "options": [
+        "Naklejam nalepkę 3 — brzmi sensownie",
+        "Nie klasyfikuje towaru — to obowiązek nadawcy, żądam prawidłowej klasyfikacji",
+        "Wioze bez nalepki"
+      ],
+      "correct": "Nie klasyfikuje towaru — to obowiązek nadawcy, żądam prawidłowej klasyfikacji"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-kto-klasyfikuje-nie-ty@adr-2025",
+  "migratedAt": "2026-07-23"
+}

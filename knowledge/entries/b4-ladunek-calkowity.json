@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-ladunek-calkowity",
+  "factId": "b4-ladunek-calkowity",
+  "adrRef": "ADR 1.2.1",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 24,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o załadunku",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Ładunek całkowity oznacza ładunek pochodzący od jednego nadawcy, mającego wyłączne prawo do używania pojazdu lub kontenera wielkiego, a wszystkie czynności załadunkowe i rozładunkowe wykonywane są zgodnie z instrukcjami nadawcy lub odbiorcy. W odniesieniu do materiałów promieniotwórczych odpowiednim określeniem jest \"używanie wyłączne\".",
+  "q": {
+    "mcq": {
+      "prompt": "W odniesieniu do materiałów promieniotwórczych \"ładunek całkowity\" nazywa się:",
+      "options": [
+        "Przewóz dedykowany",
+        "Używanie wyłączne",
+        "Transport zamknięty"
+      ],
+      "correct": "Używanie wyłączne"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-ladunek-calkowity@adr-2025",
+  "migratedAt": "2026-07-23"
+}

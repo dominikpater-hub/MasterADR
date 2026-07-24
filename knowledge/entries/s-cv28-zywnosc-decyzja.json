@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "s-cv28-zywnosc-decyzja",
+  "factId": "s-cv28-zywnosc-decyzja",
+  "adrRef": "ADR 7.5.4 / CV28",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 24,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o załadunku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "match"
+  ],
+  "why": "Gdy w kolumnie 18 tabeli A jest przepis CV28, towar trzeba oddzielić od żywności i karmy. Sposoby: ciągle przegrody, sztuki bez nalepek 6.1/6.2/9 jako bufor, wolna przestrzeń min. 0,8 m, albo całkowite przykrycie (plandeka, pokrywa).",
+  "q": {
+    "scenario": {
+      "prompt": "Wieziesz towar z przepisem CV28 i artykuły spozywcze. Nie masz przegrody. Co robisz?",
+      "options": [
+        "Ładuje razem, CV28 to zalecenie",
+        "Zostawiam min. 0,8 m wolnej przestrzeni albo przykrywam całkowicie",
+        "Odmawiam przewozu"
+      ],
+      "correct": "Zostawiam min. 0,8 m wolnej przestrzeni albo przykrywam całkowicie"
+    },
+    "match": {
+      "prompt": "Sposoby oddzielenia od żywności (CV28):",
+      "pairs": {
+        "Wolna przestrzeń": "min. 0,8 m",
+        "Ciągle przegrody": "wysokość jak sztuki przesyłek",
+        "Przykrycie": "plandeka lub pokrywa"
+      }
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-cv28-zywnosc-decyzja@adr-2025",
+  "migratedAt": "2026-07-23"
+}

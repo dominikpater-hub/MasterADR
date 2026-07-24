@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-tablica-90-3082",
+  "factId": "s-tablica-90-3082",
+  "adrRef": "ADR 5.3.2.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 20,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Numer 90 = materiał zagrażający środowisku, różne materiały niebezpieczne. UN 3082 = materiał zagrażający środowisku wodnemu, ciekły, i.n.o. (klasa 9).",
+  "q": {
+    "scenario": {
+      "prompt": "Cysterna z tablica 90 / 3082. Wyciek do rowu. Co jest głównym problemem?",
+      "options": [
+        "Pożar",
+        "Skażenie środowiska wodnego",
+        "Wybuch"
+      ],
+      "correct": "Skażenie środowiska wodnego"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-tablica-90-3082@adr-2025",
+  "migratedAt": "2026-07-23"
+}

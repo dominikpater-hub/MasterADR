@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-duze-ryzyko-progi@adr-2025",
+  "factId": "b4-duze-ryzyko-progi",
+  "adrRef": "ADR 1.10.3.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 26,
+  "status": "core",
+  "block": 4,
+  "topic": "Towary dużego ryzyka",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "mcq"
+  ],
+  "why": "Progi towarów dużego ryzyka: klasa 1 (1.1, 1.2, 1.3) — każda ilość w sztukach; gazy palne nietrujące (F, FC) — cysterna 3000 l; gazy trujące (T, TF, TC, TO, TFC, TOC) — każda ilość; klasa 3 GP I i II — cysterna 3000 l; klasa 6.1 GP I — każda ilość; klasa 8 GP I — cysterna 3000 l.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj towar do progu dużego ryzyka (cysterna):",
+      "pairs": {
+        "Gazy palne nietrujące (F, FC)": "3000 l",
+        "Materiały zapalne ciekłe GP I i II": "3000 l",
+        "Materiały żrące GP I": "3000 l"
+      }
+    },
+    "mcq": {
+      "prompt": "Materiały trujące I grupy pakowania (6.1) są towarem dużego ryzyka w ilości:",
+      "options": [
+        "Powyżej 3000 l",
+        "Każda ilość",
+        "Powyżej 1000 kg"
+      ],
+      "correct": "Każda ilość"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-duze-ryzyko-progi",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

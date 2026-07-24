@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "s-wyposazenie-klasa2-3",
+  "factId": "s-wyposazenie-klasa2-3",
+  "adrRef": "ADR 8.1.5.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór wyposażenia",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "match"
+  ],
+  "why": "Nalepka 2.3 (gazy trujące) wymaga maski ucieczkowej dla każdego członka załogi. Jednocześnie płyn do płukania oczu NIE jest wymagany przy nalepkach 1, 1.4, 1.5, 1.6, 2.1, 2.2, 2.3. Łopata też nie — 2.3 nie jest na liście 3/4.1/4.3/8/9.",
+  "q": {
+    "scenario": {
+      "prompt": "Wieziesz chlor (nalepka 2.3), załoga 2 osoby. Czego potrzebujesz?",
+      "options": [
+        "2 maski ucieczkowe, bez płynu do oczu i łopaty",
+        "1 maska, płyn do oczu, łopata",
+        "Tylko łopata"
+      ],
+      "correct": "2 maski ucieczkowe, bez płynu do oczu i łopaty"
+    },
+    "match": {
+      "prompt": "Nalepka 2.3 — co wymagane, co nie:",
+      "pairs": {
+        "Maska ucieczkowa": "wymagana",
+        "Płyn do płukania oczu": "niewymagany",
+        "Łopata": "niewymagana"
+      }
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-wyposazenie-klasa2-3@adr-2025",
+  "migratedAt": "2026-07-23"
+}

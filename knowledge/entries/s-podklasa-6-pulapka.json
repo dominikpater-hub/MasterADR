@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "id": "s-podklasa-6-pulapka",
+  "factId": "s-podklasa-6-pulapka",
+  "adrRef": "ADR 2.2.61-62",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 4,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasy zagrożeń",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "match"
+  ],
+  "why": "Klasa 6.1 = trujące (zatrucie przez połknięcie, wdychanie, skórę). Klasa 6.2 = zakaźne (odpady medyczne, wirusy, bakterie, priony). PUŁAPKA: NIE występują materiały jednocześnie zakaźne I trujące — takie połączenie nie istnieje w ADR.",
+  "q": {
+    "scenario": {
+      "prompt": "Czy może istnieć materiał jednocześnie zakaźny (6.2) i trujący (6.1)?",
+      "options": [
+        "Tak, często występuje",
+        "Nie — takie połączenie nie występuje w ADR",
+        "Tylko w odpadach medycznych"
+      ],
+      "correct": "Nie — takie połączenie nie występuje w ADR"
+    },
+    "match": {
+      "prompt": "Dopasuj podklasę klasy 6:",
+      "pairs": {
+        "6.1": "trujące",
+        "6.2": "zakaźne (odpady medyczne, wirusy)"
+      }
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-podklasa-6-pulapka@adr-2025",
+  "migratedAt": "2026-07-23"
+}

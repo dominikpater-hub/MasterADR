@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-cysterna-wielokomorowa-decyzja",
+  "factId": "s-cysterna-wielokomorowa-decyzja",
+  "adrRef": "ADR 5.3.2.1.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 21,
+  "status": "core",
+  "block": 4,
+  "topic": "Oznakowanie pojazdu w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Dla UN 1202, 1203, 1223, 1268 i 1863 można oznakować cysternę wielokomorowa tak, jakby wiozła jeden produkt — ten najniebezpieczniejszy z przewożonych. Benzyna (UN 1203, numer 33) jest niebezpieczniejsza niż olej napędowy (UN 1202, numer 30).",
+  "q": {
+    "scenario": {
+      "prompt": "Cysterna wielokomorowa: olej napędowy (UN 1202) i benzyna (UN 1203). Jaka tablica?",
+      "options": [
+        "Dwie różne tablice na komorach",
+        "33/1203 — najniebezpieczniejszy z przewożonych",
+        "30/1202"
+      ],
+      "correct": "33/1203 — najniebezpieczniejszy z przewożonych"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-cysterna-wielokomorowa-decyzja@adr-2025",
+  "migratedAt": "2026-07-23"
+}

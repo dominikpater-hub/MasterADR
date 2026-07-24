@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-tablica-x-woda",
+  "factId": "s-tablica-x-woda",
+  "adrRef": "ADR 5.3.2.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 17,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Litera X przed numerem = materiał reaguje niebezpiecznie z wodą. Woda może być użyta tylko za zgoda specjalistów. To informacja ratująca życie przy gaszeniu.",
+  "q": {
+    "scenario": {
+      "prompt": "Tablica X423. Pali się ładunek. Straż pyta czy można lać wodę. Twoja odpowiedź:",
+      "options": [
+        "Tak, woda gasi wszystko",
+        "NIE bez zgody specjalistów — X oznacza niebezpieczna reakcje z wodą",
+        "Tylko mało wody"
+      ],
+      "correct": "NIE bez zgody specjalistów — X oznacza niebezpieczna reakcje z wodą"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-tablica-x-woda@adr-2025",
+  "migratedAt": "2026-07-23"
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-instrukcje-forma",
+  "factId": "b4-instrukcje-forma",
+  "adrRef": "ADR 5.4.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 13,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "match"
+  ],
+  "why": "Instrukcje pisemne zawierają: sprzet ochrony ogólnej i indywidualnej, czynności w razie wypadku lub awarii, charakterystyke zagrożeń, wzory nalepek. Muszą być dostępne w języku zrozumiałym dla załogi, przechowywane w kabinie kierowcy w łatwo dostepnym miejscu, wydrukowane W KOLORZE. Po zakończeniu transportu powinny pozostać w pojeździe. Wymagane tylko na \"otwartych tablicach\".",
+  "q": {
+    "mcq": {
+      "prompt": "Instrukcje pisemne muszą być wydrukowane:",
+      "options": [
+        "Czarno-bialo",
+        "W kolorze",
+        "Dowolnie"
+      ],
+      "correct": "W kolorze"
+    },
+    "match": {
+      "prompt": "Dopasuj zawartość instrukcji pisemnej:",
+      "pairs": {
+        "Sprzet ochrony": "wyposażenie 8.1.5",
+        "Czynności w razie wypadku": "procedura awaryjna",
+        "Wzory nalepek": "charakterystyka zagrożeń"
+      }
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-instrukcje-forma@adr-2025",
+  "migratedAt": "2026-07-23"
+}

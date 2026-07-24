@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-znak-srodowisko-prog@adr-2025",
+  "factId": "s-znak-srodowisko-prog",
+  "adrRef": "ADR 5.2.1.8.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 4,
+  "status": "core",
+  "block": 3,
+  "topic": "Materiały zagrażające środowisku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Znak materiału zagrażającego środowisku (ryba i uschnięte drzewo) umieszcza się na opakowaniach WIĘKSZYCH niż 5 kg lub 5 litrów. Poniżej tego progu znak nie jest wymagany.",
+  "q": {
+    "scenario": {
+      "prompt": "Kanister 3 l z materiałem zagrażającym środowisku. Czy potrzebny znak ryba/drzewo?",
+      "options": [
+        "Tak, zawsze",
+        "Nie — znak od opakowań powyżej 5 kg lub 5 l",
+        "Tylko przy transporcie międzynarodowym"
+      ],
+      "correct": "Nie — znak od opakowań powyżej 5 kg lub 5 l"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-znak-srodowisko-prog",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

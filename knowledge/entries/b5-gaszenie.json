@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-gaszenie",
+  "factId": "b5-gaszenie",
+  "adrRef": "ADR 5.4.3.4",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 27,
+  "status": "core",
+  "block": 5,
+  "topic": "Gaszenie pożaru",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "mcq"
+  ],
+  "why": "Jeżeli jest to właściwe i bezpieczne, użyć gaśnic w celu ugaszenia małego lub będącego w fazie początkowej pożaru, obejmującego opony, hamulce lub przedział silnika. Członkowie załogi NIE powinni gasić pożaru obejmującego przedział ładunkowy. Nie gasimy ładunku.",
+  "q": {
+    "scenario": {
+      "prompt": "Zapalila się przestrzeń ładunkowa z towarem niebezpiecznym. Twoje działanie:",
+      "options": [
+        "Gaszę gaśnica pokladowa",
+        "Oddalam się i wzywam straż — nie gasimy ładunku",
+        "Otwieram ładunek"
+      ],
+      "correct": "Oddalam się i wzywam straż — nie gasimy ładunku"
+    },
+    "mcq": {
+      "prompt": "Gaśnica pokladowa kierowca może gasić:",
+      "options": [
+        "Pożar przestrzeni ladunkowej",
+        "Mały pożar opon, hamulców lub silnika",
+        "Każdy pożar"
+      ],
+      "correct": "Mały pożar opon, hamulców lub silnika"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b5-gaszenie@adr-2025",
+  "migratedAt": "2026-07-23"
+}

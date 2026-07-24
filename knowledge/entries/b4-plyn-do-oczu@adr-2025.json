@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-plyn-do-oczu@adr-2025",
+  "factId": "b4-plyn-do-oczu",
+  "adrRef": "ADR 8.1.5.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór wyposażenia",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Płyn do płukania oczu NIE jest wymagany przy nalepkach 1, 1.4, 1.5, 1.6, 2.1, 2.2 i 2.3. Płyn to tylko 1 sztuka w pojeździe, niezależnie od ilości członków załogi.",
+  "q": {
+    "mcq": {
+      "prompt": "Ile płynu do płukania oczu musi być w pojeździe?",
+      "options": [
+        "Jedna sztuka niezależnie od liczby załogi",
+        "Po jednej na każdego członka załogi",
+        "Dwie sztuki"
+      ],
+      "correct": "Jedna sztuka niezależnie od liczby załogi"
+    },
+    "scenario": {
+      "prompt": "Przewozisz gazy palne (2.1). Czy potrzebujesz płynu do płukania oczu?",
+      "options": [
+        "Tak, zawsze",
+        "Nie — przy nalepkach 2.1 nie jest wymagany",
+        "Tylko przy cysternie"
+      ],
+      "correct": "Nie — przy nalepkach 2.1 nie jest wymagany"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-plyn-do-oczu",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-kanistry-przekroczenie",
+  "factId": "s-kanistry-przekroczenie",
+  "adrRef": "ADR 1.1.3.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 9,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyłączenia w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Limit paliwa w zbiornikach dodatkowych (kanistrach) to 60 l. Przekroczenie tego limitu oznacza, ze wyłączenie 1.1.3.3 nie przysługuje dla nadwyżki — trzeba stosować przepisy ADR.",
+  "q": {
+    "scenario": {
+      "prompt": "Wieziesz 100 l paliwa w kanistrach. Czy to się mieści w wyłączeniu paliwowym?",
+      "options": [
+        "Tak, do 1500 l",
+        "Nie — limit dla kanistrów to 60 l",
+        "Tak, jeśli kanistry są atestowane"
+      ],
+      "correct": "Nie — limit dla kanistrów to 60 l"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-kanistry-przekroczenie@adr-2025",
+  "migratedAt": "2026-07-23"
+}

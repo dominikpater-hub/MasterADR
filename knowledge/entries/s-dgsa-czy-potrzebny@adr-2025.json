@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-dgsa-czy-potrzebny@adr-2025",
+  "factId": "s-dgsa-czy-potrzebny",
+  "adrRef": "ADR 1.8.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Doradcę DGSA powinna wyznaczyć KAŻDA firma pakująca, ładująca, transportująca lub rozładowująca towary niebezpieczne — nie tylko przewoźnicy. Kara za niewyznaczenie: 5000 PLN. DGSA sprawdza szkolenia, sporządza sprawozdanie roczne i raport powypadkowy.",
+  "q": {
+    "scenario": {
+      "prompt": "Jednoosobowa firma transportową, wozisz tylko paliwo w cysternie. Potrzebujesz DGSA?",
+      "options": [
+        "Nie, to za mała firma",
+        "Tak — każda firma transportująca towary niebezpieczne musi wyznaczyć doradcę",
+        "Tylko jeśli zatrudniasz kierowców"
+      ],
+      "correct": "Tak — każda firma transportująca towary niebezpieczne musi wyznaczyć doradcę"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-dgsa-czy-potrzebny",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

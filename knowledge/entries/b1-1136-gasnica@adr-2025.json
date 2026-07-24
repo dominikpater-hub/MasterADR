@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-1136-gasnica@adr-2025",
+  "factId": "b1-1136-gasnica",
+  "adrRef": "ADR 1.1.3.6 / 8.1.4",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "mcq"
+  ],
+  "why": "Pojazd przewożący towary niebezpieczne na zwolnieniu 1.1.3.6 musi być wyposażony w 1 gaśnice 2 kg typu ABC.",
+  "q": {
+    "scenario": {
+      "prompt": "Przewóz na zwolnieniu „1000 punktów”. Ile gaśnic i jakiej wielkości?",
+      "options": [
+        "Żadnej",
+        "1 gaśnica 2 kg typu ABC",
+        "2 gaśnice po 6 kg"
+      ],
+      "correct": "1 gaśnica 2 kg typu ABC"
+    },
+    "mcq": {
+      "prompt": "Gaśnica przy zwolnieniu „1000 punktów” musi być typu:",
+      "options": [
+        "A",
+        "ABC",
+        "CO2"
+      ],
+      "correct": "ABC"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-1136-gasnica",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

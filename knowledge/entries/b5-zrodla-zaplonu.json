@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-zrodla-zaplonu",
+  "factId": "b5-zrodla-zaplonu",
+  "adrRef": "ADR 5.4.3.4",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 2,
+  "status": "core",
+  "block": 5,
+  "topic": "Reakcja po wypadku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Unikać źródeł zapłonu, w szczególności nie palić, nie używać papierosów elektronicznych lub podobnych urządzeń oraz nie włączać żadnych urządzeń elektrycznych.",
+  "q": {
+    "mcq": {
+      "prompt": "Po wypadku z towarem niebezpiecznym NIE wolno:",
+      "options": [
+        "Zakładać kamizelki",
+        "Włączać urządzeń elektrycznych i używać e-papierosów",
+        "Powiadamiac służb"
+      ],
+      "correct": "Włączać urządzeń elektrycznych i używać e-papierosów"
+    },
+    "scenario": {
+      "prompt": "Wyciek benzyny. Chcesz oświetlić miejsce telefonem. Czy można?",
+      "options": [
+        "Tak",
+        "Nie — nie włączamy urządzeń elektrycznych",
+        "Tylko latarka z wyposażenia"
+      ],
+      "correct": "Nie — nie włączamy urządzeń elektrycznych"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b5-zrodla-zaplonu@adr-2025",
+  "migratedAt": "2026-07-23"
+}

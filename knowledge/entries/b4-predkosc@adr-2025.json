@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-predkosc@adr-2025",
+  "factId": "b4-predkosc",
+  "adrRef": "przepisy krajowe",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 22,
+  "status": "core",
+  "block": 4,
+  "topic": "Ruch drogowy i postoj",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Dla przewozu towarów niebezpiecznych NIE obowiązuje podwyższenie prędkości w terenie zabudowanym. Maksymalnie 50 km/h.",
+  "q": {
+    "mcq": {
+      "prompt": "Maksymalna prędkość pojazdu z towarem ADR w terenie zabudowanym:",
+      "options": [
+        "50 km/h",
+        "60 km/h",
+        "70 km/h"
+      ],
+      "correct": "50 km/h"
+    },
+    "scenario": {
+      "prompt": "Teren zabudowany, znak dopuszcza 60 km/h. Wieziesz ADR. Ile możesz jechać?",
+      "options": [
+        "60 km/h",
+        "50 km/h — podwyższenie nie obowiązuje przy ADR",
+        "70 km/h"
+      ],
+      "correct": "50 km/h — podwyższenie nie obowiązuje przy ADR"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-predkosc",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

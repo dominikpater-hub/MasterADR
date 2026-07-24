@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-ustawa-pl@adr-2025",
+  "factId": "b1-ustawa-pl",
+  "adrRef": "Dz.U. 2011 nr 227 poz. 1367",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "W Polsce obowiązuje Ustawa o przewozie towarów niebezpiecznych z 19.08.2011 (Dz.U. 2011 nr 227 poz. 1367).",
+  "q": {
+    "mcq": {
+      "prompt": "Polska ustawa regulująca przewóz towarów niebezpiecznych pochodzi z roku:",
+      "options": [
+        "2005",
+        "2011",
+        "2019"
+      ],
+      "correct": "2011"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-ustawa-pl",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

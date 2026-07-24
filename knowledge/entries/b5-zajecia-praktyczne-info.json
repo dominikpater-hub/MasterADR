@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-zajecia-praktyczne-info",
+  "factId": "b5-zajecia-praktyczne-info",
+  "adrRef": "program kursu (Dz.U. 2021 poz. 2150)",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "curriculum",
+  "page": null,
+  "status": "info",
+  "block": 5,
+  "topic": "Reakcja po wypadku",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "INFO: zajęcia praktyczne z pierwszej pomocy i gaszenia pożaru są obowiązkowa częścią kursu stacjonarnego ADR. Trening w aplikacji utrwala wiedzę, realny skill ćwiczy się na kursie z instruktorem.",
+  "q": {
+    "mcq": {
+      "prompt": "Gdzie ćwiczy się praktycznie gaszenie pożaru i pierwsza pomoc w ramach ADR?",
+      "options": [
+        "Na zajęciach praktycznych kursu stacjonarnego z instruktorem",
+        "Wyłącznie w aplikacji",
+        "Nie ma zajęć praktycznych w kursie ADR"
+      ],
+      "correct": "Na zajęciach praktycznych kursu stacjonarnego z instruktorem"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    },
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": null,
+  "migratedAt": "2026-07-23"
+}

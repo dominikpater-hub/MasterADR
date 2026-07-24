@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-gasnice-s3",
+  "factId": "b4-gasnice-s3",
+  "adrRef": "ADR przepis S3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór gaśnic",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Zgodnie z przepisem S3 dla towarów klasy 6.2 (zakaźne) niezależnie od DMC pojazdu wystarczy gaśnica 2 kg typu ABC, a latarka może być o dowolnej konstrukcji.",
+  "q": {
+    "mcq": {
+      "prompt": "Dla towarów klasy 6.2 (zakaźne) wg przepisu S3 wystarczy gaśnica:",
+      "options": [
+        "2 kg ABC niezależnie od DMC",
+        "12 kg",
+        "6 kg"
+      ],
+      "correct": "2 kg ABC niezależnie od DMC"
+    },
+    "scenario": {
+      "prompt": "Wieziesz odpady medyczne (6.2) zestawem 20 t. Ile gaśnicy potrzebujesz wg S3?",
+      "options": [
+        "12 kg jak dla każdego zestawu",
+        "Wystarczy 2 kg ABC",
+        "8 kg"
+      ],
+      "correct": "Wystarczy 2 kg ABC"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-gasnice-s3@adr-2025",
+  "migratedAt": "2026-07-23"
+}

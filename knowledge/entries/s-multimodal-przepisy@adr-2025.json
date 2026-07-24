@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "s-multimodal-przepisy@adr-2025",
+  "factId": "s-multimodal-przepisy",
+  "adrRef": "ADR 1.1.4.2.1 / IMDG",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "match"
+  ],
+  "why": "Poza ADR (droga) obowiązują: RID (kolej), ADN (śródlądowy), IMDG (morski), ICAO TI (lotniczy). Przy przewozie multimodalnym przesyłki mogą być oznakowane wg kodeksu morskiego lub lotniczego — wtedy w dokumencie zapis \"Przewóz zgodny z 1.1.4.2.1\". Przed przewozem morskim wymagany jest certyfikat pakowania kontenera.",
+  "q": {
+    "scenario": {
+      "prompt": "Wieziesz kontener do portu, dalej płynie promem. Jakie przepisy obowiązują na morzu?",
+      "options": [
+        "Dalej ADR",
+        "IMDG — kodeks morski",
+        "ICAO TI"
+      ],
+      "correct": "IMDG — kodeks morski"
+    },
+    "match": {
+      "prompt": "Dopasuj umowę do gałęzi transportu:",
+      "pairs": {
+        "ADR": "drogowy",
+        "RID": "kolejowy",
+        "IMDG": "morski",
+        "ICAO TI": "lotniczy"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-multimodal-przepisy",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

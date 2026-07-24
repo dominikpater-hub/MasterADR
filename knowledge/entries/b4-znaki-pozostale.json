@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-znaki-pozostale",
+  "factId": "b4-znaki-pozostale",
+  "adrRef": "znaki drogowe PL",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 22,
+  "status": "core",
+  "block": 4,
+  "topic": "Ruch drogowy i postoj",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "match"
+  ],
+  "why": "D-37 — dozwolony wjazd z wszystkimi towarami niebezpiecznymi (tunel). C-17 — nakazany kierunek jazdy dla pojazdów przewożących towary niebezpieczne. T-23i, T-23j, T-23h — tabliczki precyzujące rodzaj towaru.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj znak do znaczenia:",
+      "pairs": {
+        "B-13a": "zakaz — wszystkie klasy z tablicami",
+        "D-37": "dozwolony wjazd z wszystkimi towarami",
+        "C-17": "nakazany kierunek jazdy"
+      }
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-znaki-pozostale@adr-2025",
+  "migratedAt": "2026-07-23"
+}

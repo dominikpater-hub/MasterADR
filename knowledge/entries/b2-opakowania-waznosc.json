@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-opakowania-waznosc",
+  "factId": "b2-opakowania-waznosc",
+  "adrRef": "ADR 4.1.1.15",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 7,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt opakowania",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "fill"
+  ],
+  "why": "W większości wypadków (DPPL, kanistry, bębny) opakowania mogą być używane przez 5 lat od daty produkcji. Po 2,5 roku powinno być przeprowadzone badanie. Data produkcji zapisana jako cyfry miesiąca i roku, np. 07 21 = lipiec 2021, używany do lipca 2026.",
+  "q": {
+    "mcq": {
+      "prompt": "Przez ile lat od daty produkcji można używać DPPL?",
+      "options": [
+        "2,5 roku",
+        "5 lat",
+        "10 lat"
+      ],
+      "correct": "5 lat"
+    },
+    "fill": {
+      "prompt": "Po ___ roku (liczba) od produkcji opakowania powinno być przeprowadzone badanie.",
+      "correct": "2,5",
+      "hint": "liczba z przecinkiem"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b2-opakowania-waznosc@adr-2025",
+  "migratedAt": "2026-07-23"
+}

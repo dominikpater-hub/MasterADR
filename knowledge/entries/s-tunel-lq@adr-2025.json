@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-tunel-lq@adr-2025",
+  "factId": "s-tunel-lq",
+  "adrRef": "ADR 3.4 / 1.9.5",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 10,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o tunelu",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Jednostka powyżej 12 t DMC przewożąca powyżej 8 t brutto towarów w ilościach ograniczonych (LQ) musi być oznakowana znakiem LQ i NIE MOŻE wjeżdżać do tunelu kategorii E.",
+  "q": {
+    "scenario": {
+      "prompt": "Ciężarówka 24 t DMC, 10 t brutto towarów LQ. Tunel kategorii E — wjeżdżasz?",
+      "options": [
+        "Tak, LQ jest zwolnione",
+        "Nie — LQ powyżej 8 t brutto ma zakaz tunelu E",
+        "Tak, jeśli nie ma tablic"
+      ],
+      "correct": "Nie — LQ powyżej 8 t brutto ma zakaz tunelu E"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-tunel-lq",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

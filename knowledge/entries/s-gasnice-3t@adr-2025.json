@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-gasnice-3t@adr-2025",
+  "factId": "s-gasnice-3t",
+  "adrRef": "ADR 8.1.4",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór gaśnic",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Bus 3 t = do 3,5 t. Wymagane: 2 gaśnice, łączna pojemność 4 kg — czyli 2 kg do silnika/kabiny + 2 kg dodatkowa.",
+  "q": {
+    "scenario": {
+      "prompt": "Bus 3 t z towarem ADR. Jakie gaśnice?",
+      "options": [
+        "Jedna 4 kg",
+        "Dwie gaśnice, łącznie 4 kg (2 kg + 2 kg)",
+        "Dwie po 6 kg"
+      ],
+      "correct": "Dwie gaśnice, łącznie 4 kg (2 kg + 2 kg)"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-gasnice-3t",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

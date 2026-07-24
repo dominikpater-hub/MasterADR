@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-data-opakowania",
+  "factId": "s-data-opakowania",
+  "adrRef": "ADR 4.1.1.15",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 7,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt opakowania",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Data produkcji na opakowaniu zapisana jest jako miesiąc i rok, np. 07 21 = lipiec 2021. Opakowanie można używać 5 lat od daty produkcji, czyli do lipca 2026. Po 2,5 roku (styczen 2024) powinno być przeprowadzone badanie.",
+  "q": {
+    "scenario": {
+      "prompt": "Na DPPL widzisz oznaczenie 07 21. Do kiedy możesz go używać?",
+      "options": [
+        "Do lipca 2023",
+        "Do lipca 2026 (5 lat od produkcji)",
+        "Bezterminowo"
+      ],
+      "correct": "Do lipca 2026 (5 lat od produkcji)"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-data-opakowania@adr-2025",
+  "migratedAt": "2026-07-23"
+}

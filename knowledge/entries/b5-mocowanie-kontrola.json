@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-mocowanie-kontrola",
+  "factId": "b5-mocowanie-kontrola",
+  "adrRef": "ADR 7.5.7",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 40,
+  "status": "core",
+  "block": 5,
+  "topic": "Mocowanie ładunku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "mcq"
+  ],
+  "why": "Kierowca odpowiada za sprawdzenie zamocowania ładunku przed jazdą i po każdej przerwie, na której mogło dojść do przemieszczenia. Luźny pas, uszkodzona burta lub przesunięta paleta to podstawa do przerwania jazdy i poprawy mocowania.",
+  "q": {
+    "scenario": {
+      "prompt": "Po przerwie zauważasz, że jeden pas mocujący się poluzował. Co robisz?",
+      "options": [
+        "Jadę dalej, poprawię na rozładunku",
+        "Poprawiam mocowanie przed dalszą jazdą",
+        "Zdejmuję pas, skoro luźny"
+      ],
+      "correct": "Poprawiam mocowanie przed dalszą jazdą"
+    },
+    "mcq": {
+      "prompt": "Kiedy kierowca powinien sprawdzić zamocowanie ładunku?",
+      "options": [
+        "Tylko przy załadunku",
+        "Przed jazdą i po przerwach, na których mogło się przesunąć",
+        "Tylko gdy zatrzyma go kontrola"
+      ],
+      "correct": "Przed jazdą i po przerwach, na których mogło się przesunąć"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    },
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": null,
+  "migratedAt": "2026-07-23"
+}

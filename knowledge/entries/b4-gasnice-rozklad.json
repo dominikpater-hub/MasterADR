@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-gasnice-rozklad",
+  "factId": "b4-gasnice-rozklad",
+  "adrRef": "ADR 8.1.4.1",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór gaśnic",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "mcq"
+  ],
+  "why": "Rozkład gaśnic: co najmniej jedna gaśnica do gaszenia pożaru silnika lub kabiny o minimalnej pojemności 2 kg (dla każdej kategorii masy). Wymagana gaśnica dodatkowa: min. 2 kg dla jednostki do 3,5 t; min. 6 kg dla jednostki powyżej 3,5 t.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj masę jednostki do min. pojemności gaśnicy DODATKOWEJ:",
+      "pairs": {
+        "do 3,5 t": "2 kg",
+        "powyżej 3,5 t": "6 kg"
+      }
+    },
+    "mcq": {
+      "prompt": "Gaśnica do gaszenia pożaru silnika lub kabiny musi mieć min. pojemność:",
+      "options": [
+        "2 kg",
+        "6 kg",
+        "12 kg"
+      ],
+      "correct": "2 kg"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-gasnice-rozklad@adr-2025",
+  "migratedAt": "2026-07-23"
+}

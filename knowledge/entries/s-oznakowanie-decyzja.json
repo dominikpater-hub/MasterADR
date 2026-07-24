@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "s-oznakowanie-decyzja",
+  "factId": "s-oznakowanie-decyzja",
+  "adrRef": "ADR 5.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 21,
+  "status": "core",
+  "block": 4,
+  "topic": "Oznakowanie pojazdu w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Sposób oznakowania zależy od sposobu przewozu. Sztuki przesyłki: tablice gładkie (bez numerów) przód i tył, BEZ nalepek na pojeździe. Luzem lub cysterna: tablice z numerami przód i tył + nalepki z trzech stron (oba boki i tył). Kontener-cysterna: nalepki z 4 stron.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj sposób przewozu do oznakowania:",
+      "pairs": {
+        "Sztuki przesyłki": "tablice gładkie przód i tył, bez nalepek",
+        "Luzem lub cysterna": "tablice z numerami + nalepki z 3 stron",
+        "Kontener-cysterna": "nalepki z 4 stron"
+      }
+    },
+    "scenario": {
+      "prompt": "Wieziesz butle gazowe i DPPL (sztuki przesyłki). Jak oznakować pojazd?",
+      "options": [
+        "Tablice z numerami i nalepki z boków",
+        "Tablice gładkie bez numerów, przód i tył, bez nalepek",
+        "Bez oznakowania"
+      ],
+      "correct": "Tablice gładkie bez numerów, przód i tył, bez nalepek"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-oznakowanie-decyzja@adr-2025",
+  "migratedAt": "2026-07-23"
+}

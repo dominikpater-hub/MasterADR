@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "s-1136-co-zostaje@adr-2025",
+  "factId": "s-1136-co-zostaje",
+  "adrRef": "ADR 1.1.3.6",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 10,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Wyłączenie 1.1.3.6 nie zwalnia ze wszystkiego. ZOSTAJE: certyfikowane i oznakowane opakowania, gaśnica 2 kg ABC z data przeglądu, dokument przewozowy, szkolenie stanowiskowe. ODPADA: tablice pomarańczowe, zaświadczenie ADR, instrukcja pisemną, skrzynka ADR, znaki drogowe ADR, DGSA, zakaz pasażerów.",
+  "q": {
+    "match": {
+      "prompt": "Przewóz na zwolnieniu „1000 punktów” — co zostaje, a co odpada?",
+      "pairs": {
+        "Gaśnica 2 kg ABC": "zostaje",
+        "Dokument przewozowy": "zostaje",
+        "Tablice pomarańczowe": "odpada",
+        "Zaświadczenie ADR": "odpada"
+      }
+    },
+    "scenario": {
+      "prompt": "Jedziesz na zwolnieniu „1000 punktów”. Kontrola pyta o instrukcję pisemną. Musisz ją mieć?",
+      "options": [
+        "Tak, zawsze",
+        "Nie — instrukcja odpada przy zwolnieniu „1000 punktów”",
+        "Tylko przy klasie 3"
+      ],
+      "correct": "Nie — instrukcja odpada przy zwolnieniu „1000 punktów”"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-1136-co-zostaje",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

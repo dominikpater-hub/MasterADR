@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-pasazerowie@adr-2025",
+  "factId": "b4-pasazerowie",
+  "adrRef": "ADR 8.3.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 13,
+  "status": "core",
+  "block": 4,
+  "topic": "Ruch drogowy i postoj",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "W pojeździe \"na pełnym ADR\" nie wolno przewozić pasażerów, a jedynie członków załogi. Każdy członek załogi musi mieć dokument tożsamości.",
+  "q": {
+    "mcq": {
+      "prompt": "Kogo wolno przewozić w pojeździe na pełnym ADR?",
+      "options": [
+        "Dowolnych pasażerów",
+        "Tylko członków załogi",
+        "Pasażerów za zgoda nadawcy"
+      ],
+      "correct": "Tylko członków załogi"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-pasazerowie",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

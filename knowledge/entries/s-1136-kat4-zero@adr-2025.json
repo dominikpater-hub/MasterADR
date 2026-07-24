@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "s-1136-kat4-zero@adr-2025",
+  "factId": "s-1136-kat4-zero",
+  "adrRef": "ADR 1.1.3.6.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "fill",
+    "scenario"
+  ],
+  "why": "Kategoria 4 ma mnożnik 0 — nie dolicza się do sumy niezależnie od ilości. 500 kg kąt. 4 = 0 punktów. Liczy się tylko 100 l kąt. 3 = 100 punktów.",
+  "q": {
+    "fill": {
+      "prompt": "Ładunek: 500 kg kategorii 4 + 100 l kategorii 3. Ile punktów?",
+      "correct": "100",
+      "hint": "uwaga na mnożnik kąt. 4"
+    },
+    "scenario": {
+      "prompt": "Wieziesz 2 tony towaru kategorii 4. Ile to punktów?",
+      "options": [
+        "2000",
+        "0 — kategoria 4 ma mnożnik zero",
+        "666"
+      ],
+      "correct": "0 — kategoria 4 ma mnożnik zero"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-1136-kat4-zero",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

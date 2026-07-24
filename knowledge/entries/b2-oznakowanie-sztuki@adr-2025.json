@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-oznakowanie-sztuki@adr-2025",
+  "factId": "b2-oznakowanie-sztuki",
+  "adrRef": "ADR 5.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 7,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt opakowania",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "match"
+  ],
+  "why": "Na każdej sztuce przesyłki musi znajdować się: numer UN przewożonego towaru, znak certyfikacji opakowania (symbol ONZ — litery \"un\" w kołku), nalepka wskazująca zagrożenie (100x100 mm), prawidłowa nazwa przewozowa (dla klas 1, 2, 7), strzałki kierunkowe nr 11 dla opakowań z naczyniami wewnętrznymi z materiałami ciekłymi.",
+  "q": {
+    "mcq": {
+      "prompt": "Prawidłowa nazwa przewozowa na sztuce przesyłki jest wymagana dla klas:",
+      "options": [
+        "Wszystkich",
+        "1, 2 i 7",
+        "Tylko 3 i 8"
+      ],
+      "correct": "1, 2 i 7"
+    },
+    "match": {
+      "prompt": "Dopasuj element oznakowania sztuki przesyłki:",
+      "pairs": {
+        "Numer UN": "identyfikacja towaru",
+        "Symbol ONZ (un w kołku)": "certyfikacja opakowania",
+        "Strzalki kierunkowe nr 11": "naczynia wewnętrzne z cieczami"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b2-oznakowanie-sztuki",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

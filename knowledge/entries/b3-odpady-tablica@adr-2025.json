@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "b3-odpady-tablica@adr-2025",
+  "factId": "b3-odpady-tablica",
+  "adrRef": "przepisy krajowe",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 21,
+  "status": "core",
+  "block": 3,
+  "topic": "Odpady",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "match"
+  ],
+  "why": "Oznakowanie pojazdów przewożących ODPADY w Polsce zawiera tylko jedna tablice ODPADY 30 x 40 cm z przodu pojazdu. NIE jest wymagane przy przewozie odpadów sklasyfikowanych jako ADR. W transporcie międzynarodowym odpadów sklasyfikowanych jako ADR używamy oznakowania ADR i \"A\" z przodu i z tyłu jednostki (Niemcy, Austria, Czechy).",
+  "q": {
+    "mcq": {
+      "prompt": "Tablica ODPADY w Polsce ma wymiary i umieszczenie:",
+      "options": [
+        "30 x 40 cm, z przodu pojazdu",
+        "40 x 30 cm, z tyłu",
+        "30 x 40 cm, z obu stron"
+      ],
+      "correct": "30 x 40 cm, z przodu pojazdu"
+    },
+    "match": {
+      "prompt": "Dopasuj oznakowanie odpadów:",
+      "pairs": {
+        "Polska": "tablica ODPADY 30x40 z przodu",
+        "Niemcy, Austria, Czechy": "znak \"A\" z przodu i tyłu"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b3-odpady-tablica",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

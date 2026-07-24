@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-kat0@adr-2025",
+  "factId": "b1-kat0",
+  "adrRef": "ADR 1.1.3.6.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Dla towarów kategorii transportowej 0 KAŻDA ilość oznacza pełny ADR — limit wynosi 0, nie ma mnożnika. Dotyczy to także próżnych opakowań po towarach kategorii 0.",
+  "q": {
+    "mcq": {
+      "prompt": "Towary kategorii transportowej 0 przewozi się:",
+      "options": [
+        "Bez ograniczeń",
+        "Zawsze na pełnym ADR, każda ilość",
+        "Do 20 kg na wyłączeniu"
+      ],
+      "correct": "Zawsze na pełnym ADR, każda ilość"
+    },
+    "scenario": {
+      "prompt": "Próżne, nieoczyszczone opakowanie po towarze kategorii 0. Jaki reżim?",
+      "options": [
+        "Zwolnienie „1000 punktów”",
+        "Pełny ADR",
+        "Kategoria 4, bez ograniczeń"
+      ],
+      "correct": "Pełny ADR"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-kat0",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

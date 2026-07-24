@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "s-przypisz-klase",
+  "factId": "s-przypisz-klase",
+  "adrRef": "ADR czesc 2",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 3,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasyfikacja",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Rozpoznanie klasy po towarze to podstawa. Benzyna i olej napędowy = klasa 3 (ciecze zapalne). Propan/butan = klasa 2 (gazy). Kwas siarkowy = klasa 8 (żrące). Baterie litowe = klasa 9. Azotan amonu = klasa 5.1 (utleniający).",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj towar do klasy:",
+      "pairs": {
+        "Benzyna": "klasa 3",
+        "Propan w butli": "klasa 2",
+        "Kwas siarkowy": "klasa 8",
+        "Baterie litowe": "klasa 9"
+      }
+    },
+    "scenario": {
+      "prompt": "Wieziesz azotan amonu, który podtrzymuje spalanie. Która klasa?",
+      "options": [
+        "Klasa 3 — bo palny",
+        "Klasa 5.1 — utleniający",
+        "Klasa 9"
+      ],
+      "correct": "Klasa 5.1 — utleniający"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-przypisz-klase@adr-2025",
+  "migratedAt": "2026-07-23"
+}

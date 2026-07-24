@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-ladowanie-3-8@adr-2025",
+  "factId": "s-ladowanie-3-8",
+  "adrRef": "ADR 7.5.2.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 25,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o załadunku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "W ADR większość klas można ładować razem przy prawidłowym opakowaniu (inaczej niż w transporcie morskim IMDG). Zakazy 7.5.2.1 dotyczą w uproszczeniu klasy 1 oraz 4.1+1 i 5.2+1 o właściwościach wybuchowych.",
+  "q": {
+    "scenario": {
+      "prompt": "Chcesz załadować razem kanistry z benzyna (3) i kwasem (8). Wolno?",
+      "options": [
+        "Nie, różne klasy nigdy razem",
+        "Tak — ładowanie razem tych klas jest dozwolone",
+        "Tylko w osobnych kontenerach"
+      ],
+      "correct": "Tak — ładowanie razem tych klas jest dozwolone"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-ladowanie-3-8",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

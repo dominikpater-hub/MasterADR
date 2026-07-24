@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-austria-eskorta@adr-2025",
+  "factId": "b4-austria-eskorta",
+  "adrRef": "wymogi krajowe",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 24,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o tunelu",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "W niektórych krajach wymaga się dodatkowych wymogów, np. w Austrii jednostka transportową powinna być wyposażona w lampę o świetle pomarańczowym. Jednostki, których oznakowanie na tablicy rozpoczyna się od cyfry 2 lub zawierające podwojne cyfry 3, 4, 5, 6, 8 lub poprzedzone litera X wymagaja eskorty podczas przejazdu przez tunele.",
+  "q": {
+    "mcq": {
+      "prompt": "W Austrii jednostka transportową z ADR powinna być wyposażona w:",
+      "options": [
+        "Lampę o świetle pomarańczowym",
+        "Radio CB",
+        "Kamerę cofania"
+      ],
+      "correct": "Lampę o świetle pomarańczowym"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-austria-eskorta",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

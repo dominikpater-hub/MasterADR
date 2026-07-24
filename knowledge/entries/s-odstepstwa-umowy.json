@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-odstepstwa-umowy",
+  "factId": "s-odstepstwa-umowy",
+  "adrRef": "ADR 1.5",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Kraje mogą wprowadzać dodatkowe wymagania (np. przejazd tunelami, okresowe zakazy ruchu) oraz umowy specjalne dopuszczające odstępstwa od przepisów. Odstępstwa nie mogą trwać dłużej niż 5 lat. Wykaz na masteradr.pl/kraje.",
+  "q": {
+    "scenario": {
+      "prompt": "Umowa specjalna dopuszczająca odstępstwo od ADR może obowiązywać maksymalnie:",
+      "options": [
+        "1 rok",
+        "5 lat",
+        "Bezterminowo do odwołania"
+      ],
+      "correct": "5 lat"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-odstepstwa-umowy@adr-2025",
+  "migratedAt": "2026-07-23"
+}

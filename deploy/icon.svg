@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="MasterADR">
+  <rect width="512" height="512" rx="112" fill="#0E1117"/>
+  <!-- ADR hazard diamond -->
+  <g transform="translate(256 232) rotate(45)">
+    <rect x="-104" y="-104" width="208" height="208" rx="18" fill="#c1121f"/>
+    <rect x="-104" y="-104" width="208" height="208" rx="18" fill="none" stroke="#e8eaed" stroke-width="10"/>
+  </g>
+  <!-- flame mark, upright over the diamond -->
+  <path d="M256 150c30 34 46 60 46 84 0 28-21 48-46 48s-46-20-46-48c0-16 7-30 20-46 4 12 11 20 20 24-6-24 0-44 6-62z"
+        fill="#0E1117"/>
+  <!-- wordmark -->
+  <text x="256" y="430" text-anchor="middle"
+        font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+        font-size="72" font-weight="700" fill="#e8eaed" letter-spacing="2">ADR</text>
+</svg>

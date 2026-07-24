@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-numer-x@adr-2025",
+  "factId": "b2-numer-x",
+  "adrRef": "ADR 5.3.2.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 17,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Litera X przed numerem rozpoznawczym zagrożenia oznacza niebezpieczna reakcje z wodą. Woda może być stosowana jedynie za zgoda specjalistów. UWAGA: nie mylić z X w kodzie opakowania, który określa mocne opakowanie do I, II, III grupy pakowania.",
+  "q": {
+    "mcq": {
+      "prompt": "Litera X przed numerem rozpoznawczym zagrożenia oznacza:",
+      "options": [
+        "Materiał wybuchowy",
+        "Niebezpieczna reakcje z wodą",
+        "Mocne opakowanie"
+      ],
+      "correct": "Niebezpieczna reakcje z wodą"
+    },
+    "scenario": {
+      "prompt": "Na tablicy widzisz X423. Czy można gasić wodą?",
+      "options": [
+        "Tak, zawsze",
+        "Tylko za zgoda specjalistów",
+        "Woda jest zalecana"
+      ],
+      "correct": "Tylko za zgoda specjalistów"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b2-numer-x",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

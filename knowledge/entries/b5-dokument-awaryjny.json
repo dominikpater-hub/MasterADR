@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-dokument-awaryjny",
+  "factId": "b5-dokument-awaryjny",
+  "adrRef": "ADR 5.4.1",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 27,
+  "status": "core",
+  "block": 5,
+  "topic": "Powiadamianie służb",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Najważniejszym dokumentem w sytuacji awaryjnej jest DOKUMENT PRZEWOZOWY, ponieważ zawiera informacje na temat towaru i jego właściwości.",
+  "q": {
+    "mcq": {
+      "prompt": "Najważniejszy dokument w sytuacji awaryjnej to:",
+      "options": [
+        "Instrukcja pisemną",
+        "Dokument przewozowy",
+        "Świadectwo dopuszczenia"
+      ],
+      "correct": "Dokument przewozowy"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b5-dokument-awaryjny@adr-2025",
+  "migratedAt": "2026-07-23"
+}

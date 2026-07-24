@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-maska-ucieczkowa",
+  "factId": "b4-maska-ucieczkowa",
+  "adrRef": "ADR 8.1.5.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór wyposażenia",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Maska ucieczkowa dla KAŻDEGO członka załogi pojazdu powinna być przewożona w jednostce transportowej w przypadku nalepek ostrzegawczych 2.3 lub 6.1.",
+  "q": {
+    "mcq": {
+      "prompt": "Maska ucieczkowa wymagana jest przy nalepkach:",
+      "options": [
+        "3 i 8",
+        "2.3 lub 6.1",
+        "4.1 i 9"
+      ],
+      "correct": "2.3 lub 6.1"
+    },
+    "scenario": {
+      "prompt": "Przewozisz gaz trujący (2.3), załoga 2 osoby. Ile masek ucieczkowych?",
+      "options": [
+        "Jedna",
+        "Dwie — na każdego członka załogi",
+        "Żadna"
+      ],
+      "correct": "Dwie — na każdego członka załogi"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-maska-ucieczkowa@adr-2025",
+  "migratedAt": "2026-07-23"
+}

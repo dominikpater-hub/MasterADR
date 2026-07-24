@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-kod-opakowania-xyz@adr-2025",
+  "factId": "b2-kod-opakowania-xyz",
+  "adrRef": "ADR 6.1.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 8,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt opakowania",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "mcq"
+  ],
+  "why": "Litera na drugim miejscu kodu opakowania wskazuje, dla której grupy pakowania może być użyte: X — dla I, II, III GP; Y — dla II, III GP; Z — tylko dla III GP.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj literę kodu opakowania do grup pakowania:",
+      "pairs": {
+        "X": "I, II, III GP",
+        "Y": "II, III GP",
+        "Z": "III GP"
+      }
+    },
+    "mcq": {
+      "prompt": "Opakowanie z litera Y może być użyte dla grup pakowania:",
+      "options": [
+        "Tylko I",
+        "II i III",
+        "Wszystkich"
+      ],
+      "correct": "II i III"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b2-kod-opakowania-xyz",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

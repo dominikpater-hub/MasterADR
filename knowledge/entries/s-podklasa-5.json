@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-podklasa-5",
+  "factId": "s-podklasa-5",
+  "adrRef": "ADR 2.2.51-52",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 4,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasy zagrożeń",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Klasa 5.1 (utleniające) same nie muszą się palić, ale WZMAGAJĄ palenie. Nie wolno ich mieszać z materiałami zapalnymi — np. trocinami. W kontakcie mogą gwałtownie reagować, wybuchać, powodować pożar. 5.2 to nadtlenki organiczne (typy A-F), niektóre wybuchowe.",
+  "q": {
+    "scenario": {
+      "prompt": "Materiał utleniający (5.1) rozsypał się na trociny w naczepie. Zagrożenie?",
+      "options": [
+        "Żadne, 5.1 sam się nie pali",
+        "Poważne — utleniacz z materiałem palnym może gwałtownie reagować i zapalić się",
+        "Tylko przy ogrzaniu powyżej 100 st. C"
+      ],
+      "correct": "Poważne — utleniacz z materiałem palnym może gwałtownie reagować i zapalić się"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-podklasa-5@adr-2025",
+  "migratedAt": "2026-07-23"
+}

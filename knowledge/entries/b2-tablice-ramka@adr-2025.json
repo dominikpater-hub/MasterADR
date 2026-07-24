@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-tablice-ramka@adr-2025",
+  "factId": "b2-tablice-ramka",
+  "adrRef": "ADR 5.3.2.2.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 17,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "match"
+  ],
+  "why": "Tablica standardowa 300 x 400 mm ma czarna ramkę o szerokości 15 mm. Tablica mała 300 x 120 mm ma obramowanie 10 mm.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj rozmiar tablicy do szerokości ramki:",
+      "pairs": {
+        "300 x 400 mm": "ramka 15 mm",
+        "300 x 120 mm": "ramka 10 mm"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b2-tablice-ramka",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

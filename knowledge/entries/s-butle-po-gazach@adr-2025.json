@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-butle-po-gazach@adr-2025",
+  "factId": "s-butle-po-gazach",
+  "adrRef": "ADR 1.1.3.6.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyłączenia w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Wszystkie butle po gazach należą do kategorii transportowej 4 — mnożnik 0, bez ograniczeń ilościowych. Może je przewozić kierowca bez zaświadczenia ADR. Uwaga: butle pozostają oznakowane jak w stanie ładownym.",
+  "q": {
+    "scenario": {
+      "prompt": "Wieziesz 30 pustych butli po propanie. Potrzebujesz zaświadczenia ADR?",
+      "options": [
+        "Tak, powyżej 20 butli",
+        "Nie — wszystkie butle po gazach to kategoria 4, bez ograniczeń",
+        "Tylko jeśli są nieoczyszczone"
+      ],
+      "correct": "Nie — wszystkie butle po gazach to kategoria 4, bez ograniczeń"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-butle-po-gazach",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

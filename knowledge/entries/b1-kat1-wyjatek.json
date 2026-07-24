@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-kat1-wyjatek",
+  "factId": "b1-kat1-wyjatek",
+  "adrRef": "ADR 1.1.3.6.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "W kategorii transportowej 1 występuje wyjątek: dla UN 0081, 0082, 0084, 0241, 0331, 0332, 0482, 1005 i 1017 maksymalna ilość całkowita na jednostkę transportową wynosi 50 kg, a mnożnik to x20 (zamiast standardowych 20 i x50).",
+  "q": {
+    "mcq": {
+      "prompt": "Dla UN 1005 i UN 1017 (kategoria 1) maksymalna ilość na jednostkę wynosi:",
+      "options": [
+        "20 kg",
+        "50 kg",
+        "333 kg"
+      ],
+      "correct": "50 kg"
+    },
+    "scenario": {
+      "prompt": "Przewozisz UN 1017 (chlor). Jaki mnożnik stosujesz przy liczeniu punktów?",
+      "options": [
+        "x50 (standard kąt. 1)",
+        "x20 (wyjątek)",
+        "x3"
+      ],
+      "correct": "x20 (wyjątek)"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b1-kat1-wyjatek@adr-2025",
+  "migratedAt": "2026-07-23"
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b3-odpady-dokument",
+  "factId": "b3-odpady-dokument",
+  "adrRef": "ADR 5.4.1.1.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 12,
+  "status": "core",
+  "block": 3,
+  "topic": "Odpady",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Słowo ODPAD powinno się znaleźć po numerze UN, np. UN 1230 odpad metanol 3 (6.1) II, (D/E).",
+  "q": {
+    "mcq": {
+      "prompt": "Gdzie w dokumencie przewozowym umieszcza się słowo ODPAD?",
+      "options": [
+        "Na końcu zapisu",
+        "Po numerze UN, przed nazwa",
+        "W osobnej rubryce"
+      ],
+      "correct": "Po numerze UN, przed nazwa"
+    },
+    "scenario": {
+      "prompt": "Prawidłowy zapis odpadu w dokumencie to:",
+      "options": [
+        "UN 1230 metanol odpad",
+        "UN 1230 odpad metanol 3 (6.1) II, (D/E)",
+        "odpad UN 1230 metanol"
+      ],
+      "correct": "UN 1230 odpad metanol 3 (6.1) II, (D/E)"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b3-odpady-dokument@adr-2025",
+  "migratedAt": "2026-07-23"
+}

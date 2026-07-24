@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "s-podklasa-gazu@adr-2025",
+  "factId": "s-podklasa-gazu",
+  "adrRef": "ADR 2.2.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 3,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasy zagrożeń",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Klasa 2: 2.1 gazy palne (propan), 2.2 gazy niepalne i nietrujące — MOGĄ BYĆ DUSZĄCE (azot, argon), 2.3 gazy trujące (chlor). Pułapka: 2.2 nie jest \"bezpieczny\" — dusi, wypierając tlen. Dlatego przy gazach unika się zagłębień terenu.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj gaz do podklasy:",
+      "pairs": {
+        "Propan": "2.1 palny",
+        "Azot": "2.2 niepalny, duszący",
+        "Chlor": "2.3 trujący"
+      }
+    },
+    "scenario": {
+      "prompt": "Wyciek azotu (2.2) w zagłębieniu terenu. Czy to groźne?",
+      "options": [
+        "Nie, azot jest niepalny i nietrujący",
+        "Tak — dusi, wypierając tlen; unikać zagłębień",
+        "Tylko przy otwartym ogniu"
+      ],
+      "correct": "Tak — dusi, wypierając tlen; unikać zagłębień"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-podklasa-gazu",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

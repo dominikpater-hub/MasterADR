@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "id": "b3-znak-srodowisko",
+  "factId": "b3-znak-srodowisko",
+  "adrRef": "ADR 5.2.1.8.1",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 4,
+  "status": "core",
+  "block": 3,
+  "topic": "Materiały zagrażające środowisku",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "fill"
+  ],
+  "why": "Znak wymagany dla materiałów zagrażających środowisku (ryba i drzewo). Umieszcza się go na opakowaniach większych niż 5 kg lub 5 litrów. Zagrożenie w przypadku przedostania się do środowiska wodnego lub kanalizacji.",
+  "q": {
+    "mcq": {
+      "prompt": "Znak \"ryba i drzewo\" umieszcza się na opakowaniach większych niż:",
+      "options": [
+        "1 kg lub 1 litr",
+        "5 kg lub 5 litrów",
+        "30 kg lub 30 litrów"
+      ],
+      "correct": "5 kg lub 5 litrów"
+    },
+    "fill": {
+      "prompt": "Znak materiału zagrażającego środowisku przedstawia rybę i ___.",
+      "correct": "drzewo",
+      "hint": "roslina"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b3-znak-srodowisko@adr-2025",
+  "migratedAt": "2026-07-23"
+}

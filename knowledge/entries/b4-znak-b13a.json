@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-znak-b13a",
+  "factId": "b4-znak-b13a",
+  "adrRef": "znaki drogowe PL",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 22,
+  "status": "core",
+  "block": 4,
+  "topic": "Ruch drogowy i postoj",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq"
+  ],
+  "why": "Znak B-13a / C-3h oznacza zakaz wjazdu dla pojazdów przewożących towary niebezpieczne WSZYSTKICH KLAS oznakowanych tablicami pomarańczowymi.",
+  "q": {
+    "mcq": {
+      "prompt": "Znak B-13a zakazuje wjazdu pojazdom:",
+      "options": [
+        "Tylko z klasa 1",
+        "Wszystkich klas oznakowanych tablicami pomarańczowymi",
+        "Tylko cysternom"
+      ],
+      "correct": "Wszystkich klas oznakowanych tablicami pomarańczowymi"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-znak-b13a@adr-2025",
+  "migratedAt": "2026-07-23"
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-jtr@adr-2025",
+  "factId": "b1-jtr",
+  "adrRef": "ADR 1.2.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Jednostka i sposoby przewozu",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Jednostka transportową to pojazd silnikowy z przyczepa lub bez, albo ciągnik z naczepa. Ciągnik + naczepa = JEDNA jednostka, choc to dwa pojazdy. Ważne przy liczeniu wyposażenia i wyłączeń.",
+  "q": {
+    "mcq": {
+      "prompt": "Ciągnik siodłowy z naczepa stanowi:",
+      "options": [
+        "Dwie jednostki transportowe",
+        "Jedna jednostkę transportową",
+        "Zależy od ładunku"
+      ],
+      "correct": "Jedna jednostkę transportową"
+    },
+    "scenario": {
+      "prompt": "Zestaw 40 t. Wyposażenie ADR liczysz na:",
+      "options": [
+        "Każdy pojazd osobno",
+        "Cała jednostkę transportową",
+        "Tylko ciągnik"
+      ],
+      "correct": "Cała jednostkę transportową"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-jtr",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

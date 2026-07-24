@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "s-ktora-edycja@adr-2025",
+  "factId": "s-ktora-edycja",
+  "adrRef": "ADR 1.6",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "ADR nowelizowany jest co 2 lata, nowe przepisy wchodzą 1 stycznia roku NIEPARZYSTEGO. Edycje: 2021, 2023, 2025, 2027... Wiedza sprzed dwóch lat może być już nieaktualna — dlatego każde szkolenie i materiał trzeba sprawdzić pod kątem edycji.",
+  "q": {
+    "scenario": {
+      "prompt": "Masz materiał szkoleniowy oznaczony \"ADR 2023\". Jest rok 2026. Co to znaczy?",
+      "options": [
+        "Materiał jest aktualny, ADR się nie zmienia",
+        "Weszła już edycja 2025 — materiał może być miejscami nieaktualny",
+        "Materiał wygasł i jest bezużyteczny"
+      ],
+      "correct": "Weszła już edycja 2025 — materiał może być miejscami nieaktualny"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-ktora-edycja",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-kat4",
+  "factId": "b1-kat4",
+  "adrRef": "ADR 1.1.3.6.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Kategoria transportową 4 — każda ilość \"na wyłączeniu\", mnożnik 0, bez ograniczeń. Należą tu: próżne opakowania po towarach niebezpiecznych (z wyłączeniem tych z kategorii 0), materiały wybuchowe 1.4S oraz WSZYSTKIE butle po gazach. Butle po gazach może przewozić kierowca bez zaświadczenia ADR.",
+  "q": {
+    "mcq": {
+      "prompt": "Wszystkie butle po gazach należą do kategorii transportowej:",
+      "options": [
+        "1",
+        "2",
+        "4"
+      ],
+      "correct": "4"
+    },
+    "scenario": {
+      "prompt": "Wieziesz puste butle po gazach. Czy potrzebujesz zaświadczenia ADR?",
+      "options": [
+        "Tak, zawsze",
+        "Nie — kategoria 4, bez ograniczeń",
+        "Tylko powyżej 10 butli"
+      ],
+      "correct": "Nie — kategoria 4, bez ograniczeń"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b1-kat4@adr-2025",
+  "migratedAt": "2026-07-23"
+}

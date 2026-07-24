@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "id": "s-gdzie-sprawdzic@adr-2025",
+  "factId": "s-gdzie-sprawdzic",
+  "adrRef": "ADR 1.1 / zrodla",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Kierowca nie musi pamiętać wszystkiego — musi wiedzieć, gdzie sprawdzić. Wykaz krajów ADR, dodatkowe wymagania krajowe i wykaz tuneli: masteradr.pl/kraje. Tabela A, instrukcje pisemne i formularz multimodalny do pobrania: doradca-adr.com/dokumenty-do-pobrania. Wątpliwości w firmie rozstrzyga doradca DGSA.",
+  "q": {
+    "match": {
+      "prompt": "Gdzie sprawdzasz? Dopasuj źródło:",
+      "pairs": {
+        "Wymagania krajowe i wykaz tuneli": "masteradr.pl/kraje",
+        "Tabela A i instrukcje pisemne": "doradca-adr.com/dokumenty-do-pobrania",
+        "Watpliwosc w firmie": "doradca DGSA"
+      }
+    },
+    "scenario": {
+      "prompt": "Jedziesz do Austrii pierwszy raz. Skąd sprawdzisz dodatkowe wymagania tego kraju?",
+      "options": [
+        "Z instrukcji pisemnej",
+        "Z wykazu krajów ADR (masteradr.pl/kraje)",
+        "Z tablicy pomarańczowej"
+      ],
+      "correct": "Z wykazu krajów ADR (masteradr.pl/kraje)"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-gdzie-sprawdzic",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

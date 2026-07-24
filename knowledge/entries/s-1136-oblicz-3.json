@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "id": "s-1136-oblicz-3",
+  "factId": "s-1136-oblicz-3",
+  "adrRef": "ADR 1.1.3.6",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "fill",
+    "scenario"
+  ],
+  "why": "300 l kąt. 2 = 300 x 3 = 900 punktów. Dołożenie 200 kg kąt. 3 (x1 = 200) daje 1100 — przekroczenie 1000. Wyłączenie nie przysługuje, jedziesz na pełnym ADR.",
+  "q": {
+    "fill": {
+      "prompt": "Ładunek: 300 l kategorii 2 + 200 kg kategorii 3. Ile punktów?",
+      "correct": "1100",
+      "hint": "liczba"
+    },
+    "scenario": {
+      "prompt": "Wyszło 1100 punktów. Co to oznacza?",
+      "options": [
+        "Zwolnienie „1000 punktów” przysługuje",
+        "Przekroczone 1000 — pełny ADR",
+        "Trzeba podzielić ładunek na dwa kursy"
+      ],
+      "correct": "Przekroczone 1000 — pełny ADR"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-1136-oblicz-3@adr-2025",
+  "migratedAt": "2026-07-23"
+}

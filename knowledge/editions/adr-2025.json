@@ -1,0 +1,10 @@
+{
+  "id": "adr-2025",
+  "corpus": "ADR",
+  "label": "ADR 2025",
+  "validFrom": "2025-01-01",
+  "validTo": "2026-12-31",
+  "supersededBy": null,
+  "jurisdictions": ["*"],
+  "note": "Umowa ADR, edycja 2025. Obowiazujaca. Nastepna edycja ADR 2027 od 2027-01-01."
+}

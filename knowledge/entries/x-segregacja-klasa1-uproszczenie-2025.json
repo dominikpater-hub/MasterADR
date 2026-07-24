@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "id": "x-segregacja-klasa1-uproszczenie-2025",
+  "factId": "x-segregacja-klasa1-uproszczenie-2025",
+  "adrRef": "ADR 2025, 7.5.2.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "key-amendments-2025",
+  "page": null,
+  "status": "rozszerzenie",
+  "block": 4,
+  "topic": "Zmiany ADR 2025",
+  "kind": "fact",
+  "scope": "specjalistyczny",
+  "formats": [
+    "mcq"
+  ],
+  "why": "ROZSZERZENIE (poza kompendium): ADR 2025 upraszcza matryce mieszanego ładowania, szczególnie dla klasy 1 (materiały wybuchowe). Zakres specjalistyczny. DO WERYFIKACJI DGSA.",
+  "q": {
+    "mcq": {
+      "prompt": "Co ADR 2025 zmienił w zasadach mieszanego ładowania?",
+      "options": [
+        "Uprościł matryce, szczególnie dla klasy 1",
+        "Zniósł wszystkie ograniczenia segregacji",
+        "Wprowadził zakaz mieszanego ładowania"
+      ],
+      "correct": "Uprościł matryce, szczególnie dla klasy 1"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    },
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": null,
+  "migratedAt": "2026-07-23"
+}

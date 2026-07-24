@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "s-1136-kat1-wyjatek-oblicz@adr-2025",
+  "factId": "s-1136-kat1-wyjatek-oblicz",
+  "adrRef": "ADR 1.1.3.6.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyliczenie 1000 punktów",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "fill",
+    "scenario"
+  ],
+  "why": "UN 1017 (chlor) należy do wyjątku kategorii 1: limit 50 kg, mnożnik x20 zamiast x50. 20 kg x 20 = 400 punktów.",
+  "q": {
+    "fill": {
+      "prompt": "Wieziesz 20 kg UN 1017 (wyjątek kategorii 1, mnożnik x20). Ile punktów?",
+      "correct": "400",
+      "hint": "ilość x mnożnik wyjątku"
+    },
+    "scenario": {
+      "prompt": "UN 1005 i UN 1017 w kategorii 1 mają mnożnik:",
+      "options": [
+        "x50 jak cała kategoria 1",
+        "x20 — wyjątek",
+        "x3"
+      ],
+      "correct": "x20 — wyjątek"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "s-1136-kat1-wyjatek-oblicz",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

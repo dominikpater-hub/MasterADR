@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-uczestnicy@adr-2025",
+  "factId": "b1-uczestnicy",
+  "adrRef": "ADR 1.4",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 28,
+  "status": "core",
+  "block": 1,
+  "topic": "Uczestnicy przewozu",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "scenario"
+  ],
+  "why": "Sześciu uczestników przewozu i ich JEDEN kluczowy obowiązek: nadawca (klasyfikuje i dopuszcza do przewozu, daje dokumenty), przewoźnik (sprawdza wzrokowo pojazd i ładunek przed jazdą), załadowca (układa sztuki na pojeździe, pilnuje segregacji), napełniający (napełnia cysterny), rozładowca (sprawdza i czyści po rozładunku), odbiorca (nie opóźnia przyjęcia). Uczysz się po czasowniku — każda rola ma inny.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj uczestnika do głównego obowiązku:",
+      "pairs": {
+        "Nadawca": "klasyfikuje i dopuszcza do przewozu",
+        "Przewoźnik": "wzrokowa kontrola pojazdu przed jazdą",
+        "Załadowca": "układa sztuki i pilnuje segregacji",
+        "Napełniający": "napełnia cysterny",
+        "Rozładowca": "sprawdza i czyści po rozładunku",
+        "Odbiorca": "nie opóźnia przyjęcia towaru"
+      }
+    },
+    "scenario": {
+      "prompt": "Firma pakuje kanistry, układa je na pojeździe i pilnuje, by nie załadować razem klas, których nie wolno. W jakiej roli występuje przy tych czynnościach?",
+      "options": [
+        "Nadawcy",
+        "Załadowcy",
+        "Przewoźnika"
+      ],
+      "correct": "Załadowcy"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-uczestnicy",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

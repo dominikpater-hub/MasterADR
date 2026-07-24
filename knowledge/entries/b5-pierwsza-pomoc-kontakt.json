@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "id": "b5-pierwsza-pomoc-kontakt",
+  "factId": "b5-pierwsza-pomoc-kontakt",
+  "adrRef": "ADR 5.4.3 (instrukcje pisemne)",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "adr-2025",
+  "page": null,
+  "status": "core",
+  "block": 5,
+  "topic": "Pierwsza pomoc",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Przy kontakcie substancji ze skórą lub oczami: natychmiast płukać miejsce duża ilością letniej wody przez co najmniej 15-20 minut, zdejmując skażoną odzież. NIE stosować środków neutralizujących. DO WERYFIKACJI: treść medyczna, przegląd ratownik/instruktor.",
+  "q": {
+    "mcq": {
+      "prompt": "Co zrobić przy kontakcie substancji niebezpiecznej ze skórą lub oczami?",
+      "options": [
+        "Płukać duża ilością letniej wody min. 15-20 minut",
+        "Przetrzeć sucha szmatka",
+        "Posmarować kremem neutralizujacym"
+      ],
+      "correct": "Płukać duża ilością letniej wody min. 15-20 minut"
+    },
+    "scenario": {
+      "prompt": "Substancją żrąca prysnęła kierowcy do oka. Pierwsza czynność?",
+      "options": [
+        "Natychmiast płukać oko letnią wodą, szeroko otwierając powiekę",
+        "Zamknąć oko i czekać na pogotowie",
+        "Przetrzeć oko i zneutralizować substancja zasadowa"
+      ],
+      "correct": "Natychmiast płukać oko letnią wodą, szeroko otwierając powiekę"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    },
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": null,
+  "migratedAt": "2026-07-23"
+}

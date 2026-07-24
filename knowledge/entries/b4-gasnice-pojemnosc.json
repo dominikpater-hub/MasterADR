@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-gasnice-pojemnosc",
+  "factId": "b4-gasnice-pojemnosc",
+  "adrRef": "ADR 8.1.4",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 16,
+  "status": "core",
+  "block": 4,
+  "topic": "Dobór gaśnic",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "match",
+    "scenario"
+  ],
+  "why": "Minimalna całkowita pojemność gaśnic wg dopuszczalnej masy całkowitej jednostki transportowej: do 3,5 t = 4 kg; powyżej 3,5 do 7,5 t = 8 kg; powyżej 7,5 t = 12 kg. Gaśnice muszą być typu ABC.",
+  "q": {
+    "mcq": {
+      "prompt": "Min. łączna pojemność gaśnic dla jednostki powyżej 7,5 t:",
+      "options": [
+        "4 kg",
+        "8 kg",
+        "12 kg"
+      ],
+      "correct": "12 kg"
+    },
+    "match": {
+      "prompt": "Dopasuj masę jednostki do min. łącznej pojemności gaśnic:",
+      "pairs": {
+        "do 3,5 t": "4 kg",
+        "3,5-7,5 t": "8 kg",
+        "powyżej 7,5 t": "12 kg"
+      }
+    },
+    "scenario": {
+      "prompt": "Zestaw 40 t z towarem ADR. Min. łączna pojemność gaśnic:",
+      "options": [
+        "8 kg",
+        "12 kg",
+        "6 kg"
+      ],
+      "correct": "12 kg"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-gasnice-pojemnosc@adr-2025",
+  "migratedAt": "2026-07-23"
+}

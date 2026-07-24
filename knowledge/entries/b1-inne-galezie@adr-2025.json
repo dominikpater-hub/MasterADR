@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-inne-galezie@adr-2025",
+  "factId": "b1-inne-galezie",
+  "adrRef": "RID / ADN / IMDG / ICAO TI",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 1,
+  "status": "core",
+  "block": 1,
+  "topic": "Podstawy prawne",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "match"
+  ],
+  "why": "Poza ADR (drogowy) istnieją: RID — kolejowy, ADN — śródlądowy, IMDG — morski, ICAO TI — lotniczy.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj umowę do gałęzi transportu:",
+      "pairs": {
+        "RID": "kolejowy",
+        "ADN": "śródlądowy",
+        "IMDG": "morski",
+        "ICAO TI": "lotniczy"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-inne-galezie",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

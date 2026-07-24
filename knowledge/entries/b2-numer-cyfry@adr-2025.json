@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-numer-cyfry@adr-2025",
+  "factId": "b2-numer-cyfry",
+  "adrRef": "ADR 5.3.2.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 18,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "match",
+    "mcq"
+  ],
+  "why": "Cyfry numeru rozpoznawczego zagrożenia: 2 — emisja gazu spowodowana ciśnieniem lub reakcja chemiczna, 3 — zapalność materiałów ciekłych i gazów, 4 — zapalność materiałów stałych, 5 — działanie utleniające, 6 — działanie trujące lub ryzyko zakażenia, 7 — działanie promieniotwórcze, 8 — działanie żrące, 9 — ryzyko samorzutnej i gwałtownej reakcji.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj cyfrę numeru zagrożenia do znaczenia:",
+      "pairs": {
+        "2": "emisja gazu",
+        "3": "zapalność cieczy",
+        "5": "działanie utleniające",
+        "8": "działanie żrące"
+      }
+    },
+    "mcq": {
+      "prompt": "Cyfra 9 w numerze rozpoznawczym zagrożenia oznacza:",
+      "options": [
+        "Działanie żrące",
+        "Ryzyko samorzutnej i gwałtownej reakcji",
+        "Emisje gazu"
+      ],
+      "correct": "Ryzyko samorzutnej i gwałtownej reakcji"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b2-numer-cyfry",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 2,
+  "id": "b2-numery-specjalne@adr-2025",
+  "factId": "b2-numery-specjalne",
+  "adrRef": "ADR 5.3.2.3",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 17,
+  "status": "core",
+  "block": 2,
+  "topic": "Odczyt tablicy",
+  "kind": "ref",
+  "scope": "podstawowy",
+  "formats": [
+    "match"
+  ],
+  "why": "Następujące zestawienia cyfr mają znaczenie specjalne: 22, 323, 333, 362, 382, 423, 44, 446, 462, 482, 539, 606, 623, 642, 823, 842, 90 i 99. Przykłady: 90 = materiał zagrażający środowisku, 99 = różne materiały niebezpieczne przewożone w podwyższonej temperaturze, 333 = materiał piroforyczny ciekły, 606 = materiał zakaźny.",
+  "q": {
+    "match": {
+      "prompt": "Dopasuj numer specjalny do znaczenia:",
+      "pairs": {
+        "90": "zagrażający środowisku",
+        "99": "podwyższona temperatura",
+        "333": "piroforyczny ciekły",
+        "606": "materiał zakaźny"
+      }
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b2-numery-specjalne",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

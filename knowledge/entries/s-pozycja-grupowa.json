@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "id": "s-pozycja-grupowa",
+  "factId": "s-pozycja-grupowa",
+  "adrRef": "ADR 3.1.2",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 2,
+  "status": "core",
+  "block": 2,
+  "topic": "Klasyfikacja",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "match"
+  ],
+  "why": "Numer UN może być przypisany do JEDNEJ substancji (UN 1090 ACETON) albo do POZYCJI GRUPOWEJ — kilku towarów o podobnych właściwościach (UN 1263 FARBA). Przy pozycji grupowej pod jednym numerem UN kryją się różne produkty.",
+  "q": {
+    "scenario": {
+      "prompt": "UN 1263 FARBA. Czy to jedna konkretna substancją?",
+      "options": [
+        "Tak, jedna farba",
+        "Nie — to pozycja grupowa, wiele produktów o podobnych właściwościach",
+        "To numer zagrożenia"
+      ],
+      "correct": "Nie — to pozycja grupowa, wiele produktów o podobnych właściwościach"
+    },
+    "match": {
+      "prompt": "Dopasuj typ pozycji:",
+      "pairs": {
+        "UN 1090 ACETON": "jedna substancja",
+        "UN 1263 FARBA": "pozycja grupowa"
+      }
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-pozycja-grupowa@adr-2025",
+  "migratedAt": "2026-07-23"
+}

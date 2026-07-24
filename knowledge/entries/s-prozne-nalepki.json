@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "s-prozne-nalepki",
+  "factId": "s-prozne-nalepki",
+  "adrRef": "ADR 5.1.3",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 11,
+  "status": "core",
+  "block": 1,
+  "topic": "Wyłączenia w praktyce",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario"
+  ],
+  "why": "Próżne, nieoczyszczone opakowania pozostają oznakowane tak jak w stanie ładownym. Nie usuwa się nalepek ostrzegawczych ani numerów UN. Zdejmuję się je dopiero po całkowitym oczyszczeniu (robi to rozładowca).",
+  "q": {
+    "scenario": {
+      "prompt": "Rozładowałeś DPPL po farbie, nieoczyszczony. Co robisz z nalepka klasy 3?",
+      "options": [
+        "Usuwam — jest pusty",
+        "Zostawiam — nieoczyszczone oznakowane jak ładowne",
+        "Zaklejam tasma"
+      ],
+      "correct": "Zostawiam — nieoczyszczone oznakowane jak ładowne"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "s-prozne-nalepki@adr-2025",
+  "migratedAt": "2026-07-23"
+}

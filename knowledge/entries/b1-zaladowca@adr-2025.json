@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-zaladowca@adr-2025",
+  "factId": "b1-zaladowca",
+  "adrRef": "ADR 1.4.3.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 28,
+  "status": "core",
+  "block": 1,
+  "topic": "Uczestnicy przewozu",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Załadowca to ten, kto UMIESZCZA zapakowany towar (sztuki przesyłki, kontenery) NA pojazd — nie mylić z napełniającym (ten napełnia cysterny) ani z pakującym (ten wkłada towar do opakowań). Załadowca: przekazuje do przewozu tylko towar dopuszczony, sprawdza czy opakowania nie są uszkodzone, przestrzega zakazów ładowania razem (segregacja) i zasad mocowania. Haczyk: załadowca patrzy na STAN opakowania i zgodność załadunku, a nie klasyfikuje towaru (to nadawca).",
+  "q": {
+    "mcq": {
+      "prompt": "Kto odpowiada za przestrzeganie zakazów ładowania razem (segregacji) przy załadunku sztuk przesyłki?",
+      "options": [
+        "Nadawca",
+        "Załadowca",
+        "Odbiorca"
+      ],
+      "correct": "Załadowca"
+    },
+    "scenario": {
+      "prompt": "Widzisz uszkodzone opakowanie w chwili umieszczania go na pojeździe. Czyj to obowiązek nie przyjąć takiej sztuki do załadunku?",
+      "options": [
+        "Nadawcy",
+        "Załadowcy",
+        "Odbiorcy"
+      ],
+      "correct": "Załadowcy"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-zaladowca",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

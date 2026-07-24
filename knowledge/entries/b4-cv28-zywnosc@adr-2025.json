@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-cv28-zywnosc@adr-2025",
+  "factId": "b4-cv28-zywnosc",
+  "adrRef": "ADR 7.5.4 / CV28",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 24,
+  "status": "core",
+  "block": 4,
+  "topic": "Decyzja o załadunku",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "match",
+    "scenario"
+  ],
+  "why": "Jeżeli w kolumnie 18 tabeli wskazany jest przepis szczególny CV28, towar należy oddzielić od żywności lub karmy dla zwierząt: (a) ciągłymi przegrodami o wysokości nie mniejszej niż sztuki przesyłek oznaczone nalepkami 6.1, 6.2, 9; (b) sztukami przesyłek, które NIE są zaopatrzone w nalepki 6.1, 6.2, 9; (c) wolna przestrzenią o szerokości nie mniej niż 0,8 m lub przez całkowite przykrycie (plandeka, pokrywa z tektury). Dotyczy UN 2212, 2315, 2590, 3151, 3152, 3245.",
+  "q": {
+    "mcq": {
+      "prompt": "Minimalna szerokość wolnej przestrzeni oddzielającej towar od żywności (CV28):",
+      "options": [
+        "0,5 m",
+        "0,8 m",
+        "1,2 m"
+      ],
+      "correct": "0,8 m"
+    },
+    "match": {
+      "prompt": "Dopasuj sposób oddzielenia od żywności wg CV28:",
+      "pairs": {
+        "Ciągle przegrody": "wysokość nie mniejsza niż sztuki przesyłek",
+        "Wolna przestrzeń": "min. 0,8 m",
+        "Całkowite przykrycie": "plandeka lub pokrywa"
+      }
+    },
+    "scenario": {
+      "prompt": "Przewozisz UN 2212 (azbest) i artykuły spozywcze. Co robisz?",
+      "options": [
+        "Ładuje razem bez ograniczeń",
+        "Oddzielam wg CV28 — przegroda lub 0,8 m wolnej przestrzeni",
+        "Odmawiam przewozu"
+      ],
+      "correct": "Oddzielam wg CV28 — przegroda lub 0,8 m wolnej przestrzeni"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b4-cv28-zywnosc",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

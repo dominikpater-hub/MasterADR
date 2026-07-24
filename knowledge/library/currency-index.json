@@ -1,0 +1,2158 @@
+{
+  "builtAt": "2026-07-23T21:46:45.640Z",
+  "asOf": "2026-07-23",
+  "note": "CACHE — odtwarzalny z entries/ + editions/ + policy.json",
+  "entries": [
+    {
+      "id": "b1-1131@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-1132-gazy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-1133-paliwo@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-1136-gasnica@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-1136@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-def@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-dgsa@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-droga-uprawnienia@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-egzamin-prog@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-eq@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-inne-galezie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-jtr@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-kat0@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-kat1-wyjatek@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-kat4@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-kategorie-transportowe@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-kurs-cysterny-prog@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-lq-oznakowanie-pojazdu@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-lq-tunel-e@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-lq@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-luzem-przepisy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-mnozniki@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-nadawca@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-odbiorca@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-odstepstwa@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-prozne-oznakowanie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-przepisy-szczegolne@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-przewoznik@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-rodzaje-przewozu@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-role-rozroznianie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-rozladowca@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-szkolenie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-uczestnicy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-ustawa-pl@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-wartosc-energetyczna@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-waznosc@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-wejscie-przepisow@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-zakres-podstawowy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-zaladowca@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b1-zaswiadczenie-wydanie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-grupy-pakowania@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-ino@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-klasa3-temp@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-klasa9-temp@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-klasyfikacja-kto@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-kod-opakowania-xyz@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-nalepka-9a@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-nalepka-wymiary@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-nie-podlega-adr@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-numer-cyfry@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-numer-podwojenie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-numer-x@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-numer-zero@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-numery-przyklady@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-numery-specjalne@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-opakowania-waznosc@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-overpack@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-oznakowanie-sztuki@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-pietrowanie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-podklasy2@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-podklasy4@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-podklasy5@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-podklasy6@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-tablice-gladkie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-tablice-ramka@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-temp-kontrolowana@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-un-pozycje@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-zagrozenie-dodatkowe@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b2-zagrozenie-dominujace@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-numer-zagrozenia-90",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-obowiazek-srodowisko",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-odpady-dokument@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-odpady-klasyfikacja",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-odpady-tablica@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-srodowisko-wyciek",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-srodowisko-znak-ryba",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-un-srodowisko@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-wyciek-sekwencja",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-wyciek-srodowisko@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-znak-srodowisko@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b3-znak-temperatura@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-austria-eskorta@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-certyfikat-pakowania@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-cv2-plomien@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-cv28-zywnosc@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-cv3-cv15@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-cysterna-wielokomorowa@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-dokument-jezyk@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-dokument-kto@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-dokument-zapisy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-dokument-zawartosc@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-duze-ryzyko-cel@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-duze-ryzyko-progi@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-gasnice-liczba@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-gasnice-pojemnosc@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-gasnice-rozklad@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-gasnice-s3@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-instrukcje-forma@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-instrukcje-kto@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-kontener-cysterna@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-kontrola@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-ladunek-calkowity@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-lopata-oslona@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-maska-ucieczkowa@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-nadzor-parkingi@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-oznakowanie-luzem-cysterna@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-oznakowanie-sztuki-pojazd@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-oznakowanie-wariant2@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-pasazerowie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-plan-ochrony-wymogi@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-plan-ochrony@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-plyn-do-oczu@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-predkosc@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-segregacja-zakazy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-sprawozdanie-roczne@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-swiadectwo-typy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-swiadectwo@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-tunel-brak-kodu@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-tunel-zachowanie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-tunele-kategorie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-tunele-kod@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-wyposazenie-jednostka@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-wyposazenie-zaloga@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-znak-b13@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-znak-b13a@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-znak-b14@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b4-znaki-pozostale@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-dgsa-zdarzenie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-dokument-awaryjny@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-fissile@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-gasnica-parametry@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-gaszenie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-kolejnosc-informacji@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-kolejnosc@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-mocowanie-kontrola",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-mocowanie-sila",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-mocowanie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-numery-alarmowe@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-oznakowanie-miejsca@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-pierwsza-pomoc-kontakt",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-pierwsza-pomoc-numer",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-pierwsza-pomoc-wdychanie",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-pierwsza-pomoc@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-wiele-zagrozen@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-wskazowki-klasy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-zajecia-praktyczne-info",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "b5-zrodla-zaplonu@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-1132-oblicz-energia@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-1136-co-zostaje@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-1136-gdzie-kategoria@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-1136-kat0-blokada@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-1136-kat1-wyjatek-oblicz@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-1136-kat4-zero@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-1136-mnozniki-tabela@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-1136-oblicz-1@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-1136-oblicz-2@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-1136-oblicz-3@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-2025-baterie-sodowe",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-2025-dokument-kabina",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-2025-lq-szkolenie",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-2025-pojazdy-baterie",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-butle-po-gazach@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-co-nie-podlega-adr@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-cv28-zywnosc-decyzja@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-cysterna-wielokomorowa-decyzja@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-data-opakowania@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-dgsa-czy-potrzebny@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-dokument-1136-punkty@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-dokument-odczyt@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-dokument-odpad-zapis@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-dokument-prozny@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-gasic-czy-nie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-gasnica-technika@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-gasnice-1136@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-gasnice-3t@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-gasnice-40t@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-gasnice-s3-6-2@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-gdzie-sprawdzic@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-grupa-pakowania-ktore-klasy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-grupa-pakowania-natezenie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-ino-uzupelnienie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-jtr-paliwo-zestaw@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-jtr-wyposazenie-liczba@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-kanistry-przekroczenie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-klasa9-co-tam@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-kod-klasyfikacyjny@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-kod-opakowania-y@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-kto-klasyfikuje-nie-ty@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-ktora-edycja@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-ladowanie-3-8@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-ladowanie-klasa1@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-luzem-czy-wolno@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-multimodal-przepisy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-odstepstwa-umowy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-okres-przejsciowy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-oznakowanie-decyzja@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-paliwo-limity@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-podklasa-4@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-podklasa-5@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-podklasa-6-pulapka@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-podklasa-gazu@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-pozycja-grupowa@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-prozne-nalepki@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-przypisz-klase@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-sposob-przewozu-rozpoznanie@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-swiadectwo-kiedy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tablica-268-1017@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tablica-33-1203@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tablica-90-3082@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tablica-sklad-cyfr@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tablica-x-woda@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tablica-zero@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-temp-kontrolowana-kiedy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tunel-b@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tunel-de-cysterna@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tunel-de-sztuki@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tunel-gdzie-kod@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tunel-lq@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-tunel-minus@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-un-3077-3082@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-uprawnienia-cysterna@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-uprawnienia-klasy@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-wiatr-opary@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-wypadek-sekwencja@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-wyposazenie-ilosci@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-wyposazenie-klasa2-3@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-wyposazenie-klasa3@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-x-opakowanie-vs-tablica@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-zgloszenie-sluzbom@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-znak-srodowisko-prog@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-znak-temperatura-prog@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "s-zrodla-zaplonu-decyzja@adr-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "x-baterie-sodowe-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "x-dokument-kabina-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "x-kamizelka-eniso20471-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "x-lq-szkolenie-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "x-pojazdy-baterie-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "x-segregacja-klasa1-uproszczenie-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    },
+    {
+      "id": "x-sp677-baterie-uszkodzone-2025",
+      "currency": "CURRENT",
+      "trustLevel": "T1",
+      "reasons": [
+        "przeglad 0 dni temu, edycja obowiazuje"
+      ],
+      "migrateTo": []
+    }
+  ]
+}

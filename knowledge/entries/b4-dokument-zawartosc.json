@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "id": "b4-dokument-zawartosc",
+  "factId": "b4-dokument-zawartosc",
+  "adrRef": "ADR 5.4.1.1.1",
+  "editionRefs": [
+    "adr-2023"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 12,
+  "status": "core",
+  "block": 4,
+  "topic": "Praca z dokumentem",
+  "kind": "skill",
+  "scope": "podstawowy",
+  "formats": [
+    "order",
+    "scenario"
+  ],
+  "why": "Kolejność zapisu w dokumencie przewozowym: numer UN, prawidłowa nazwa przewozowa, numery nalepek, grupa pakowania (GP), kod tunelu. Przykład: UN 1203 Benzyna Silnikowa zagrażający środowisku, 3, II, (D/E).",
+  "q": {
+    "order": {
+      "prompt": "Ulóz kolejność zapisu w dokumencie przewozowym:",
+      "items": [
+        "Numery nalepek",
+        "Numer UN",
+        "Prawidłowa nazwa przewozowa",
+        "Grupa pakowania"
+      ],
+      "correct": [
+        "Numer UN",
+        "Prawidłowa nazwa przewozowa",
+        "Numery nalepek",
+        "Grupa pakowania"
+      ]
+    },
+    "scenario": {
+      "prompt": "W dokumencie: UN 1580 CHLOROPIKRYNA 6.1 GP I. Co to mówi kierowcy?",
+      "options": [
+        "Materiał zapalny, małe zagrożenie",
+        "Materiał trujący, silnie (I grupa pakowania)",
+        "Gaz duszący"
+      ],
+      "correct": "Materiał trujący, silnie (I grupa pakowania)"
+    }
+  },
+  "lifecycle": "DRAFT",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": "b4-dokument-zawartosc@adr-2025",
+  "migratedAt": "2026-07-23"
+}

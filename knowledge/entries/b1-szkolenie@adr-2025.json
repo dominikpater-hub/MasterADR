@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "id": "b1-szkolenie@adr-2025",
+  "factId": "b1-szkolenie",
+  "adrRef": "ADR 1.3 / 8.2",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 8,
+  "status": "core",
+  "block": 1,
+  "topic": "Zakres uprawnień",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "mcq",
+    "scenario"
+  ],
+  "why": "Korzystając ze wszystkich wyłączeń kierowca NIE musi posiadać zaświadczenia ADR. Powinien przejść na koszt pracodawcy szkolenie stanowiskowe (wg 1.3), inne niż kurs ADR.",
+  "q": {
+    "mcq": {
+      "prompt": "Kierowca przewożący towary na wyłączeniu:",
+      "options": [
+        "Musi mieć zaświadczenie ADR",
+        "Wystarczy szkolenie stanowiskowe na koszt pracodawcy",
+        "Nie potrzebuje żadnego szkolenia"
+      ],
+      "correct": "Wystarczy szkolenie stanowiskowe na koszt pracodawcy"
+    },
+    "scenario": {
+      "prompt": "Wieziesz towar w ilościach wyłączonych (EQ). Czy potrzebujesz kursu ADR?",
+      "options": [
+        "Tak, pełnego kursu",
+        "Nie, wystarczy szkolenie stanowiskowe",
+        "Tylko przy klasie 3"
+      ],
+      "correct": "Nie, wystarczy szkolenie stanowiskowe"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": "b1-szkolenie",
+  "supersededBy": null,
+  "migratedAt": "2026-07-23",
+  "carriedForwardAt": "2026-07-23",
+  "carriedForwardFrom": "adr-2023"
+}

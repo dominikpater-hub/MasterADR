@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "id": "b3-srodowisko-wyciek",
+  "factId": "b3-srodowisko-wyciek",
+  "adrRef": "ADR 1.4.1",
+  "editionRefs": [
+    "adr-2025"
+  ],
+  "jurisdictions": [
+    "PL"
+  ],
+  "source": "kompendium",
+  "page": 22,
+  "status": "core",
+  "block": 3,
+  "topic": "Obowiązek ochrony środowiska",
+  "kind": "fact",
+  "scope": "podstawowy",
+  "formats": [
+    "scenario",
+    "mcq"
+  ],
+  "why": "Przy wycieku materiału zagrażającego środowisku kierowca ma, o ile to bezpieczne, ograniczyć skażenie: zatrzymać wyciek u źródła, nie dopuścić do przedostania się substancji do kanalizacji, rowów, cieków wodnych. Nie spłukiwać wodą do studzienek — to roznosi skażenie.",
+  "q": {
+    "scenario": {
+      "prompt": "Z pojazdu wycieka substancja szkodliwa dla środowiska w pobliżu kratki kanalizacyjnej. Co robisz?",
+      "options": [
+        "Spłukuję wodą do kratki",
+        "Zabezpieczam kratkę i tamuję wyciek, o ile to bezpieczne",
+        "Czekam aż wsiąknie w ziemię"
+      ],
+      "correct": "Zabezpieczam kratkę i tamuję wyciek, o ile to bezpieczne"
+    },
+    "mcq": {
+      "prompt": "Czego NIE wolno robić przy wycieku substancji groźnej dla środowiska?",
+      "options": [
+        "Tamować wycieku u źródła",
+        "Spłukiwać jej wodą do kanalizacji",
+        "Zabezpieczać studzienek"
+      ],
+      "correct": "Spłukiwać jej wodą do kanalizacji"
+    }
+  },
+  "lifecycle": "PUBLISHED",
+  "review": [
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "MIGRATION_SIGHTED",
+      "note": "Przeglad zadan w prototypie przed migracja. Nie jest weryfikacja zrodlowa.",
+      "countsTowardPublication": false
+    },
+    {
+      "by": "domo",
+      "at": "2026-07-23",
+      "kind": "VERIFICATION",
+      "role": "OWNER",
+      "note": "Przeglad calosci przez wlasciciela: tresc zadan i wyjasnien sprawdzona wobec kompendium ADR. Zakres: wszystkie aktywne wpisy na edycji ADR 2025.",
+      "countsTowardPublication": true
+    }
+  ],
+  "drift": null,
+  "supersedes": null,
+  "supersededBy": null,
+  "migratedAt": "2026-07-23"
+}
