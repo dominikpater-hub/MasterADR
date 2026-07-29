@@ -693,7 +693,8 @@ function AdrTrainer({
         licensed: licensed,
         onMixed: () => startMixed(false),
         onExam: () => startExam(),
-        onProgress: () => setScreen("progress")
+        onProgress: () => setScreen("progress"),
+        onFranek: () => setScreen("franek")
       });
     }
     return /*#__PURE__*/React.createElement(Modules, {
@@ -719,7 +720,8 @@ function AdrTrainer({
     onHowTo: () => setScreen("howto"),
     onMixed: () => startMixed(false),
     onExam: () => startExam(),
-    onProgress: () => setScreen("progress")
+    onProgress: () => setScreen("progress"),
+    onFranek: () => setScreen("franek")
   });
   if (screen === "block") return /*#__PURE__*/React.createElement(BlockView, {
     blockId: activeBlock,
@@ -768,6 +770,9 @@ function AdrTrainer({
   if (screen === "login") return /*#__PURE__*/React.createElement(Login, {
     onBack: () => setScreen("progress"),
     onDone: () => setScreen("progress")
+  });
+  if (screen === "franek") return /*#__PURE__*/React.createElement(FranekChat, {
+    onBack: () => setScreen("home")
   });
 
   /* ═══════════ SESJA ═══════════ */
@@ -1061,7 +1066,8 @@ function Home({
   onHowTo,
   onMixed,
   onExam,
-  onProgress
+  onProgress,
+  onFranek
 }) {
   const adrIds = new Set(FACTS.map(f => f.id));
   states = states.filter(s => adrIds.has(s.id));
@@ -1175,7 +1181,25 @@ function Home({
     style: { fontSize: 10, fontWeight: 800, background: C.red, color: "#fff", borderRadius: 5, padding: "2px 6px" }
   }, "PRO")), /*#__PURE__*/React.createElement("span", {
     style: { fontSize: 12, fontWeight: 600, opacity: 0.75 }
-  }, "30 pytań · 60 min · próg ⅔ (20/30) — format prawdziwego egzaminu")), /*#__PURE__*/React.createElement("div", {
+  }, "30 pytań · 60 min · próg ⅔ (20/30) — format prawdziwego egzaminu")), /*#__PURE__*/React.createElement("button", {
+    style: {
+      ...btn(C.card, C.text, false, C.skill),
+      display: "flex",
+      alignItems: "center",
+      gap: 12,
+      padding: "15px 18px",
+      marginTop: 10
+    },
+    onClick: onFranek
+  }, /*#__PURE__*/React.createElement("span", {
+    style: { fontSize: 22, lineHeight: 1 }
+  }, "🧭"), /*#__PURE__*/React.createElement("span", {
+    style: { display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 2 }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: { fontSize: 16, fontWeight: 800 }
+  }, "Zapytaj Franka"), /*#__PURE__*/React.createElement("span", {
+    style: { fontSize: 12, fontWeight: 600, opacity: 0.75 }
+  }, "przewodnik po ADR — pytaj o wszystko"))), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: 12,
       color: C.dim,
@@ -2396,6 +2420,131 @@ function DailyHabitPill({
   }, " ❄", habit.freezes) : null, /*#__PURE__*/React.createElement("span", {
     style: { fontSize: 11, opacity: 0.85, marginLeft: 4, color: met ? C.skill : C.dim }
   }, ` ${Math.min(prog, habit.dailyGoal)}/${habit.dailyGoal}`));
+}
+function FranekChat({ onBack }) {
+  const KEY = "masteradr.franek.chat.v1";
+  const intro = {
+    role: "assistant",
+    content: "Cześć, jestem Franek — Twój przewodnik po ADR. Zapytaj mnie o cokolwiek: przepisy, wyłączenia, oznakowanie, dokumenty, co robić po wypadku. Odpowiem i wskażę odnośnik w ADR."
+  };
+  const [messages, setMessages] = useState(function () {
+    try { const s = JSON.parse(localStorage.getItem(KEY)); if (Array.isArray(s) && s.length) return s; } catch (e) {}
+    return [intro];
+  });
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const scroller = useRef(null);
+  useEffect(function () {
+    try { localStorage.setItem(KEY, JSON.stringify(messages.slice(-40))); } catch (e) {}
+    if (scroller.current) scroller.current.scrollTop = scroller.current.scrollHeight;
+  }, [messages, loading]);
+
+  const suggestions = [
+    "Kiedy przewóz podlega ADR?",
+    "Na czym polega wyłączenie LQ (1.1.3.6)?",
+    "Jakie dokumenty wozić w kabinie?",
+    "Co robić po wypadku z ADR?"
+  ];
+
+  async function send(text) {
+    const q = (text != null ? text : input).trim();
+    if (!q || loading) return;
+    const next = [...messages, { role: "user", content: q }];
+    setMessages(next); setInput(""); setLoading(true);
+    try {
+      const r = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: next.map(m => ({ role: m.role, content: m.content })) })
+      });
+      const j = await r.json();
+      const reply = (j && j.reply) || "Nie udało się uzyskać odpowiedzi. Spróbuj ponownie.";
+      setMessages(m => [...m, { role: "assistant", content: reply }]);
+    } catch (e) {
+      setMessages(m => [...m, { role: "assistant", content: "Brak połączenia. Sprawdź internet i spróbuj ponownie." }]);
+    } finally { setLoading(false); }
+  }
+
+  const avatar = /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: "0 0 auto", width: 26, height: 26, borderRadius: "50%",
+      background: C.skill, color: "#fff", fontSize: 13, fontWeight: 800,
+      display: "flex", alignItems: "center", justifyContent: "center"
+    }
+  }, "F");
+
+  const bubbles = messages.map(function (m, i) {
+    const mine = m.role === "user";
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      style: { display: "flex", gap: 8, justifyContent: mine ? "flex-end" : "flex-start", alignItems: "flex-end" }
+    }, !mine && avatar, /*#__PURE__*/React.createElement("div", {
+      style: {
+        maxWidth: "80%", whiteSpace: "pre-wrap", lineHeight: 1.5, fontSize: 14,
+        padding: "10px 13px", borderRadius: 14,
+        borderBottomRightRadius: mine ? 4 : 14, borderBottomLeftRadius: mine ? 14 : 4,
+        background: mine ? C.skill : C.card, color: mine ? "#fff" : C.text,
+        border: mine ? "none" : `1px solid ${C.line}`
+      }
+    }, m.content));
+  });
+
+  const typing = loading ? /*#__PURE__*/React.createElement("div", {
+    style: { display: "flex", gap: 8, alignItems: "flex-end" }
+  }, avatar, /*#__PURE__*/React.createElement("div", {
+    style: { fontSize: 13, color: C.dim, padding: "10px 13px", borderRadius: 14, background: C.card, border: `1px solid ${C.line}` }
+  }, "Franek pisze…")) : null;
+
+  const chips = messages.length <= 1 ? /*#__PURE__*/React.createElement("div", {
+    style: { display: "flex", flexWrap: "wrap", gap: 8, marginTop: 4 }
+  }, suggestions.map(function (s, i) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: i,
+      onClick: () => send(s),
+      style: {
+        cursor: "pointer", fontSize: 12, fontWeight: 600, color: C.text,
+        background: "transparent", border: `1px solid ${C.line}`, borderRadius: 16, padding: "7px 12px"
+      }
+    }, s);
+  })) : null;
+
+  return /*#__PURE__*/React.createElement(TrShell, null,
+    /*#__PURE__*/React.createElement(TrHeader, {
+      title: "Franek — przewodnik ADR",
+      left: /*#__PURE__*/React.createElement(BackBtn, { onBack: onBack })
+    }),
+    /*#__PURE__*/React.createElement("div", {
+      ref: scroller,
+      style: { flex: 1, overflowY: "auto", padding: 16, display: "flex", flexDirection: "column", gap: 10 }
+    }, bubbles, typing, chips),
+    /*#__PURE__*/React.createElement("div", {
+      style: { padding: "8px 12px 4px", fontSize: 10, color: C.dim, textAlign: "center", fontFamily: C.mono }
+    }, "Pomoc w nauce — nie zastępuje kursu ani doradcy DGSA. Sprawdzaj w aktualnym ADR."),
+    /*#__PURE__*/React.createElement("div", {
+      style: { display: "flex", gap: 8, padding: "6px 12px 14px", alignItems: "flex-end" }
+    }, /*#__PURE__*/React.createElement("textarea", {
+      value: input,
+      onChange: e => setInput(e.target.value),
+      onKeyDown: e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } },
+      rows: 1,
+      placeholder: "Zapytaj Franka o ADR…",
+      style: {
+        flex: 1, resize: "none", fontSize: 14, fontFamily: "inherit",
+        color: C.text, background: C.card, border: `1px solid ${C.line}`,
+        borderRadius: 12, padding: "11px 13px", maxHeight: 120, lineHeight: 1.4, outline: "none"
+      }
+    }), /*#__PURE__*/React.createElement("button", {
+      onClick: () => send(),
+      disabled: loading || !input.trim(),
+      style: {
+        cursor: loading || !input.trim() ? "default" : "pointer",
+        flex: "0 0 auto", width: 46, height: 46, borderRadius: 12, border: "none",
+        background: loading || !input.trim() ? C.card : C.skill,
+        color: "#fff", fontSize: 18, fontWeight: 800,
+        opacity: loading || !input.trim() ? 0.5 : 1
+      },
+      "aria-label": "Wyślij"
+    }, "➤")));
 }
 function KindBadge({
   kind
