@@ -1,6 +1,13 @@
 import { Redis } from '@upstash/redis';
 
-const redis = new Redis({ url: process.env.KV_REST_API_URL, token: process.env.KV_REST_API_TOKEN });
+// Obsluguje oba nazewnictwa zmiennych srodowiskowych:
+//  - natywne Upstash:              UPSTASH_REDIS_REST_URL / _TOKEN
+//  - integracja Vercel KV/Upstash: KV_REST_API_URL / KV_REST_API_TOKEN
+// Dzieki temu dziala niezaleznie od tego, ktora integracja wstrzyknela zmienne.
+const redis = new Redis({
+  url: process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL,
+  token: process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN,
+});
 
 // ---- limity ochronne -------------------------------------------------
 const MAX_MSG = 1000;        // znakow w polu tekstowym

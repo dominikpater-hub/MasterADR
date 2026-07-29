@@ -1,36 +1,8 @@
-# Dependencies
 node_modules/
-.pnp
-.pnp.js
-
-# Builds / output
 dist/
-build/
-out/
 .vite/
-
-# Vercel (specyficzne dla konta wdrożeniowego)
 .vercel/
-
-# Środowisko i sekrety — NIGDY nie commitować
 .env
 .env.*
-!.env.example
-
-# Capacitor / Android
-app/android/
-*.keystore
-*.jks
-
-# Logi
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 *.log
-
-# Systemowe
 .DS_Store
-Thumbs.db
-*.swp
-.idea/
-.vscode/

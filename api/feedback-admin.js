@@ -1,6 +1,12 @@
 import { Redis } from '@upstash/redis';
 
-const redis = new Redis({ url: process.env.KV_REST_API_URL, token: process.env.KV_REST_API_TOKEN });
+// Obsluguje oba nazewnictwa zmiennych srodowiskowych:
+//  - natywne Upstash:              UPSTASH_REDIS_REST_URL / _TOKEN
+//  - integracja Vercel KV/Upstash: KV_REST_API_URL / KV_REST_API_TOKEN
+const redis = new Redis({
+  url: process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL,
+  token: process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN,
+});
 
 // Porownanie odporne na timing attack.
 function safeEqual(a, b) {

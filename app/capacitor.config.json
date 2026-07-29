@@ -1,9 +1,0 @@
-{
-  "appId": "pl.masteradr.app",
-  "appName": "MasterADR",
-  "webDir": "dist",
-  "backgroundColor": "#0E1117",
-  "android": {
-    "backgroundColor": "#0E1117"
-  }
-}

@@ -1,3 +1,5 @@
+import "./franek.js";
+if (typeof window !== "undefined") window.__ADR_ONLY__ = true; // standalone MasterADR (bez hubu DriverOS)
 // Punkt wejścia MasterADR (Vite + React 18).
 // Montuje AdrApp i rejestruje service workera (offline / PWA).
 import React from "react";
