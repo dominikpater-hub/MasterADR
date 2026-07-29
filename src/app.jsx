@@ -6,6 +6,7 @@ import { loadHabit, saveHabit, registerActivity, awardCorrect, dayIndex, goalMet
 import { t, getLang, setLang, LANGS } from "./i18n.js";
 
 /* ---------- KONTA + SYNCHRONIZACJA POSTĘPU (backend Vercel + Redis) ---------- */
+const GOOGLE_CLIENT_ID = "272890735121-jenj9r0a46cjdggrier025ss0446k04j.apps.googleusercontent.com";
 const AUTH_KEY = "masteradr.auth.v1";
 function authGet() { try { return JSON.parse(localStorage.getItem(AUTH_KEY) || "null"); } catch (e) { return null; } }
 function authToken() { const a = authGet(); return a && a.token; }
@@ -2319,6 +2320,22 @@ function Login({ onBack, onDone }) {
   const [busy, setBusy] = useState(false);
   const lbl = { fontSize: 12, color: C.dim, fontFamily: C.mono, display: "block", marginBottom: 4 };
   const fld = { width: "100%", boxSizing: "border-box", padding: "10px 12px", borderRadius: 10, border: `1px solid ${C.card}`, background: C.bg, color: C.text, fontSize: 15, fontFamily: "inherit" };
+  async function finishAuth(res, fallbackEmail) {
+    authSet({ token: res.token, user: res.user });
+    try {
+      localStorage.setItem("guardian.identity.v1", JSON.stringify({
+        name: (res.user && res.user.name) || (fallbackEmail ? fallbackEmail.split("@")[0] : "Uczeń"),
+        email: (res.user && res.user.email) || fallbackEmail || "",
+        createdAt: (res.user && res.user.createdAt) || Date.now(),
+      }));
+    } catch (e) {}
+    // scal postęp: pobierz z serwera → złącz z lokalnym → odeślij unię
+    const server = await syncPull();
+    const applied = applyServerProgress(server);
+    try { await syncPush(collectLocalProgress()); } catch (e) {}
+    if (applied) { try { location.reload(); return; } catch (e) {} }
+    onDone && onDone();
+  }
   async function submit() {
     if (busy) return;
     const em = email.trim().toLowerCase();
@@ -2329,24 +2346,39 @@ function Login({ onBack, onDone }) {
     try {
       const res = await authApi(mode, { email: em, password: pass, name: em.split("@")[0] });
       if (!res.ok) { setErr(res.message || "Nie udało się. Spróbuj ponownie."); setBusy(false); return; }
-      authSet({ token: res.token, user: res.user });
-      try {
-        localStorage.setItem("guardian.identity.v1", JSON.stringify({
-          name: (res.user && res.user.name) || em.split("@")[0],
-          email: (res.user && res.user.email) || em,
-          createdAt: (res.user && res.user.createdAt) || Date.now(),
-        }));
-      } catch (e) {}
-      // scal postęp: pobierz z serwera → złącz z lokalnym → odeślij unię
-      const server = await syncPull();
-      const applied = applyServerProgress(server);
-      try { await syncPush(collectLocalProgress()); } catch (e) {}
-      if (applied) { try { location.reload(); return; } catch (e) {} }
-      onDone && onDone();
-    } catch (e) {
-      setErr("Błąd sieci. Spróbuj ponownie."); setBusy(false);
-    }
+      await finishAuth(res, em);
+    } catch (e) { setErr("Błąd sieci. Spróbuj ponownie."); setBusy(false); }
   }
+  const gbtnRef = useRef(null);
+  async function onGoogle(credential) {
+    if (!credential) return;
+    setErr(""); setBusy(true);
+    try {
+      const res = await authApi("google", { credential: credential });
+      if (!res.ok) { setErr(res.message || "Logowanie Google nie powiodło się."); setBusy(false); return; }
+      await finishAuth(res);
+    } catch (e) { setErr("Błąd sieci przy logowaniu Google."); setBusy(false); }
+  }
+  useEffect(function () {
+    function init() {
+      try {
+        var g = window.google;
+        if (!g || !g.accounts || !g.accounts.id) return;
+        g.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: function (resp) { if (resp && resp.credential) onGoogle(resp.credential); } });
+        if (gbtnRef.current) {
+          gbtnRef.current.innerHTML = "";
+          g.accounts.id.renderButton(gbtnRef.current, { theme: "filled_black", size: "large", text: "continue_with", shape: "pill", width: 300 });
+        }
+      } catch (e) {}
+    }
+    if (window.google && window.google.accounts && window.google.accounts.id) { init(); return; }
+    var ex = document.getElementById("gsi-script");
+    if (ex) { ex.addEventListener("load", init); return; }
+    var s = document.createElement("script");
+    s.src = "https://accounts.google.com/gsi/client"; s.async = true; s.defer = true; s.id = "gsi-script"; s.onload = init;
+    document.head.appendChild(s);
+    // eslint-disable-next-line
+  }, []);
   function tab(active, label, on) {
     return React.createElement("button", { onClick: on, style: { flex: 1, padding: "8px 10px", borderRadius: 9, border: "none", cursor: "pointer", fontSize: 13, fontWeight: 700, background: active ? C.card : "transparent", color: active ? C.text : C.dim } }, label);
   }
@@ -2373,7 +2405,7 @@ function Login({ onBack, onDone }) {
         React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 10, margin: "16px 0", color: C.dim, fontSize: 12 } },
           React.createElement("div", { style: { flex: 1, height: 1, background: C.line } }), "albo", React.createElement("div", { style: { flex: 1, height: 1, background: C.line } })
         ),
-        React.createElement("button", { style: { ...btn(C.card, C.text, false, C.line), marginBottom: 8 }, onClick: () => setErr("Logowanie Google dodamy w następnym kroku — na razie użyj e-maila i hasła.") }, "Kontynuuj z Google")
+        React.createElement("div", { ref: gbtnRef, style: { display: "flex", justifyContent: "center", minHeight: 44 } })
       )
     ),
     React.createElement(TrFoot, null));
