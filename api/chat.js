@@ -9,7 +9,7 @@ const MAX_TURNS = 16;      // ile ostatnich tur bierzemy pod uwagę
 const TOP_K = 12;          // ile faktów wstrzykujemy jako kontekst
 const RATE_PER_HOUR = 40;  // zapytań/godzinę z jednego IP (jeśli jest Redis)
 
-const MODEL_ANTHROPIC = process.env.FRANEK_MODEL || 'claude-3-5-haiku-latest';
+const MODEL_ANTHROPIC = process.env.FRANEK_MODEL || 'claude-haiku-4-5-20251001';
 const MODEL_OPENAI = process.env.FRANEK_MODEL_OPENAI || 'gpt-4o-mini';
 
 const clip = (v, n) => (typeof v === 'string' ? v.slice(0, n) : '');
