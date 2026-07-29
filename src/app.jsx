@@ -534,6 +534,7 @@ function AdrTrainer({
   initialModule
 }) {
   const [screen, setScreen] = useState("modules");
+  const [franekSeed, setFranekSeed] = useState(null);
   try { window.__go = setScreen; } catch (e) {}
   useEffect(() => {
     if (!initialModule) return;
@@ -729,6 +730,7 @@ function AdrTrainer({
     licensed: licensed,
     onTopic: startTopic,
     onWholeBlock: startBlock,
+    onFranek: (seedText) => { setFranekSeed(seedText || null); setScreen("franek"); },
     onBack: () => setScreen("home")
   });
   if (screen === "paywall") return /*#__PURE__*/React.createElement(Paywall, {
@@ -772,7 +774,8 @@ function AdrTrainer({
     onDone: () => setScreen("progress")
   });
   if (screen === "franek") return /*#__PURE__*/React.createElement(FranekChat, {
-    onBack: () => setScreen("home")
+    onBack: () => { setFranekSeed(null); setScreen("home"); },
+    seed: franekSeed
   });
 
   /* ═══════════ SESJA ═══════════ */
@@ -849,7 +852,20 @@ function AdrTrainer({
     ok: lastCorrect,
     question: question,
     boxJump: boxJump
-  }), phase === "feedback" && /*#__PURE__*/React.createElement(FrankWidget, {
+  }), phase === "feedback" && /*#__PURE__*/React.createElement("button", {
+    onClick: function () {
+      try {
+        setFranekSeed("Wyjaśnij mi prościej: " + (question.topic || "to zagadnienie") + (question.adrRef ? " (" + question.adrRef + ")" : "") + ". Chcę to lepiej zrozumieć.");
+      } catch (e) {}
+      setScreen("franek");
+    },
+    style: {
+      marginTop: 12, width: "100%", cursor: "pointer",
+      background: "transparent", color: C.skill, fontWeight: 700, fontSize: 14,
+      border: `1px solid ${C.skill}`, borderRadius: 12, padding: "11px 14px",
+      display: "flex", alignItems: "center", justifyContent: "center", gap: 8
+    }
+  }, "🧭 Zapytaj Franka o to"), phase === "feedback" && /*#__PURE__*/React.createElement(FrankWidget, {
     question: question
   })), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1282,6 +1298,7 @@ function BlockView({
   states,
   onTopic,
   onWholeBlock,
+  onFranek,
   onBack
 }) {
   const sOf = id => states.find(s => s.id === id);
@@ -1313,7 +1330,14 @@ function BlockView({
       ...btn(C.red, "#fff")
     },
     onClick: () => onWholeBlock(blockId)
-  }, "Ćwicz cały blok (", FACTS.filter(f => f.block === blockId).length, " zadań)"), /*#__PURE__*/React.createElement("div", {
+  }, "Ćwicz cały blok (", FACTS.filter(f => f.block === blockId).length, " zadań)"), onFranek && /*#__PURE__*/React.createElement("button", {
+    style: {
+      cursor: "pointer", display: "flex", alignItems: "center", gap: 8,
+      background: "transparent", color: C.skill, fontWeight: 700, fontSize: 14,
+      border: `1px solid ${C.skill}`, borderRadius: 12, padding: "11px 14px"
+    },
+    onClick: () => onFranek("Opowiedz mi zwięźle o zakresie: " + block.name + ". Co jest najważniejsze do egzaminu ADR?")
+  }, /*#__PURE__*/React.createElement("span", { style: { fontSize: 18, lineHeight: 1 } }, "🧭"), "Zapytaj Franka o ten blok"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: 12,
       color: C.dim,
@@ -2421,8 +2445,9 @@ function DailyHabitPill({
     style: { fontSize: 11, opacity: 0.85, marginLeft: 4, color: met ? C.skill : C.dim }
   }, ` ${Math.min(prog, habit.dailyGoal)}/${habit.dailyGoal}`));
 }
-function FranekChat({ onBack }) {
+function FranekChat({ onBack, seed }) {
   const KEY = "masteradr.franek.chat.v1";
+  const seededRef = useRef(false);
   const intro = {
     role: "assistant",
     content: "Cześć, jestem Franek — Twój przewodnik po ADR. Zapytaj mnie o cokolwiek: przepisy, wyłączenia, oznakowanie, dokumenty, co robić po wypadku. Odpowiem i wskażę odnośnik w ADR."
@@ -2464,6 +2489,12 @@ function FranekChat({ onBack }) {
       setMessages(m => [...m, { role: "assistant", content: "Brak połączenia. Sprawdź internet i spróbuj ponownie." }]);
     } finally { setLoading(false); }
   }
+
+  // Wejście z kontekstem faktu (np. „Zapytaj Franka o to") — wyślij pytanie raz.
+  useEffect(function () {
+    if (seed && !seededRef.current) { seededRef.current = true; send(seed); }
+    // eslint-disable-next-line
+  }, [seed]);
 
   const avatar = /*#__PURE__*/React.createElement("span", {
     style: {
