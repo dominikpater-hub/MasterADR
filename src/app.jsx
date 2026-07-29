@@ -2445,6 +2445,28 @@ function DailyHabitPill({
     style: { fontSize: 11, opacity: 0.85, marginLeft: 4, color: met ? C.skill : C.dim }
   }, ` ${Math.min(prog, habit.dailyGoal)}/${habit.dailyGoal}`));
 }
+// Lekki renderer odpowiedzi Franka: **pogrubienie**, listy (- / •), akapity.
+// Zwraca elementy React (bez innerHTML — bezpieczne pod CSP).
+function franekRich(text) {
+  const inline = s => String(s).split(/\*\*/).map((p, i) =>
+    i % 2 === 1 ? /*#__PURE__*/React.createElement("b", { key: i }, p) : p);
+  const lines = String(text).split("\n");
+  const out = [];
+  let list = null;
+  const flush = key => { if (list) { out.push(/*#__PURE__*/React.createElement("ul", { key: "ul" + key, style: { margin: "4px 0", paddingLeft: 18 } }, list)); list = null; } };
+  lines.forEach((ln, i) => {
+    const t = ln.trim();
+    if (/^[-•*]\s+/.test(t)) {
+      if (!list) list = [];
+      list.push(/*#__PURE__*/React.createElement("li", { key: "li" + i, style: { marginBottom: 3 } }, inline(t.replace(/^[-•*]\s+/, ""))));
+    } else {
+      flush(i);
+      if (t) out.push(/*#__PURE__*/React.createElement("div", { key: "p" + i, style: { marginBottom: 6 } }, inline(t)));
+    }
+  });
+  flush("end");
+  return out;
+}
 function FranekChat({ onBack, seed }) {
   const KEY = "masteradr.franek.chat.v1";
   const seededRef = useRef(false);
@@ -2464,12 +2486,26 @@ function FranekChat({ onBack, seed }) {
     if (scroller.current) scroller.current.scrollTop = scroller.current.scrollHeight;
   }, [messages, loading]);
 
-  const suggestions = [
+  const areaChips = BLOCKS.map(b => ({
+    label: b.name,
+    q: "Wyjaśnij zwięźle zakres: " + b.name + ". Co jest najważniejsze do egzaminu ADR?"
+  }));
+  const faqChips = [
     "Kiedy przewóz podlega ADR?",
     "Na czym polega wyłączenie LQ (1.1.3.6)?",
     "Jakie dokumenty wozić w kabinie?",
     "Co robić po wypadku z ADR?"
-  ];
+  ].map(q => ({ label: q, q }));
+  const chipStyle = accent => ({
+    cursor: "pointer", fontSize: 12, fontWeight: 600, textAlign: "left",
+    color: accent ? C.skill : C.text, background: "transparent",
+    border: "1px solid " + (accent ? C.skill : C.line), borderRadius: 16, padding: "7px 12px"
+  });
+  function resetChat() {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    seededRef.current = true; // nie wstrzykuj ponownie seeda po resecie
+    setMessages([intro]);
+  }
 
   async function send(text) {
     const q = (text != null ? text : input).trim();
@@ -2517,7 +2553,7 @@ function FranekChat({ onBack, seed }) {
         background: mine ? C.skill : C.card, color: mine ? "#fff" : C.text,
         border: mine ? "none" : `1px solid ${C.line}`
       }
-    }, m.content));
+    }, mine ? m.content : franekRich(m.content)));
   });
 
   const typing = loading ? /*#__PURE__*/React.createElement("div", {
@@ -2527,22 +2563,39 @@ function FranekChat({ onBack, seed }) {
   }, "Franek pisze…")) : null;
 
   const chips = messages.length <= 1 ? /*#__PURE__*/React.createElement("div", {
-    style: { display: "flex", flexWrap: "wrap", gap: 8, marginTop: 4 }
-  }, suggestions.map(function (s, i) {
-    return /*#__PURE__*/React.createElement("button", {
-      key: i,
-      onClick: () => send(s),
-      style: {
-        cursor: "pointer", fontSize: 12, fontWeight: 600, color: C.text,
-        background: "transparent", border: `1px solid ${C.line}`, borderRadius: 16, padding: "7px 12px"
-      }
-    }, s);
-  })) : null;
+    style: { marginTop: 6 }
+  },
+    /*#__PURE__*/React.createElement("div", {
+      style: { fontSize: 11, color: C.dim, fontFamily: C.mono, marginBottom: 8 }
+    }, "OD CZEGO ZACZĄĆ — 5 OBSZARÓW ADR"),
+    /*#__PURE__*/React.createElement("div", {
+      style: { display: "flex", flexWrap: "wrap", gap: 8 }
+    }, areaChips.map((c, i) => /*#__PURE__*/React.createElement("button", {
+      key: "a" + i, onClick: () => send(c.q), style: chipStyle(true)
+    }, c.label))),
+    /*#__PURE__*/React.createElement("div", {
+      style: { fontSize: 11, color: C.dim, fontFamily: C.mono, margin: "14px 0 8px" }
+    }, "CZĘSTE PYTANIA"),
+    /*#__PURE__*/React.createElement("div", {
+      style: { display: "flex", flexWrap: "wrap", gap: 8 }
+    }, faqChips.map((c, i) => /*#__PURE__*/React.createElement("button", {
+      key: "f" + i, onClick: () => send(c.q), style: chipStyle(false)
+    }, c.label)))
+  ) : null;
 
   return /*#__PURE__*/React.createElement(TrShell, null,
     /*#__PURE__*/React.createElement(TrHeader, {
       title: "Franek — przewodnik ADR",
-      left: /*#__PURE__*/React.createElement(BackBtn, { onBack: onBack })
+      left: /*#__PURE__*/React.createElement(BackBtn, { onBack: onBack }),
+      right: messages.length > 1 ? /*#__PURE__*/React.createElement("button", {
+        onClick: resetChat,
+        title: "Nowa rozmowa",
+        style: {
+          cursor: "pointer", fontSize: 12, fontWeight: 700, color: C.dim,
+          background: "transparent", border: `1px solid ${C.line}`,
+          borderRadius: 16, padding: "6px 10px"
+        }
+      }, "Nowa") : null
     }),
     /*#__PURE__*/React.createElement("div", {
       ref: scroller,
