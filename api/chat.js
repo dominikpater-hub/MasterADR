@@ -3,6 +3,7 @@
 // Provider: ANTHROPIC_API_KEY (Claude) albo OPENAI_API_KEY (GPT). Bez klucza -> grzeczny offline.
 // Zależności: brak (global fetch). Rate-limit best-effort, jeśli jest Redis (KV_*/UPSTASH_*).
 import { KB } from './adr-knowledge.js';
+import { requireAuth } from './_lib/auth.js';
 
 const MAX_MSG = 2000;      // znaków w pojedynczej wiadomości użytkownika
 const MAX_TURNS = 16;      // ile ostatnich tur bierzemy pod uwagę
@@ -133,9 +134,21 @@ async function maybeRateLimit(req) {
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   if (req.method === 'OPTIONS') return res.status(204).end();
   if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'method_not_allowed' });
+
+  // Franek jest za logowaniem — chroni koszty i wiąże rozmowy z kontem.
+  let authEmail = null;
+  try { authEmail = await requireAuth(req); } catch (e) { authEmail = null; }
+  if (!authEmail) {
+    return res.status(401).json({
+      ok: false,
+      error: 'auth_required',
+      reply: 'Żeby porozmawiać z Frankiem, zaloguj się na swoje konto MasterADR. '
+        + 'Dzięki temu Twój postęp synchronizuje się między urządzeniami. 🛻',
+    });
+  }
 
   const hasAnthropic = !!process.env.ANTHROPIC_API_KEY;
   const hasOpenAI = !!process.env.OPENAI_API_KEY;

@@ -2,8 +2,80 @@
 // Źródło: masterADR/prototyp/MasterADR.html. Silnik Leitnera + 218 pozycji ADR.
 // Jedyna zmiana vs prototyp: React z importu (bundle Vite) zamiast globalu z CDN + Babel.
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import { loadHabit, saveHabit, registerActivity, awardCorrect, dayIndex, goalMet } from "./daily-habit.js";
+import { loadHabit, saveHabit, registerActivity, awardCorrect, dayIndex, goalMet, HABIT_KEY } from "./daily-habit.js";
 import { t, getLang, setLang, LANGS } from "./i18n.js";
+
+/* ---------- KONTA + SYNCHRONIZACJA POSTĘPU (backend Vercel + Redis) ---------- */
+const AUTH_KEY = "masteradr.auth.v1";
+function authGet() { try { return JSON.parse(localStorage.getItem(AUTH_KEY) || "null"); } catch (e) { return null; } }
+function authToken() { const a = authGet(); return a && a.token; }
+function authUser() { const a = authGet(); return a && a.user; }
+function authSet(o) { try { localStorage.setItem(AUTH_KEY, JSON.stringify(o)); } catch (e) {} }
+function authClear() { try { localStorage.removeItem(AUTH_KEY); } catch (e) {} }
+async function authApi(action, payload) {
+  const tk = authToken();
+  const headers = { "content-type": "application/json" };
+  if (tk) headers.authorization = "Bearer " + tk;
+  const r = await fetch("/api/auth", {
+    method: "POST", headers: headers,
+    body: JSON.stringify(Object.assign({ action: action }, payload || {})),
+  });
+  let j = {}; try { j = await r.json(); } catch (e) {}
+  j.status = r.status; return j;
+}
+async function syncPull() {
+  const tk = authToken(); if (!tk) return null;
+  try {
+    const r = await fetch("/api/sync", { headers: { authorization: "Bearer " + tk } });
+    const j = await r.json(); return j && j.ok ? j.progress : null;
+  } catch (e) { return null; }
+}
+async function syncPush(progress) {
+  const tk = authToken(); if (!tk) return false;
+  try {
+    const r = await fetch("/api/sync", {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: "Bearer " + tk },
+      body: JSON.stringify({ progress: progress }),
+    });
+    const j = await r.json(); return !!(j && j.ok);
+  } catch (e) { return false; }
+}
+// scalanie postępu przy logowaniu: per-fakt bierze bardziej zaawansowany (wyższe pudełko, potem więcej powtórek)
+function mergeProgressStates(local, server) {
+  const byId = {};
+  (local || []).forEach(function (s) { if (s && s.id) byId[s.id] = s; });
+  (server || []).forEach(function (s) {
+    if (!s || !s.id) return;
+    const cur = byId[s.id];
+    if (!cur) { byId[s.id] = s; return; }
+    const better = (s.box || 0) > (cur.box || 0) ||
+      ((s.box || 0) === (cur.box || 0) && (s.seen || 0) > (cur.seen || 0));
+    if (better) byId[s.id] = s;
+  });
+  return Object.keys(byId).map(function (k) { return byId[k]; });
+}
+// zapisuje scalony postęp do localStorage (states + nawyk). Zwraca true, jeśli coś zmieniono.
+function applyServerProgress(server) {
+  if (!server) return false;
+  try {
+    let local = []; try { local = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); } catch (e) {}
+    const merged = mergeProgressStates(local, server.states || []);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
+    if (server.habit) {
+      let lh = null; try { lh = JSON.parse(localStorage.getItem(HABIT_KEY) || "null"); } catch (e) {}
+      const lu = (lh && lh.updatedAt) || 0, su = server.updatedAt || 0;
+      if (!lh || su >= lu) localStorage.setItem(HABIT_KEY, JSON.stringify(server.habit));
+    }
+    return true;
+  } catch (e) { return false; }
+}
+// zbiera bieżący lokalny postęp do wysłania na serwer
+function collectLocalProgress() {
+  let states = []; try { states = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); } catch (e) {}
+  let habit = null; try { habit = JSON.parse(localStorage.getItem(HABIT_KEY) || "null"); } catch (e) {}
+  return { states: states, habit: habit };
+}
 import { MIN, DAY, INTERVALS, newFact, review, buildQueue, FORMAT_BY_BOX, pickFormat } from "./leitner.js";
 
 /* ── Override dla samodzielnego trenera ADR ──
@@ -558,6 +630,17 @@ function AdrTrainer({
   useEffect(() => {
     storage.save(states);
   }, [states]);
+  // synchronizacja postępu na serwer (gdy zalogowany) — z debounce, żeby nie spamować
+  const syncTimer = useRef(null);
+  useEffect(() => {
+    if (!authToken()) return;
+    if (syncTimer.current) clearTimeout(syncTimer.current);
+    syncTimer.current = setTimeout(() => {
+      const h = habit ? Object.assign({}, habit, { updatedAt: Date.now() }) : null;
+      syncPush({ states: states, habit: h });
+    }, 2500);
+    return () => { if (syncTimer.current) clearTimeout(syncTimer.current); };
+  }, [states, habit]);
   const [queue, setQueue] = useState([]);
   const [qi, setQi] = useState(0);
   const [question, setQuestion] = useState(null);
@@ -2204,7 +2287,7 @@ function Progress({
         (ident && ident.name)
           ? React.createElement("div", null,
               React.createElement("div", { style: { fontSize: 14, color: C.text, marginBottom: 10 } }, "Zalogowany jako ", React.createElement("b", null, ident.name)),
-              React.createElement("button", { style: btn(C.card, C.dim, false, C.line), onClick: function () { try { localStorage.removeItem("guardian.identity.v1"); } catch (e) {} setIdent(null); } }, "Wyloguj"))
+              React.createElement("button", { style: btn(C.card, C.dim, false, C.line), onClick: function () { try { authApi("logout", {}).catch(function () {}); } catch (e) {} authClear(); try { localStorage.removeItem("guardian.identity.v1"); } catch (e) {} setIdent(null); try { location.reload(); } catch (e) {} } }, "Wyloguj"))
           : React.createElement("button", { style: btn(C.green, "#fff"), onClick: onLogin }, t("profile.login", "Zaloguj się")),
         React.createElement("div", { style: { fontSize: 12, color: C.dim, margin: "14px 0 8px", fontFamily: C.mono } }, t("profile.lang", "Język")),
         React.createElement("div", { style: { display: "flex", gap: 6, flexWrap: "wrap" } },
@@ -2233,26 +2316,35 @@ function Login({ onBack, onDone }) {
   const [pass, setPass] = useState("");
   const [consent, setConsent] = useState(false);
   const [err, setErr] = useState("");
+  const [busy, setBusy] = useState(false);
   const lbl = { fontSize: 12, color: C.dim, fontFamily: C.mono, display: "block", marginBottom: 4 };
   const fld = { width: "100%", boxSizing: "border-box", padding: "10px 12px", borderRadius: 10, border: `1px solid ${C.card}`, background: C.bg, color: C.text, fontSize: 15, fontFamily: "inherit" };
-  function readAcct() { try { return JSON.parse(localStorage.getItem("masteradr.account.v1") || "null"); } catch (e) { return null; } }
-  function finish(a) {
-    try { localStorage.setItem("guardian.identity.v1", JSON.stringify({ name: a.name, email: a.email, createdAt: a.createdAt })); } catch (e) {}
-    onDone && onDone();
-  }
-  function submit() {
+  async function submit() {
+    if (busy) return;
     const em = email.trim().toLowerCase();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) { setErr("Podaj poprawny e-mail."); return; }
     if (pass.length < 8) { setErr("Hasło musi mieć min. 8 znaków."); return; }
-    if (mode === "register") {
-      if (!consent) { setErr("Zaznacz zgodę na zasady prywatności."); return; }
-      const a = { email: em, p: encPass(pass), name: em.split("@")[0], createdAt: Date.now() };
-      try { localStorage.setItem("masteradr.account.v1", JSON.stringify(a)); } catch (e) {}
-      finish(a);
-    } else {
-      const a = readAcct();
-      if (!a || a.email !== em || a.p !== encPass(pass)) { setErr("Nie znaleziono konta albo złe hasło."); return; }
-      finish(a);
+    if (mode === "register" && !consent) { setErr("Zaznacz zgodę na zasady prywatności."); return; }
+    setErr(""); setBusy(true);
+    try {
+      const res = await authApi(mode, { email: em, password: pass, name: em.split("@")[0] });
+      if (!res.ok) { setErr(res.message || "Nie udało się. Spróbuj ponownie."); setBusy(false); return; }
+      authSet({ token: res.token, user: res.user });
+      try {
+        localStorage.setItem("guardian.identity.v1", JSON.stringify({
+          name: (res.user && res.user.name) || em.split("@")[0],
+          email: (res.user && res.user.email) || em,
+          createdAt: (res.user && res.user.createdAt) || Date.now(),
+        }));
+      } catch (e) {}
+      // scal postęp: pobierz z serwera → złącz z lokalnym → odeślij unię
+      const server = await syncPull();
+      const applied = applyServerProgress(server);
+      try { await syncPush(collectLocalProgress()); } catch (e) {}
+      if (applied) { try { location.reload(); return; } catch (e) {} }
+      onDone && onDone();
+    } catch (e) {
+      setErr("Błąd sieci. Spróbuj ponownie."); setBusy(false);
     }
   }
   function tab(active, label, on) {
@@ -2277,12 +2369,11 @@ function Login({ onBack, onDone }) {
           React.createElement("span", null, "Akceptuję zasady prywatności. Moje dane są moje — mogę je pobrać lub usunąć w każdej chwili.")
         ) : null,
         err ? React.createElement("div", { style: { fontSize: 12, color: C.red, margin: "8px 0 2px" } }, err) : null,
-        React.createElement("button", { style: { ...btn(C.green, "#fff"), marginTop: 12 }, onClick: submit }, mode === "register" ? "Załóż konto" : "Zaloguj się"),
+        React.createElement("button", { disabled: busy, style: { ...btn(C.green, "#fff"), marginTop: 12, opacity: busy ? 0.6 : 1 }, onClick: submit }, busy ? "Chwila…" : (mode === "register" ? "Załóż konto" : "Zaloguj się")),
         React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 10, margin: "16px 0", color: C.dim, fontSize: 12 } },
           React.createElement("div", { style: { flex: 1, height: 1, background: C.line } }), "albo", React.createElement("div", { style: { flex: 1, height: 1, background: C.line } })
         ),
-        React.createElement("button", { style: { ...btn(C.card, C.text, false, C.line), marginBottom: 8 }, onClick: () => setErr("Logowanie Google/Apple dodamy razem z backendem kont.") }, "Kontynuuj z Google"),
-        React.createElement("button", { style: btn(C.card, C.text, false, C.line), onClick: () => setErr("Logowanie Google/Apple dodamy razem z backendem kont.") }, "Kontynuuj z Apple")
+        React.createElement("button", { style: { ...btn(C.card, C.text, false, C.line), marginBottom: 8 }, onClick: () => setErr("Logowanie Google dodamy w następnym kroku — na razie użyj e-maila i hasła.") }, "Kontynuuj z Google")
       )
     ),
     React.createElement(TrFoot, null));
@@ -2513,9 +2604,10 @@ function FranekChat({ onBack, seed }) {
     const next = [...messages, { role: "user", content: q }];
     setMessages(next); setInput(""); setLoading(true);
     try {
+      const tk = authToken();
       const r = await fetch("/api/chat", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: Object.assign({ "Content-Type": "application/json" }, tk ? { authorization: "Bearer " + tk } : {}),
         body: JSON.stringify({ messages: next.map(m => ({ role: m.role, content: m.content })) })
       });
       const j = await r.json();
@@ -2528,7 +2620,7 @@ function FranekChat({ onBack, seed }) {
 
   // Wejście z kontekstem faktu (np. „Zapytaj Franka o to") — wyślij pytanie raz.
   useEffect(function () {
-    if (seed && !seededRef.current) { seededRef.current = true; send(seed); }
+    if (seed && !seededRef.current && authToken()) { seededRef.current = true; send(seed); }
     // eslint-disable-next-line
   }, [seed]);
 
@@ -2583,11 +2675,21 @@ function FranekChat({ onBack, seed }) {
     }, c.label)))
   ) : null;
 
+  const loggedIn = !!authToken();
+  const gate = /*#__PURE__*/React.createElement("div", {
+    style: { flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: 24, textAlign: "center", gap: 14 }
+  },
+    /*#__PURE__*/React.createElement("div", {
+      style: { width: 56, height: 56, borderRadius: "50%", background: C.skill, color: "#fff", fontSize: 24, fontWeight: 800, display: "flex", alignItems: "center", justifyContent: "center" }
+    }, "F"),
+    /*#__PURE__*/React.createElement("div", { style: { fontSize: 17, fontWeight: 800, color: C.text } }, "Zaloguj się, żeby rozmawiać z Frankiem"),
+    /*#__PURE__*/React.createElement("div", { style: { fontSize: 13, color: C.dim, lineHeight: 1.5, maxWidth: 300 } }, "Franek — Twój przewodnik po ADR — jest dla zalogowanych. Dzięki temu Twój postęp trzyma się konta i synchronizuje między urządzeniami."),
+    /*#__PURE__*/React.createElement("button", { onClick: function () { try { window.__go && window.__go("login"); } catch (e) {} }, style: btn(C.green, "#fff") }, "Zaloguj się / załóż konto"));
   return /*#__PURE__*/React.createElement(TrShell, null,
     /*#__PURE__*/React.createElement(TrHeader, {
       title: "Franek — przewodnik ADR",
       left: /*#__PURE__*/React.createElement(BackBtn, { onBack: onBack }),
-      right: messages.length > 1 ? /*#__PURE__*/React.createElement("button", {
+      right: loggedIn && messages.length > 1 ? /*#__PURE__*/React.createElement("button", {
         onClick: resetChat,
         title: "Nowa rozmowa",
         style: {
@@ -2597,14 +2699,15 @@ function FranekChat({ onBack, seed }) {
         }
       }, "Nowa") : null
     }),
-    /*#__PURE__*/React.createElement("div", {
+    !loggedIn ? gate : null,
+    loggedIn && /*#__PURE__*/React.createElement("div", {
       ref: scroller,
       style: { flex: 1, overflowY: "auto", padding: 16, display: "flex", flexDirection: "column", gap: 10 }
     }, bubbles, typing, chips),
-    /*#__PURE__*/React.createElement("div", {
+    loggedIn && /*#__PURE__*/React.createElement("div", {
       style: { padding: "8px 12px 4px", fontSize: 10, color: C.dim, textAlign: "center", fontFamily: C.mono }
     }, "Pomoc w nauce — nie zastępuje kursu ani doradcy DGSA. Sprawdzaj w aktualnym ADR."),
-    /*#__PURE__*/React.createElement("div", {
+    loggedIn && /*#__PURE__*/React.createElement("div", {
       style: { display: "flex", gap: 8, padding: "6px 12px 14px", alignItems: "flex-end" }
     }, /*#__PURE__*/React.createElement("textarea", {
       value: input,
