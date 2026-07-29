@@ -1046,10 +1046,7 @@ function Modules({
         fontFamily: C.mono
       }
     }, m.count, " zadań · ", m.started, " rozpoczęte", m.structured ? " · bloki i tematy" : ""));
-  }), /*#__PURE__*/React.createElement("button", {
-    style: btn(C.card, C.text, false, C.line),
-    onClick: onProgress
-  }, "Mój postęp")), /*#__PURE__*/React.createElement(TrFoot, null));
+  })), /*#__PURE__*/React.createElement(TrFoot, null));
 }
 
 /* ═══════════ EKRAN GŁÓWNY ═══════════ */
@@ -1250,10 +1247,7 @@ function Home({
   }), /*#__PURE__*/React.createElement("button", {
     style: btn(C.card, C.text, false, C.line),
     onClick: onHowTo
-  }, "Jak zdobyć uprawnienia ADR"), /*#__PURE__*/React.createElement("button", {
-    style: btn(C.card, C.text, false, C.line),
-    onClick: onProgress
-  }, "Mój postęp")), /*#__PURE__*/React.createElement(TrFoot, null));
+  }, "Jak zdobyć uprawnienia ADR")), /*#__PURE__*/React.createElement(TrFoot, null));
 }
 
 /* ═══════════ WIDOK BLOKU — tematy z zadaniami ═══════════ */
@@ -2290,16 +2284,31 @@ function TrHeader({
     "aria-label": "Mój postęp",
     style: {
       cursor: "pointer",
-      border: `1px solid ${C.card}`,
-      background: "transparent",
+      border: `1px solid ${C.line}`,
+      background: C.card,
       color: C.text,
       borderRadius: 20,
-      padding: "6px 12px",
+      padding: "7px 11px",
       fontSize: 13,
       fontWeight: 700,
-      lineHeight: 1
+      lineHeight: 1,
+      display: "flex",
+      alignItems: "center"
     }
-  }, "📊"), habitPill, right || null);
+  }, /*#__PURE__*/React.createElement("svg", {
+    width: 18,
+    height: 18,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    "aria-hidden": "true",
+    style: { display: "block" }
+  }, /*#__PURE__*/React.createElement("rect", {
+    x: 3, y: 12, width: 4.5, height: 9, rx: 1.3, fill: C.dim
+  }), /*#__PURE__*/React.createElement("rect", {
+    x: 9.75, y: 7, width: 4.5, height: 14, rx: 1.3, fill: C.text
+  }), /*#__PURE__*/React.createElement("rect", {
+    x: 16.5, y: 3, width: 4.5, height: 18, rx: 1.3, fill: C.skill
+  }))), habitPill, right || null);
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
