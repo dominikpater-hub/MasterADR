@@ -168,6 +168,8 @@ function buildQuestion(f, format, seed) {
     kind: f.kind,
     format,
     why: f.why,
+    okMsg: f.okMsg,
+    badMsg: f.badMsg,
     adrRef: f.adrRef,
     page: f.page
   };
@@ -1645,14 +1647,14 @@ function Feedback({
       color: C.greenLite,
       fontWeight: 600
     }
-  }, fmtCorrect(question))), question.why && /*#__PURE__*/React.createElement("div", {
+  }, fmtCorrect(question))), (ok ? (question.okMsg || question.why) : (question.badMsg || question.why)) && /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 10,
       fontSize: 13,
       color: "#9AA0AA",
       lineHeight: 1.5
     }
-  }, question.why), /*#__PURE__*/React.createElement("div", {
+  }, ok ? (question.okMsg || question.why) : (question.badMsg || question.why)), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 10,
       fontSize: 11,
