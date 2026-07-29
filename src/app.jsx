@@ -2389,7 +2389,9 @@ function DailyHabitPill({
       color: habit.streak > 0 ? C.skill : C.dim
     },
     title: `Seria dzienna: ${habit.streak} (rekord ${habit.bestStreak}) · zamrożenia: ${habit.freezes} · cel dziś: ${prog}/${habit.dailyGoal}`
-  }, "📅", habit.streak, habit.freezes > 0 ? /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement("span", {
+    style: { marginRight: 5 }
+  }, "📅"), habit.streak, habit.freezes > 0 ? /*#__PURE__*/React.createElement("span", {
     style: { fontSize: 11, opacity: 0.8 }
   }, " ❄", habit.freezes) : null, /*#__PURE__*/React.createElement("span", {
     style: { fontSize: 11, opacity: 0.85, marginLeft: 4, color: met ? C.skill : C.dim }
