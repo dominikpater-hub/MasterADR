@@ -3,6 +3,7 @@
 import {
   redis, normEmail, validEmail, hashPassword, verifyPassword,
   getUser, saveUser, createSession, getSessionEmail, destroySession, bearer,
+  isLocked, bumpFail, clearFail,
 } from './_lib/auth.js';
 
 const MIN_PASS = 8;
@@ -29,7 +30,8 @@ function publicUser(u) {
 }
 
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'https://masteradr.vercel.app');
+  res.setHeader('Vary', 'Origin');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.setHeader('Cache-Control', 'no-store');
@@ -65,8 +67,8 @@ export default async function handler(req, res) {
       if (password.length < MIN_PASS) return res.status(400).json({ ok: false, error: 'weak_password', message: 'Hasło musi mieć co najmniej 8 znaków.' });
       const existing = await getUser(email);
       if (existing) return res.status(409).json({ ok: false, error: 'email_taken', message: 'Konto z tym e-mailem już istnieje. Zaloguj się.' });
-      const { salt, hash } = await hashPassword(password);
-      const user = { email, name, salt, hash, provider: 'password', createdAt: Date.now() };
+      const { salt, hash, iters } = await hashPassword(password);
+      const user = { email, name, salt, hash, iters, provider: 'password', emailVerified: false, createdAt: Date.now() };
       await saveUser(user);
       const token = await createSession(email);
       return res.status(200).json({ ok: true, token, user: publicUser(user) });
@@ -76,12 +78,16 @@ export default async function handler(req, res) {
       if (!(await rateOk(ip))) return res.status(429).json({ ok: false, error: 'rate_limited' });
       const email = normEmail(body.email);
       const password = clip(body.password, MAX_PASS);
+      if (await isLocked(email)) {
+        return res.status(429).json({ ok: false, error: 'locked', message: 'Za dużo prób logowania. Odczekaj 15 minut i spróbuj ponownie.' });
+      }
       const u = await getUser(email);
       // ten sam komunikat dla „brak konta" i „złe hasło" — nie ujawniamy istnienia konta
-      const fail = () => res.status(401).json({ ok: false, error: 'bad_credentials', message: 'Nieprawidłowy e-mail lub hasło.' });
+      const fail = async () => { await bumpFail(email); return res.status(401).json({ ok: false, error: 'bad_credentials', message: 'Nieprawidłowy e-mail lub hasło.' }); };
       if (!u || !u.hash) return fail();
-      const ok = await verifyPassword(password, u.salt, u.hash);
+      const ok = await verifyPassword(password, u.salt, u.hash, u.iters);
       if (!ok) return fail();
+      await clearFail(email);
       const token = await createSession(email);
       return res.status(200).json({ ok: true, token, user: publicUser(u) });
     }
@@ -109,10 +115,17 @@ export default async function handler(req, res) {
       const email = normEmail(info.email);
       let u = await getUser(email);
       if (!u) {
-        u = { email, name: info.name || info.given_name || email.split('@')[0], provider: 'google', createdAt: Date.now() };
+        u = { email, name: info.name || info.given_name || email.split('@')[0], provider: 'google', emailVerified: true, createdAt: Date.now() };
         await saveUser(u);
-      } else if (!u.provider) {
-        u.provider = u.hash ? 'password' : 'google';
+      } else {
+        // OCHRONA PRZED PRZEJĘCIEM KONTA (pre-hijacking):
+        // logowanie Google dowodzi własności e-maila. Jeśli konto miało hasło ustawione
+        // przez kogoś, kto NIE zweryfikował adresu — unieważniamy to hasło.
+        if (!u.emailVerified && u.hash) { delete u.hash; delete u.salt; delete u.iters; }
+        u.emailVerified = true;
+        if (!u.provider || u.provider === 'password') u.provider = u.hash ? 'password+google' : 'google';
+        await saveUser(u);
+        try { await clearFail(email); } catch (e) {}
       }
       const token = await createSession(email);
       return res.status(200).json({ ok: true, token, user: publicUser(u) });

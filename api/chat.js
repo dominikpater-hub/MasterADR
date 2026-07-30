@@ -3,12 +3,13 @@
 // Provider: ANTHROPIC_API_KEY (Claude) albo OPENAI_API_KEY (GPT). Bez klucza -> grzeczny offline.
 // Zależności: brak (global fetch). Rate-limit best-effort, jeśli jest Redis (KV_*/UPSTASH_*).
 import { KB } from './adr-knowledge.js';
-import { requireAuth } from './_lib/auth.js';
+import { requireAuth, redis } from './_lib/auth.js';
 
 const MAX_MSG = 2000;      // znaków w pojedynczej wiadomości użytkownika
 const MAX_TURNS = 16;      // ile ostatnich tur bierzemy pod uwagę
 const TOP_K = 12;          // ile faktów wstrzykujemy jako kontekst
-const RATE_PER_HOUR = 40;  // zapytań/godzinę z jednego IP (jeśli jest Redis)
+const RATE_PER_HOUR = 40;      // zapytań/godzinę z jednego KONTA
+const RATE_GLOBAL_DAY = 3000;  // twardy globalny sufit dzienny — ochrona klucza API
 
 const MODEL_ANTHROPIC = process.env.FRANEK_MODEL || 'claude-haiku-4-5-20251001';
 const MODEL_OPENAI = process.env.FRANEK_MODEL_OPENAI || 'gpt-4o-mini';
@@ -22,15 +23,20 @@ function norm(s) {
 const STOP = new Set(('i oraz w we na do z za o u a co jak czy to jest są być czym ile kiedy gdzie'
   + ' dla po od bez pod nad przy ten ta to te czy jaki jaka jakie ktory ktora ktore adr').split(/\s+/));
 
+// Prosty „stemmer" PL: obcięcie do rdzenia (6 znaków) zdejmuje końcówki fleksyjne,
+// więc „gaśnicami" i „gaśnica" trafiają w to samo (po norm: „gasnic"). Krótkie słowa bez zmian.
+function stem(w) { return w.length > 6 ? w.slice(0, 6) : w; }
 function retrieve(query) {
-  const qt = norm(query).split(/[^a-z0-9]+/).filter((w) => w.length > 2 && !STOP.has(w));
+  const qt = norm(query).split(/[^a-z0-9]+/)
+    .filter((w) => w.length > 2 && !STOP.has(w)).map(stem);
   if (!qt.length) return KB.slice(0, TOP_K);
   const scored = KB.map((e) => {
     const hay = norm(e.topic + ' ' + e.why + ' ' + e.adrRef + ' ' + e.blockName);
+    const hayTopic = norm(e.topic), hayRef = norm(e.adrRef);
     let s = 0;
     for (const w of qt) { if (hay.includes(w)) s += 1; }
     // lekka premia za trafienie w temat/odnośnik
-    for (const w of qt) { if (norm(e.topic).includes(w) || norm(e.adrRef).includes(w)) s += 0.5; }
+    for (const w of qt) { if (hayTopic.includes(w) || hayRef.includes(w)) s += 0.5; }
     return { e, s };
   }).filter((x) => x.s > 0);
   scored.sort((a, b) => b.s - a.s);
@@ -109,30 +115,29 @@ async function callOpenAI(sys, messages) {
   return (j.choices && j.choices[0] && j.choices[0].message.content || '').trim();
 }
 
-async function maybeRateLimit(req) {
-  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
-  if (!url || !token) return true; // brak Redis -> nie limitujemy (best-effort)
+// Limit per KONTO (nie IP) + twardy globalny sufit dzienny. FAIL-CLOSED:
+// gdy Redis nie odpowiada, nie przepuszczamy — ochrona kosztów jest ważniejsza niż wygoda.
+async function rateCheck(email) {
   try {
-    const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'unknown';
-    const key = `madr:chatrl:${ip}:${new Date().toISOString().slice(0, 13)}`;
-    const inc = await fetch(`${url}/incr/${encodeURIComponent(key)}`, {
-      headers: { authorization: `Bearer ${token}` },
-    }).then((r) => r.json());
-    const n = inc && inc.result;
-    if (n === 1) {
-      await fetch(`${url}/expire/${encodeURIComponent(key)}/3600`, {
-        headers: { authorization: `Bearer ${token}` },
-      });
-    }
-    return !(n > RATE_PER_HOUR);
+    const hour = new Date().toISOString().slice(0, 13);
+    const day = new Date().toISOString().slice(0, 10);
+    const acctKey = `madr:chatrl:acct:${email}:${hour}`;
+    const globKey = `madr:chatrl:glob:${day}`;
+    const n = await redis.incr(acctKey);
+    if (n === 1) await redis.expire(acctKey, 3600);
+    if (n > RATE_PER_HOUR) return { ok: false, why: 'acct' };
+    const g = await redis.incr(globKey);
+    if (g === 1) await redis.expire(globKey, 86400);
+    if (g > RATE_GLOBAL_DAY) return { ok: false, why: 'global' };
+    return { ok: true };
   } catch (e) {
-    return true;
+    return { ok: false, why: 'error' };
   }
 }
 
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'https://masteradr.vercel.app');
+  res.setHeader('Vary', 'Origin');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   if (req.method === 'OPTIONS') return res.status(204).end();
@@ -167,12 +172,14 @@ export default async function handler(req, res) {
     const messages = sanitizeMessages(body.messages);
     if (!messages.length) return res.status(400).json({ ok: false, error: 'empty' });
 
-    const okRate = await maybeRateLimit(req);
-    if (!okRate) {
-      return res.status(429).json({
-        ok: false, error: 'rate_limited',
-        reply: 'Sporo dziś pytań! Daj mi chwilę i spróbuj za moment. 🛻',
-      });
+    const rl = await rateCheck(authEmail);
+    if (!rl.ok) {
+      const msg = rl.why === 'global'
+        ? 'Franek ma dziś komplet pytań (limit dzienny). Wróć jutro. 🛻'
+        : rl.why === 'error'
+          ? 'Chwilowo nie mogę odpowiadać (serwis limitów). Spróbuj za moment. 🛻'
+          : 'Sporo dziś pytań z Twojego konta! Daj mi chwilę i spróbuj za moment. 🛻';
+      return res.status(429).json({ ok: false, error: 'rate_limited', reply: msg });
     }
 
     const lastUser = [...messages].reverse().find((m) => m.role === 'user');

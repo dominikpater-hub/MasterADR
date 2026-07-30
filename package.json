@@ -2,7 +2,7 @@
   "name": "masteradr",
   "version": "1.0.0",
   "private": true,
-  "description": "MasterADR — grywalizowany trener egzaminu ADR (silnik Leitnera, 218 pozycji). Dodatek do nauki, nie kurs akredytowany.",
+  "description": "MasterADR — grywalizowany trener egzaminu ADR (silnik Leitnera, 239 pozycji, edycja ADR 2025). Dodatek do nauki, nie kurs akredytowany.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,6 @@
     "cap:open": "cap open android"
   },
   "dependencies": {
-    "@upstash/redis": "^1.38.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

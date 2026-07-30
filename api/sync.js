@@ -6,8 +6,29 @@ import { redis, requireAuth, progKey } from './_lib/auth.js';
 
 const MAX_BYTES = 512 * 1024; // ochrona przed wielkim payloadem
 
+// scalanie per-fakt: bierzemy bardziej zaawansowany stan (wyższe pudełko, potem więcej powtórek)
+function mergeStates(a, b) {
+  const byId = {};
+  (Array.isArray(a) ? a : []).forEach((s) => { if (s && s.id) byId[s.id] = s; });
+  (Array.isArray(b) ? b : []).forEach((s) => {
+    if (!s || !s.id) return;
+    const cur = byId[s.id];
+    if (!cur) { byId[s.id] = s; return; }
+    const better = (s.box || 0) > (cur.box || 0) ||
+      ((s.box || 0) === (cur.box || 0) && (s.seen || 0) > (cur.seen || 0));
+    if (better) byId[s.id] = s;
+  });
+  return Object.keys(byId).map((k) => byId[k]);
+}
+function pickHabit(prev, next) {
+  if (!prev) return next || null;
+  if (!next) return prev;
+  return (next.updatedAt || 0) >= (prev.updatedAt || 0) ? next : prev;
+}
+
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'https://masteradr.vercel.app');
+  res.setHeader('Vary', 'Origin');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.setHeader('Cache-Control', 'no-store');
@@ -34,9 +55,10 @@ export default async function handler(req, res) {
       const progress = body.progress || {};
       const size = JSON.stringify(progress).length;
       if (size > MAX_BYTES) return res.status(413).json({ ok: false, error: 'too_large' });
+      const prev = (await redis.get(progKey(email))) || {};
       const rec = {
-        states: progress.states || {},
-        habit: progress.habit || null,
+        states: mergeStates(prev.states, progress.states),
+        habit: pickHabit(prev.habit, progress.habit),
         updatedAt: Date.now(),
       };
       await redis.set(progKey(email), rec);

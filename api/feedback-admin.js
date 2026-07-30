@@ -36,9 +36,14 @@ function toCsv(rows) {
 }
 
 export default async function handler(req, res) {
+  res.setHeader('Cache-Control', 'no-store');
   const secret = process.env.FEEDBACK_ADMIN_TOKEN;
   if (!secret) {
-    return res.status(500).json({ ok: false, error: 'admin_token_not_set' });
+    return res.status(503).json({
+      ok: false,
+      error: 'admin_token_not_set',
+      message: 'Odczyt uwag Franka wyłączony — ustaw FEEDBACK_ADMIN_TOKEN w zmiennych środowiskowych Vercela i zrób redeploy.',
+    });
   }
 
   const given =

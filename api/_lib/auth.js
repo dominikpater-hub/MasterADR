@@ -8,7 +8,9 @@ export const redis = new Redis({
 });
 
 const SESSION_TTL = 60 * 60 * 24 * 30; // 30 dni
-const PBKDF2_ITERS = 100000;
+const PBKDF2_ITERS = 600000;           // OWASP 2023 dla PBKDF2-HMAC-SHA256
+const LOCK_MAX = 8;                     // nieudanych prób logowania
+const LOCK_WINDOW = 900;                // okno blokady (sekundy = 15 min)
 
 const enc = (s) => new TextEncoder().encode(s);
 const bufToHex = (buf) =>
@@ -25,15 +27,16 @@ export const userKey = (email) => 'madr:user:' + normEmail(email);
 export const sessKey = (token) => 'madr:sess:' + token;
 export const progKey = (email) => 'madr:progress:' + normEmail(email);
 
-export async function hashPassword(password, saltHex) {
+export async function hashPassword(password, saltHex, iters) {
+  const it = iters || PBKDF2_ITERS;
   const salt = saltHex ? hexToBuf(saltHex) : crypto.getRandomValues(new Uint8Array(16));
   const key = await crypto.subtle.importKey('raw', enc(password), 'PBKDF2', false, ['deriveBits']);
   const bits = await crypto.subtle.deriveBits(
-    { name: 'PBKDF2', salt, iterations: PBKDF2_ITERS, hash: 'SHA-256' },
+    { name: 'PBKDF2', salt, iterations: it, hash: 'SHA-256' },
     key,
     256
   );
-  return { salt: saltHex || bufToHex(salt), hash: bufToHex(bits) };
+  return { salt: saltHex || bufToHex(salt), hash: bufToHex(bits), iters: it };
 }
 
 // porównanie w stałym czasie
@@ -44,9 +47,25 @@ export function safeEqual(a, b) {
   return out === 0;
 }
 
-export async function verifyPassword(password, saltHex, expectedHash) {
-  const { hash } = await hashPassword(password, saltHex);
+export async function verifyPassword(password, saltHex, expectedHash, iters) {
+  const { hash } = await hashPassword(password, saltHex, iters);
   return safeEqual(hash, expectedHash);
+}
+
+// --- lockout logowania (per konto) ---
+export async function isLocked(email) {
+  try { const n = await redis.get('madr:loginfail:' + normEmail(email)); return (Number(n) || 0) >= LOCK_MAX; }
+  catch (e) { return false; }
+}
+export async function bumpFail(email) {
+  try {
+    const k = 'madr:loginfail:' + normEmail(email);
+    const n = await redis.incr(k);
+    if (n === 1) await redis.expire(k, LOCK_WINDOW);
+  } catch (e) {}
+}
+export async function clearFail(email) {
+  try { await redis.del('madr:loginfail:' + normEmail(email)); } catch (e) {}
 }
 
 export function makeToken() {
