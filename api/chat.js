@@ -2,7 +2,7 @@
 // Grounding: 239 faktów ADR 2025 (retrieval po słowach kluczowych) wstrzykiwane do promptu.
 // Provider: ANTHROPIC_API_KEY (Claude) albo OPENAI_API_KEY (GPT). Bez klucza -> grzeczny offline.
 // Zależności: brak (global fetch). Rate-limit best-effort, jeśli jest Redis (KV_*/UPSTASH_*).
-import { KB } from './adr-knowledge.js';
+import { KB } from './_lib/adr-knowledge.js';
 import { requireAuth, redis } from './_lib/auth.js';
 
 const MAX_MSG = 2000;      // znaków w pojedynczej wiadomości użytkownika

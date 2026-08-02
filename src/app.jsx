@@ -456,10 +456,10 @@ function idsHaveLocked(ids) {
 async function activateLicense(rawKey) {
   const key = (rawKey || "").trim();
   if (key.length < 4) return { ok: false, msg: "Wpisz poprawny klucz." };
-  // ⚠️ KLUCZ TESTOWY — USUŃ PRZED PUBLIKACJĄ. Odblokowuje bez sieci, do testów UI.
-  if (key === "MASTERADR-TEST-2026") {
+  // Klucz testowy tylko w dev (import.meta.env.DEV) — Vite usuwa tę gałąź z bundla produkcyjnego.
+  if (import.meta.env.DEV && key === "MASTERADR-TEST-2026") {
     license.save(key);
-    return { ok: true, msg: "Tryb testowy — odblokowano pełny dostęp." };
+    return { ok: true, msg: "Tryb testowy (dev) — odblokowano pełny dostęp." };
   }
   try {
     const res = await fetch("https://api.lemonsqueezy.com/v1/licenses/activate", {

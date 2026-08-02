@@ -67,6 +67,7 @@ export default async function handler(req, res) {
 
     return res.status(405).json({ ok: false, error: 'method_not_allowed' });
   } catch (e) {
-    return res.status(500).json({ ok: false, error: 'server_error', detail: String((e && e.message) || e).slice(0, 200) });
+    console.error('sync error', e && e.message);
+    return res.status(500).json({ ok: false, error: 'server_error' });
   }
 }
